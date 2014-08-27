@@ -28,13 +28,13 @@
 
         <!-- If the query includes 'print-pdf', include the PDF print sheet -->
         <script>
-if( window.location.search.match( /print-pdf/gi ) ) {
-    var link = document.createElement( 'link' );
-    link.rel = 'stylesheet';
-    link.type = 'text/css';
-    link.href = 'css/print/pdf.css';
-    document.getElementsByTagName( 'head' )[0].appendChild( link );
-}
+            if( window.location.search.match( /print-pdf/gi ) ) {
+                var link = document.createElement( 'link' );
+                link.rel = 'stylesheet';
+                link.type = 'text/css';
+                link.href = 'css/print/pdf.css';
+                document.getElementsByTagName( 'head' )[0].appendChild( link );
+            }
         </script>
 
         <!--[if lt IE 9]>
@@ -55,21 +55,21 @@ if( window.location.search.match( /print-pdf/gi ) ) {
                     <h2>Introduction to Computer Science I</h2>
                     <p>Gregory M. Kapfhammer</p>
 
-<br /><small><a href="http://creativecommons.org/licenses/by-nc-sa/2.0/">creative commons licensed ( BY-NC-SA )</a> <a title="Thinkin' about the code" href="http://flickr.com/photos/yourdon/2681686220">flickr photo</a> shared by <a href="http://flickr.com/people/yourdon">Ed Yourdon</a></small>
+                    <br /><small><a href="http://creativecommons.org/licenses/by-nc-sa/2.0/">creative commons licensed ( BY-NC-SA )</a> <a title="Thinkin' about the code" href="http://flickr.com/photos/yourdon/2681686220">flickr photo</a> shared by <a href="http://flickr.com/people/yourdon">Ed Yourdon</a></small>
 
                 </section>
 
 
             </div>
 
-                <script src="lib/js/head.min.js"></script>
-                <script src="js/reveal.min.js"></script>
+            <script src="lib/js/head.min.js"></script>
+            <script src="js/reveal.min.js"></script>
 
-                <script>
+            <script>
 
-// Full list of configuration options available here:
-// https://github.com/hakimel/reveal.js#configuration
-                Reveal.initialize({
+                // Full list of configuration options available here:
+                // https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
 controls: true,
 progress: true,
 history: true,
@@ -90,10 +90,10 @@ dependencies: [
 { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
 { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
 { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
-                ]
-                });
+            ]
+            });
 
-                </script>
+            </script>
 
-            </body>
-        </html>
+        </body>
+    </html>
