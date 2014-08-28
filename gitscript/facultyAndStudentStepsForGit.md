@@ -60,5 +60,60 @@ cd cs111F2014
 git clone git@bitbucket.org:gkapfham/cs111f2014-trial.git
 cs cs111F2014-trial 
 
+git remote add cs111 https://gkapfham-test@bitbucket.org/gkapfham-test/cs111f2014-gkapfhamtest.git 
+git push -u cs111 master
+
+Faculty:
+
+git remote add gkapfham https://gkapfham-test@bitbucket.org/gkapfham-test/cs111f2014-gkapfhamtest.git
+
+Continue running these commands for all of the students in the class.
+You should get an email for each of the repositories once a student shares it with you.
+
+Make sure that you have all of the students:
+
+git remote -v
+
+Check to see if the students pushed:
+
+git fetch --all
+
+(Does a faculty member have to log in as the student? Did once, did not second time).
+
+Start working on the first lab assignment.
+
+git checkout -b lab1 master
+vim cs111F2014-lab1.txt
+git add cs111F2014-lab1.txt
+git commit -a
+git push origin lab1
+
+Students:
+
+git fetch origin
+git checkout -b lab1 origin/lab1
+
+cd labs
+cd lab1
+more cs111F2014-lab1.txt
+vim HelloWorld.java
+javac HelloWorld.java
+java HelloWorld
+
+Please make sure that you put your name in a comment of your file!
+
+git add HelloWorld.java
+git commit HelloWorld.java
+git push cs111 lab1
+
+Faculty:
+
+git fetch --all
+
+Go back to the root directory of the repository.
+
+git checkout master
+
+
 
 
