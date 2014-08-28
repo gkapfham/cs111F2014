@@ -27,4 +27,38 @@ Paste in the public key that you have highlighted and upload it.  If no errors o
 
 Faculty:
 
+mkdir cs111F2014-trial
+cd cs111F2014-trial
+git init .
+mkdir labs
+cd labs
+mkdir lab1
+cd lab1
+cd ../
+cd ../
+vim README.md
+git add README.md
+git commit README.md
+
+Create the repository in bitbucket with the same name as the directory that you just created
+
+git remote add origin git@bitbucket.org:gkapfham/cs111f2014-trial.git
+git push -u origin --all
+git push -u origin --tags
+
+Check to make sure that the README.md file is now available in the repository.
+
+Students:
+
+Using bitbucket, create a new private repository with the name cs111f2014-<your user name>
+
+Add the CMPSC 111 professors so that they have administrator privileges for the repository.
+Go into the settings panel and then click access management.
+
+mkdir cs111F2014
+cd cs111F2014
+git clone git@bitbucket.org:gkapfham/cs111f2014-trial.git
+cs cs111F2014-trial 
+
+
 
