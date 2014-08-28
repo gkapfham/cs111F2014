@@ -1,0 +1,30 @@
+Steps for Using Git in CMPSC 111 Fall 2014
+
+Faculty and Students:
+
+git config --global user.name "Gregory M. Kapfhammer"
+git config --glocal user.email "gkapfham@allegheny.edu"
+
+Open a terminal window and type the following command
+
+ssh-keygen
+
+Follow prompts to create keys and save them in the default directory
+
+cd .ssh
+ls
+vim id_rsa.pub
+
+Go to bitbucket.org and create an account. Make sure to use your allegheny.edu email address.
+
+Go to the settings for your account and find the section for ssh keys.
+
+Return to your terminal window and highlight and copy all of the key.  Make sure that you do not select any white space.
+
+Return to the web site where you are viewing the bitbucket.org  Web site.
+
+Paste in the public key that you have highlighted and upload it.  If no errors occur then this upload worked correctly.
+
+Faculty:
+
+
