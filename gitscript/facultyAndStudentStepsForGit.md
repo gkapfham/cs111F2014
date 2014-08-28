@@ -113,6 +113,13 @@ git fetch --all
 Go back to the root directory of the repository.
 
 git checkout master
+git branch -D lab1
+git checkout -b lab1 gkapfham/lab1
+
+cd labs/lab1
+more HelloWorld.java
+
+Repeat the following steps for all of the students who are in the class.
 
 
 
