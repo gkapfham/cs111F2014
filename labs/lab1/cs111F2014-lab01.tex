@@ -51,31 +51,33 @@ Hours of lab availability are posted on the bulletin board in each lab and on th
 
 In order to create a program, you need a {\em text editor}. There are many different text editors on your workstation, and
 you should feel free to explore these on your own. Since it is a powerful text editor known for helping computer
-scientists ``edit text at the speed of thought'', in this class we will use the one called ``{\tt gvim}''
+scientists ``edit text at the speed of thought'', in this class we will use the text editor called ``{\tt gvim}''.
 
 % : \raisebox{-1.5em}{\includegraphics[width=.7in]{images/terminal}}
 
-There are several ways to launch {\tt gvim}, but for today please use the method described in this paragraph.  On the
-left side of your screen, click on the icon that contains the ``>'' symbol.  Alternatively, you can type the ``Super''
-key and then start typing the word ``terminal''.  Another way to open a terminal involves typing the key combination
-{\tt <Ctrl>-<Alt>-t}.
+There are several ways to launch {\tt gvim}, but for today please use a method described in this paragraph.  On the
+left side of your screen, click on the icon that contains the ``{\tt >}'' symbol.  Alternatively, you can type the
+``Super'' key, start typing the word ``terminal'', and then select that program.  Another way to open a terminal
+involves typing the key combination {\tt <Ctrl>-<Alt>-t}.
 
-(If you don't see it, right-click on the desktop and choose ``Open in Terminal'' from the menu.)  This opens a {\em
-  terminal} window, a plain window with text. For today, you'll work with the terminal window rather than with folders,
-icons, and the mouse.
+% (If you don't see it, right-click on the desktop and choose ``Open in Terminal'' from the menu.)  This opens a {\em
+%   terminal} window, a plain window with text. For today, you'll work with the terminal window rather than with folders,
+% icons, and the mouse.
 
-Type the following commands {\em exactly as shown} into the terminal window. 
-(The ``{\tt 1}'' is the digit ``one'', not the letter ``ell.'') All Linux, Java, 
-and {\tt gvim}
-commands are case-sensitive, so be sure to capitalize the file name 
-``{\tt Lab1.java}'' but nothing else.
-Don't worry if you make a mistake---just ask for help:
+Now, you should type the following commands {\em exactly as shown} into the terminal window.  (The ``{\tt 1}'' is the digit ``one'', not
+  the letter ``ell.'') All Linux, Java, and {\tt gvim} commands are case-sensitive, so be sure to capitalize the file
+name ``{\tt Lab1.java}'' but nothing else.  Don't worry if you make a mistake---just ask the course instructor or a
+teaching assistant for help and then try again.
+
 \begin{verbatim}
+       mkdir cs111F2014
+       cd cs111F2014
+       mkdir labs
+       cd labs
        mkdir lab1
        cd lab1
        gvim Lab1.java
-       \end{verbatim}
-       {\color{red}\bf [What did I just do??]}
+\end{verbatim}
 
        At this point, a new window should open up. This is the {\tt gvim} editor.
        You may notice that if you start typing, nothing appears (unless you happen to
