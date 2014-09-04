@@ -52,13 +52,15 @@ outlined in this assignment.
   \item Now, you need to test to see if you can authenticate with the Bitbucket servers.  First, show the course
     instructor that you have correctly configured your Bitbucket account.  Now, ask your instructor to share the
     course's Git repository with you.  Open a terminal window on your workstation and change into the directory where
-    you will store your files for this course.  For instance, you might make a {\tt cs111F2014/} directory that will
-    contain the Git repository that I will always use to share files with you.  Once you have done so, please type the
-    following command: ``{\tt git clone git@bitbucket.org:gkapfham/cs111f2014-share.git}''.  If everything worked
-    correctly, you should be able to download all of the files that you will need for this practical assignment. Please
-    resolve any problems that you encountered by first reviewing the Bitbucket documentation and then discussing the
-    matter with a teaching assistant. If you are still not able to run {\tt git clone}, then please see a course
-    instructor.
+    you will store your files for this course.  For instance, you by opening a terminal window and typing the command
+    ``{\tt mkdir cs111F2014}'' you could make a {\tt cs111F2014/} directory that will contain the Git repository that I
+    will always use to share files with you.  Once you have done so, please type the following command: ``{\tt git clone
+      git@bitbucket.org:gkapfham/cs111f2014-share.git}''.  
+    
+    If everything worked correctly, you should be able to download all of the files that you will need for this
+    practical assignment. Please resolve any problems that you encountered by first reviewing the Bitbucket
+    documentation and then discussing the matter with a teaching assistant.  If you are still not able to run {\tt git
+      clone}, then please see a course instructor.
 
   \item Using your terminal window, you should browse the files that are in this Git repository.  In particular, please
     look in the {\tt cs111F2014-share/practicals/practical01} directory and use {\tt gvim} to study the Java program that
@@ -82,8 +84,12 @@ outlined in this assignment.
 \section*{Creating a New Repository}
 
 Now that you have learned how to clone an existing Git repository, you should make a new repository in the {\tt
-cs112S2014/} directory that you previously created.  First, make a new directory called {\tt cs112S2014-<your user
-name>}. Then, change into this directory and type the command {\tt git init .}.  At this point, you should go into the
+cs111F2014/} directory that you previously created.  First, make a new directory called {\tt cs112S2014-<your user
+name>} using the ``{\tt mkdir}'' command in your terminal window. If you opened a new terminal, then you could 
+
+
+
+Then, change into this directory and type the command {\tt git init .}.  At this point, you should go into the
 {\tt cs112s2014-share} repository and use the {\tt cp -r} command to copy the entire {\tt labs/} directory from the {\tt
 cs112s2014-share} repository to {\tt cs112S2014-<your user name>}.  Once the files are in your own Git repository,
 please use the {\tt git add} and {\tt git commit} commands to add them correctly. If you do not know how to use the {\tt
