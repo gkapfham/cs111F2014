@@ -17,14 +17,14 @@
 
 Practicing software developers normally use a version control system to manage most of the artifacts produced during the
 phases of the software development life cycle.  In this course, we will always use the Git distributed version control
-system to manage the files associated with our laboratory assignments.  In this practical assignment, you will learn how
-to use the Bitbucket service for managing Git repositories and the {\tt git} command-line tool in the Ubuntu Linux
-operating system. After connecting to the course's Git repository and creating your own repository, you will compile and
-run one Java program, capture the program's output, and commit your output to a repository.
+system to manage the files associated with our laboratory and practical assignments.  In this practical assignment, you
+will learn how to use the Bitbucket service for managing Git repositories and the {\tt git} command-line tool in the
+Ubuntu operating system. After connecting to the course's Git repository and creating your own repository, you will
+compile and run one Java program, capture the program's output, and commit your output to a repository.
 
 \section*{Configuring Git and Bitbucket}
 
-During this laboratory assignment and subsequent assignments, we will securely communicate with the Bitbucket.org
+During this practical assignment and subsequent assignments, we will securely communicate with the Bitbucket.org
 servers that will host all of our projects.  In this practical assignment, we will perform all of the steps to configure
 the accounts on the departmental servers and the Bitbucket service.  Throughout the assignment, you should refer to the
 following Web site for additional information: \url{https://confluence.atlassian.com/display/BITBUCKET/Bitbucket+101}.
@@ -35,27 +35,32 @@ outlined in this assignment.
 
 \begin{enumerate}
 
-  \item If you have never done so before, you must use the {\tt ssh-keygen} program to create secure-shell keys that you
-    can use to support your communication with the Bitbucket servers.  Type {\tt man ssh-keygen} and talk with your
-    partner to learn more about how to use this program.  What files does {\tt ssh-keygen} produce?  Where does this
-    program store these files by default?
-
   \item If you do not already have a Bitbucket account, please go to the Bitbucket Web site and create one --- 
     make sure that you use your {\tt allegheny.edu} email address so that you can create an unlimited number of free
     Bitbucket repositories while you are a student. 
+    
+  \item If you have never done so before, you must use the {\tt ssh-keygen} program to create secure-shell keys that you
+    can use to support your communication with the Bitbucket servers. Follow the prompts to create your keys and save
+    them in the default directory (press ``Enter'' after you are promted: ``{\tt Enter file in which to save the key ...
+    :}'', then press ``Enter'' twice if you do not wish to create a passphrase at this time or type your selected
+    passphrase if you do).   Type {\tt man ssh-keygen} and talk with your partner to learn more about this program.
+    What files does {\tt ssh-keygen} produce?  Where does this program store these files by default?
 
     Once both you and your partner have created your ssh keys, you should raise your hand to invite either a teaching
-    assistant or a course instructor to help you with the next steps. First, you must log into Bitbucket and look in
-    the right corner for an account avatar with a down arrow.  Click on this blue link and then select the ``Manage
-    account'' option. Now, scroll down until you found the ``SSH keys'' option and upload your ssh key to Bitbucket.
+    assistant or a course instructor to help you with the next steps. First, you must log into Bitbucket and look in the
+    right corner for an account avatar with a down arrow.  Click on this blue link and then select the ``Manage
+    account'' option. Now, scroll down until you found the ``SSH keys'' option and upload your ssh key to Bitbucket. You
+    can copy your SSH key by going to the terminal and typing ``{\tt cat \textasciitilde{}/.ssh/id\_rsa.pub}'' command.
 
   \item Now, you need to test to see if you can authenticate with the Bitbucket servers.  First, show the course
     instructor that you have correctly configured your Bitbucket account.  Now, ask your instructor to share the
     course's Git repository with you.  Open a terminal window on your workstation and change into the directory where
-    you will store your files for this course.  For instance, you by opening a terminal window and typing the command
-    ``{\tt mkdir cs111F2014}'' you could make a {\tt cs111F2014/} directory that will contain the Git repository that I
-    will always use to share files with you.  Once you have done so, please type the following command: ``{\tt git clone
-      git@bitbucket.org:gkapfham/cs111f2014-share.git}''.  
+    you will store your files for this course.  For instance, by opening a terminal window and typing the command ``{\tt
+    mkdir cs111F2014}'' you could make a {\tt cs111F2014/} directory that will contain the Git repository that the
+    instructor will always use to share files with you.  Once you have done so, please type the following command if you
+    are in {\bf sections 1 and 2} of the course: \\ ``{\tt git clone
+    git@bitbucket.org:janyljumadinova/cs111f2014-share.git}'', \newline {\bf or} the following command if you are in {\bf
+    sections 3 and 4} of the course: \\``{\tt git clone git@bitbucket.org:gkapfham/cs111f2014-share.git}''.  
 
     If everything worked correctly, you should be able to download all of the files that you will need for this
     practical assignment. Please resolve any problems that you encountered by first reviewing the Bitbucket
@@ -119,15 +124,13 @@ or a teaching assistant verify that you have everything set up correctly.
 The next step in this practical requires you to use the graphical browser to copy the {\tt Kinetic.java} file from the
 ``source'' browser to the ``destination'' browser, ensuring that the file is transferred from the {\tt cs111F2014-share}
 repository to the {\tt practical01} directory of the {\tt cs111F2014-<your user name>} repository.  Once the files are
-in your own Git repository, please use the {\tt git add} and {\tt git commit} commands to add them correctly. If you do
-not know how to use the {\tt git add} and {\tt git commit} commands in the terminal window, then please learn more about
-them by searching on the Internet, reviewing the ``Git Cheatsheet'', and discussing them with a course instructor.
+in your own Git repository, please use the {\tt git add} and {\tt git commit} commands to add them correctly. You can learn how to use the {\tt git add} and {\tt git commit} commands in the terminal window by reviewing the ``Git Cheatsheet'', discussing them with teaching assistants and course instructors, or searching on the Internet.
 
 Next, you should use the Bitbucket Web site to create a repository that has the same name as the local directory and
 local repository.  You must follow Bitbucket's instructions to push the code and tags in your local repository to the
 remote one. When you are finished with this step, you should see in your Web browser that the Bitbucket servers are
 storing the Java program. Once the Git repository contains the correct files, you should share your Bitbucket repository
-with the course instructor, whose Bitbucket user name is ``gkapfham''.
+with the course instructor. If you are in sections 1 and 2 your instructor's Bitbucket user name is ``janyljumadinova'' and if you are in sections 3 and 4 your instructor's Bitbucket user name is ``gkapfham''.
 
 At this point, you can learn more about Git by consulting Web sites like \url{http://try.github.io/} and
 \url{http://gitimmersion.com/}.  After discussion them with a class member and a teaching assistant, you should ensure
@@ -147,20 +150,20 @@ that you have a basic understanding of the following Git commands:
 
 \section*{Compiling, Running, and Understanding a Java Program}
 
-Once you have mastered the basic use of Git and version control, you should return to the {\tt practicals/practical01}
+Once you have mastered the basic use of the version control, you should return to the \\ {\tt practicals/practical01}
 directory that contains the Java program. Now, use the Java compiler by typing ``{\tt javac Kinetic.java}'' in the
-terminal window.  Next, you can run this program by typing ``{\tt java Kinetic}'' in the terminal window.  What output
-does this program produce?  If the equation for kinetic energy, denoted $K$, is $K=\frac{1}{2} \times m \times v^2$,
-then can you find and fix the defect?
+terminal window.  Next, you can run this program by typing ``{\tt java Kinetic}'' in the terminal window.  What output does this program produce?  
+You are not expected to understand all of the details of this program at this point--just do your best to understand lines of the code that look familiar consulting your text book and talking about it with
+your classmates and the teaching assistants as needed. If you are up for a challenge, try to locate and fix the defect in this program: if the equation for kinetic energy, denoted $K$, is $K=\frac{1}{2} \times m \times v^2$, then can you find and fix the defect?
+
+Once you have finished studying this Java program, add comments to the code to explain what
+it does and how it works. Again just do your best to explain everything that you understood, while ignoring the parts that you did not understand. Finally, please make sure that the commented and repaired version of the program is correctly committed to your Git version control repository hosted by Bitbucket by going to your repository's directory and correctly using {\tt git add, git commit} and {\tt git push} commands. 
+
+
 
     % After compiling, using, and studying the {\tt Hooray} program, you should complete the same steps for the {\tt
     %   Weeee.java} program. Go ahead and compile and run this program.  What output does it produce? Why does it create
     % this output? How is the output similar to and different from that which was created by the {\tt Hooray} program? 
 
-Once you have finished studying, understanding, and fixing this Java program, add comments to the code to explain what
-it does and how it works. Don't worry if you do not understand all of the details of this program or you cannot find the
-defect in it---just do your best to understand each line of code, consulting your text book and talking about it with
-your classmates and the teaching assistants as needed. Finally, please make sure that the commented and repaired version
-of the program is correctly committed to your Git version control repository hosted by Bitbucket.
 
-\end{document}
+    \end{document}
