@@ -7,7 +7,7 @@
 
 \begin{document}
 % \MYTITLE{Lab 1 \\ Assigned: Thursday, 4 September 2014 \\ Due: Thursday, 11 September 2014, 2:30 pm}
-\MYTITLE{Practical 1\\4--5 September 2014\\Due at the end of class\\``Checkmark'' grade}
+\MYTITLE{Practical 1\\4--5 September 2014\\Due: September 10, 2014 by the end of class\\``Checkmark'' grade}
 
 % \begin{document}
 % \MYTITLE{Laboratory Assignment One: Version Control with Git and Bitbucket}
@@ -30,14 +30,14 @@ the accounts on the departmental servers and the Bitbucket service.  Throughout 
 following Web site for additional information: \url{https://confluence.atlassian.com/display/BITBUCKET/Bitbucket+101}.
 As you will be required to use Git in the remaining laboratory and practical assignments and during the class sessions,
 please be sure to keep a record of all of the steps that you complete and the challenges that you face.  You are also
-responsible for working with a partner to ensure that each of your is able to successfully complete each of the steps
+responsible for working with a partner to ensure that each of you is able to successfully complete each of the steps
 outlined in this assignment.
 
 \begin{enumerate}
 
-  \item If you do not already have a Bitbucket account, please go to the Bitbucket Web site and create one --- 
-    make sure that you use your {\tt allegheny.edu} email address so that you can create an unlimited number of free
-    Bitbucket repositories while you are a student. 
+  \item If you do not already have a Bitbucket account, please go to the Bitbucket Web site and create one---make sure
+    that you use your {\tt allegheny.edu} email address so that you can create an unlimited number of free Bitbucket
+    repositories while you are a student. 
     
   \item If you have never done so before, you must use the {\tt ssh-keygen} program to create secure-shell keys that you
     can use to support your communication with the Bitbucket servers. Follow the prompts to create your keys and save
@@ -68,14 +68,14 @@ outlined in this assignment.
       clone}, then please see a course instructor.
 
   \item Using your terminal window, you should browse the files that are in this Git repository.  In particular, please
-    look in the {\tt cs111F2014-share/practicals/practical01} directory and use {\tt gvim} to study the Java program that
+    look in the {\tt cs111f2014-share/practicals/practical01} directory and use {\tt gvim} to study the Java program that
     you find.  Remember, the ``{\tt cd}'' command allows you to change into a directory. So, you could type the following
     commands to go to the directory that contains today's Java program; make sure you fully understand these steps!
 
     \vspace*{-.1in}
     \begin{verbatim}
         cd cs111F2014
-        cd cs111F2014-share
+        cd cs111f2014-share
         ls
         cd practicals
         ls
@@ -106,7 +106,7 @@ discussing them with your neighbor, a teaching assistant, or one of the course i
     % entire {\tt labs/} directory from the {\tt cs112s2014-share} repository to {\tt cs112S2014-<your user name>}.  
 
 Once you have changed into this directory you can type the command ``{\tt git init .}''. Then, you can use the ``{\tt
-  mkdir practicals}'' command to make a new directory and the ``{\tt cd practicals}'' to change into it.  Next, you
+  mkdir practicals}'' command to make a new directory and ``{\tt cd practicals}'' to change into it.  Next, you
 should again use the ``{\tt mkdir}'' command to create an additional directory called {\tt practical01}.  Please make
 sure that you completed each of these steps inside of the parent directory called {\tt cs111F2014-<your user name>}; if
 you are stuck, ask a course instructor for help.
@@ -114,15 +114,15 @@ you are stuck, ask a course instructor for help.
 After completing this step you should click on the file icon in the upper left corner to load the Ubuntu file browser.
 Once the first window displays, you should click the ``File/New Window'' menu item to load a second graphical file
 browser. At this point, you should have two file system browsers that are displaying the same content.  In the first
-window, which we will call the ``source'' window, you should navigate to the {\tt cs111F2014-share} directory by
+window, which we will call the ``source'' window, you should navigate to the {\tt cs111f2014-share} directory by
 clicking on the correct folder icons.  Now, please find the {\tt Kinetic.java} file that is stored inside of the {\tt
-  cs111F2014-share} repository in the ``source'' window. In the second window, which we will call the ``destination''
+  cs111f2014-share} repository in the ``source'' window. In the second window, which we will call the ``destination''
 window, you should follow the same process to first navigate to the {\tt cs111F2014-<your user name>} directory,
 ultimately finding the {\tt practical01} directory. Before you move on to the next step, please have a course instructor
 or a teaching assistant verify that you have everything set up correctly.
 
 The next step in this practical requires you to use the graphical browser to copy the {\tt Kinetic.java} file from the
-``source'' browser to the ``destination'' browser, ensuring that the file is transferred from the {\tt cs111F2014-share}
+``source'' browser to the ``destination'' browser, ensuring that the file is transferred from the {\tt cs111f2014-share}
 repository to the {\tt practical01} directory of the {\tt cs111F2014-<your user name>} repository.  Once the files are
 in your own Git repository, please use the {\tt git add} and {\tt git commit} commands to add them correctly. You can learn how to use the {\tt git add} and {\tt git commit} commands in the terminal window by reviewing the ``Git Cheatsheet'', discussing them with teaching assistants and course instructors, or searching on the Internet.
 
@@ -151,9 +151,10 @@ that you have a basic understanding of the following Git commands:
 \section*{Compiling, Running, and Understanding a Java Program}
 
 Once you have mastered the basic use of version control, you should return to the \\ {\tt practicals/practical01}
-directory that contains the Java program. Now, use the Java compiler by typing ``{\tt javac Kinetic.java}'' in the
-terminal window.  Next, you can run this program by typing ``{\tt java Kinetic}'' in the terminal window.  What output
-does this program produce?  
+directory---in your version control repository---that contains the Java program. Now, use the Java compiler by typing
+``{\tt javac Kinetic.java}'' in the terminal window.  Next, you can run this program by typing ``{\tt java Kinetic}'' in
+the terminal window.  What output does this program produce?  As you will in this week's laboratory assignment, practice
+compiling and running this Java program until you are completely comfortable with these steps.
 
 For this practical assignment, you are not expected to understand all of the details of this program---just do your best
 to understand lines of the code that look familiar, consulting your text book and talking about it with your classmates
@@ -162,11 +163,15 @@ If the equation for kinetic energy, denoted $K$, is $K=\frac{1}{2} \times m \tim
 defect?
 
 Once you have finished studying this Java program, add comments to the code to explain what it does and how it works.
-Again just do your best to explain everything that you understood, while ignoring the parts that you did not understand.
-Most importantly, make sure that a final version of this program is correctly committed to your Git version control
-repository hosted by Bitbucket; you can do this by going to your repository's directory and correctly using {\tt git
-add, git commit} and {\tt git push} commands. If you are not able to complete this step, please seek assistance from a
-teaching assistant or a course instructor so that you can finish by the end of the session.
+Again just do your best to explain everything that you understood, while ignoring the parts that did not make sense to
+you.  Most importantly, make sure that a final version of this program is correctly committed to your Git version
+control repository hosted by Bitbucket; you can do this by going to your repository's directory and correctly using {\tt
+git add, git commit} and {\tt git push} commands. Additionally, please make sure that you commit the output of the
+program that you ran in the terminal window.  You can accomplish this task by highlighting the program's output, pasting
+it into a {\tt gvim} window, saving the output in a file with an appropriate name, and using the correct {\tt git add},
+{\tt git commit}, and {\tt git push} commands to store it on Bitbucket.  If you are not able to complete this step,
+then please seek assistance from a teaching assistant or a course instructor so that you can finish by the end of the
+session.
 
 
 
