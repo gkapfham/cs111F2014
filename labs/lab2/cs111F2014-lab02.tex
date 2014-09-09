@@ -80,34 +80,34 @@ this template file once, thus allowing you to re-use it in the future laboratory
 
 \noindent Save this file using the ``File/Save'' menu or by typing ``{\tt :w}'' when you are not in insert mode. At this
 point, your {\tt cs111F2014-<your user name>} directory should contain a file named ``{\tt Template.java}.'' You may now
-close {\tt gvim} editor. Make sure that you store your file in your Bitbucket repository!
+close {\tt gvim} editor. Make sure that you store this file in your Bitbucket repository!
 
 \subsection*{Create a New Directory}
 
 In your {\tt cs111F2014-<your user name>} directory type the command ``{\tt mkdir lab2}'' to create a new directory for lab 2.
-\noindent Type ``{\tt cd lab2}'' to move to the new directory.  
+\noindent Type ``{\tt cd lab2}'' to move to this new directory.  
 
 \subsection*{Write a Java Program to Perform a Simple Calculation}
-You are going to write a program that performs some kind of simple unit
-conversion. I leave the specific problem up to you; I just ask that it be 
-``G-rated'' and in good taste.
 
-\noindent{\bf Creating the File:} Type ``{\tt gvim Lab2.java}''. Inside the
-{\tt gvim} editor, make sure you are {\em not} in insert mode. (The word
-``{\tt --INSERT--}'' should {\em not} appear in the lower left corner.) Type the
-following exactly as shown; it will appear in the bottom line of the {\tt gvim}
-window:
-\begin{center}
-\verb$:r  ../Template.java$
-\end{center}
-This ``reads'' your {\tt Template.java} file into your new {\tt Lab2} program.
-You only need to do this once!  Now you need to edit {\tt Lab2.java} program with your name, the lab number, date, etc.
+You are going to write a program that performs some kind of simple unit conversion. While I leave the specific problem
+up to you, I ask that it be in good taste and suitable for a classroom setting.
 
-\noindent In your program for this laboratory assignment you will need to create variables and assign values to them. To create a variable you must declare it by specifying its type (String, integer, etc.) and the name of the variable that you chose (for example, {\tt int count;}). 
-To assign the value to a variable after you have declared it, you need to write an assignment statement using an assignment operator `=', as, for example, {\tt count  = 0;} 
-You may combine the variable declaration and assignment into one statement as: 
-{\tt int count = 0;} 
-You may print variables by incorporating them into a print or println statement by using `+' and the name of the variable as: {\tt System.out.println("My first variable is "+count);} 
+\noindent{\bf Creating the File:} Type ``{\tt gvim Lab2.java}''. Inside the {\tt gvim} editor, make sure you are {\em
+not} in insert mode. That is, the word ``{\tt --INSERT--}'' should {\em not} appear in the lower left corner. Then, type
+the following exactly as shown; it will appear in the bottom line of the {\tt gvim} window: 
+
+\begin{center} \verb$:r../Template.java$ \end{center} 
+
+This ``reads'' your {\tt Template.java} file into your new {\tt Lab2} program.  You only need to do this once!  Now you
+need to modify {\tt Lab2.java} to include your name, the lab number, date, etc.
+
+In your program for this laboratory assignment you will need to create variables and assign values to them. To create a
+variable you must declare it by specifying its type (e.g., {\tt String}, {\tt boolean}, or {\tt int}) and the name of
+the variable that you chose; for example, a full example would be ``{\tt int count;}'').  To assign the value to a
+variable after you have declared it, you need to write an assignment statement using an assignment operator `{\tt =}',
+as, for example, ``{\tt count = 0;}'' You may combine the variable declaration and assignment into one statement as in
+``{\tt int count = 0;}'' You may print variables by incorporating them into a print or println statement by using `{\tt
++}' and the name of the variable as in {\tt System.out.println("My first variable is " + count);} 
 
  Complete the laboratory assignment by writing the Java statements needed to perform several simple
 arithmetic calculations and print the results. See an example below. Obviously you may not use this!
