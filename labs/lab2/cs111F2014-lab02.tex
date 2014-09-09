@@ -212,28 +212,33 @@ When you have corrected all of the errors, then you can type:
 \end{quote}
 \vspace*{-.1in}
 
-Did you get the desired result? If not, repair the program and go back to
-the {\tt javac} command to re-compile it.
-
-The cycle goes on like that: {\tt javac} is used to re-compile the
-program every time you make a change
-to the file. Use {\tt java} to execute the program once {\tt javac}
-finds no more errors.
+Did you get the desired result? If not, repair the program and re-run the {\tt javac} command to re-compile it.  The
+cycle goes on like this: {\tt javac} is used to re-compile the program every time you make a change to the file and then
+you use {\tt java} to execute the program once {\tt javac} finds no more errors. You may review a graphical summary of
+these steps by looking at the diagrams in Figures 1.20 and 1.21 of your textbook. Please see an instructor if you
+have questions about these steps.
 
 \subsection*{Required Deliverables}
-This assignment asks you to submit electronic versions of the following deliverables through
-a bitbucket repository that you created during practical 1: 
-\begin{itemize}
-	\item A completed, properly commented and formatted {\tt Lab2.java} program.
-	\item The output from running {\tt Lab2} in the terminal window. You may use {\tt gvim} to save
-	your output as follows: using the mouse,
-select everything from the ``{\tt java Lab2}'' command to the end of your output.
-Right-click on the selected text and copy it.
-Type ``{\tt gvim output}'' [Note that this {\em not} a Java program!]
-and use the ``paste'' command to paste your program output into the file.
- Save this file.
-\end{itemize}
 
-Share your program and the output file through your repository with me by using `add', `commit' and `push' commands correctly. When you are done, please check through bitbucket website that your `lab2' directory in your repository contains two files: {\tt Lab2.java} and {\tt output}.
+This assignment invites you to submit electronic versions of the following deliverables through the Bitbucket repository that
+you created during the first practical assignment.  In addition, students should submit signed and printed versions of all
+the required deliverables.
+
+\begin{enumerate}
+
+	\item A completed, properly commented and formatted {\tt Lab2.java} program.
+
+        \item The output from running {\tt Lab2} in the terminal window. You may use {\tt gvim} to save your output as
+          follows: using the mouse, select everything from the ``{\tt java Lab2}'' command to the end of your output.
+          Right-click on the selected text and copy it.  Type ``{\tt gvim output}''---note that this {\em not} a Java
+          program!---and use the ``File/Paste'' menu item to paste your program output into the file.  Now, use ``{\tt
+          :w}'' or the ``File/Save'' menu item to save this file.
+
+\end{enumerate}
+
+Share your program and the output file with me through your Git repository by correctly using ``{\tt git add}'', ``{\tt
+git commit}'', and ``{\tt git push}'' commands. When you are done, please ensure that the Bitbucket Web site has
+a ``{\tt lab2}'' directory in your repository with the two files called {\tt Lab2.java} and {\tt output}. You should see 
+the instructor if you have questions about assignment submission.
 
 \end{document}
