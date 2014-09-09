@@ -1,0 +1,160 @@
+\input{111pre}
+\begin{document}
+\MYTITLE{Practical 2\\23--24 January 2014\\Due in Sakai by midnight of the day of your practical \\ ``Checkmark'' grade}
+%\MYHEADERS{Recitation 2}{Due same day, midnight}
+
+\subsection*{Summary}
+Create a Java program that prints something ``interesting'' and upload
+it to your Sakai drop box. See the end
+of the assignment for a few hints and suggestions.
+
+\subsection*{Review the Textbook}
+Be sure to read section 2.1 of your book---it explains how to print some of the
+special characters. (This is also discussed at the end of this assignment.)
+
+\subsection*{Exercise: Print Something ``Interesting''}
+Create a Java program that uses a sequence of {\em no
+more than ten} {\tt System.out.println} statements to print something
+``interesting.'' You may {\em not} use any other features of Java, such as
+variables, loops, etc.  However, you are {\em required} to use at least
+one of the ``escaped'' characters, such as \verb$\"$ or \verb$\\$. You
+can ``cheat'' and get pictures taller than ten lines by using the \verb$\n$
+character in your {\tt println} statements.
+
+Your program must print your name and today's date (using ``{\tt new Date()}''). 
+This will not count as part of your ten print statements.
+
+\begin{quote}
+You must come up with an {\em original} design---{\em under no circumstances} 
+should you 
+copy a design from another source, such as an ``ASCII Art'' web site. (However,
+you may look at such sites for inspiration.)
+\end{quote}
+
+Here are two examples (try them!)
+\newpage
+
+\subsection*{Example 1: File ``{\tt PrintName.java}''}
+\begin{verbatim}
+     //**********************************
+     // Janyl Jumadinova
+     // Recitation 2, 22 January 2014
+     //
+     // Prints my name
+     //**********************************
+     import java.util.Date;
+     public class PrintName
+     {
+       public static void main(String[] args)
+       {
+          System.out.println("Janyl Jumadinova, CMPSC 111\n" + new Date() + "\n");
+          System.out.println(" ____        __");
+          System.out.println("  |  \\        |");
+          System.out.println("  |__/   __   |__");
+          System.out.println("  |  \\  /  \\  |  \\");
+          System.out.println(" _|__/  \\__/ _|__/");
+       }
+     }
+\end{verbatim}
+
+\noindent{\bf OUTPUT:}
+\begin{verbatim}
+     jjumadinova@aldenv5:~$ javac PrintName.java
+     jjumadinova@aldenv5:~$ java PrintName
+     Janyl Jumadinova, CMPSC 111
+     Wed Jan 22 21:04:41 EST 2014
+     
+      ____        __
+       |  \        |
+       |__/   __   |__
+       |  \  /  \  |  \
+      _|__/  \__/ _|__/
+\end{verbatim}
+
+\newpage
+
+\subsection*{Example 2: File ``{\tt PrintFace.java}''}
+\begin{verbatim}
+     //**********************************
+     // Janyl Jumadinova
+     // Recitation 2, 22 January 2014
+     //
+     // Prints a face
+     //**********************************
+     import java.util.Date;
+     public class PrintFace
+     {
+       public static void main(String[] args)
+       {
+          System.out.println("Janyl Jumadinova, CMPSC 111\n" + new Date() + "\n");
+          System.out.println("   \\\\\\|||///");
+          System.out.println("   /       \\");
+          System.out.println("   | -- -- |");
+          System.out.println("  @|  O O  |@");
+          System.out.println("   |   V   |");
+          System.out.println("    \\ \\_/ /");
+          System.out.println("     \\___/");
+       }
+     } 
+\end{verbatim}
+\noindent{\bf OUTPUT:}
+\begin{verbatim}
+     jjumadinova@aldenv5:~$ javac PrintFace.java
+     jjumadinova@aldenv5:~$ java PrintFace
+     Janyl Jumadinova, CMPSC 111
+     Wed Jan 22 21:11:55 EST 2014
+     
+        \\\|||///
+        /       \
+        | -- -- |
+       @|  O O  |@
+        |   V   |
+         \ \_/ /
+          \___/
+\end{verbatim}
+
+\subsection*{When You Are Finished}
+Upload your program to your Sakai Drop Box. You do {\em not} have to
+hand in a hard copy of anything---just upload your Java program.
+
+\subsection*{A Few Hints}
+The name of your program file (for instance, ``{\tt PrintFace.java}'')
+must be the same as the name in the ``{\tt public class ...}''
+statement---see earlier examples.
+
+The characters ``\verb$\$'' (backslash) and ``\verb$"$'' (double-quote)
+require special handling. To print them out, you need to put an extra
+``\verb$\$'' in front of them. For instance,
+\begin{quote}
+The statement:\ \ \ \ \ \ \ \verb$System.out.println("backslash: \\, quote: \"");$\\
+prints:\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 
+\verb$backslash: \, quote: "$
+\end{quote}
+\subsection*{General Guidelines for Recitation Sessions}
+\begin{itemize}
+\item
+{\bf Experiment!} 
+Practical sessions are for learning by doing
+without the pressure of grades or ``right/wrong'' answers. So try
+things!  The best way to learn is by trying things out.
+\item
+{\bf Submit \textbf{\textit{something}}.} Your grade is just 0 or 1,
+depending on whether or not you attempt the work and upload something to 
+Sakai. 
+\item
+{\bf Try to Finish During Class.} Practical exercises are not intended
+to be the equal of laboratory assignments. If you are simply a slow
+typist, I've given you until the end of the day, but ideally you should
+upload a file, even a non-working one, by the end of the class period and 
+be finished with it.
+\item
+{\bf Help One Another!} 
+If your neighbor is struggling and you know what
+to do, offer your help. Don't ``do the work'' for them, but advise them on what
+to type or how to handle things.
+\item
+{\bf Review the Honor Code policy on the syllabus.} Remember that you
+may discuss programs with others, but programs that are nearly identical
+to others will be taken as evidence of violating the Honor Code.
+\end{itemize}
+\end{document}
