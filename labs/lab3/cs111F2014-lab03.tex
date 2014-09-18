@@ -5,11 +5,11 @@
 \begin{document}
 \MYTITLE{Lab 3 for Sections 03 and 04\\18 September 2014\\Due Thursday, 25 September by 2:30 pm}
 
-\vspace{-0.25in}
+\vspace{-0.275in}
 \subsection*{Objectives}
 
-To gain more experience working with variables and expressions; write a Java program with user input by correctly
-employing a {\tt Scanner} object and its methods.
+To gain more experience working with variables and expressions you will write a Java program with user input by
+correctly employing a {\tt Scanner} object and its methods.
 
 \vspace{-0.15in}
 \subsection*{General Guidelines for Labs}
@@ -38,7 +38,7 @@ To learn more about variables, expressions, and user input, review Sections 2.1-
 
 In your {\tt cs111F2014-<your user name>} directory type the command ``{\tt mkdir lab3}'' to create a new directory for
 the third laboratory.  \noindent Type ``{\tt cd lab3}'' to change into this new directory.  To create the required file,
-type ``{\tt gvim Lab3.java}''. Begin your program by including the ``{\tt Template.java}'' file that you created during
+type ``{\tt gvim Lab3.java}''. Begin your program by including the {\tt Template.java} file that you created during
 the last laboratory session (if you don't have one, you can still create one if you'd like---it will save you time!).
 Assuming that your {\tt Template.java} file is inside the {\tt labs/} directory, but not inside the {\tt lab3/}
 directory, you need to type: ``{\tt :r../Template.java}'' in {\tt gvim} to read your program template.  See last week's
@@ -49,8 +49,10 @@ terminal window ``{\tt ..}'' stands for ``go back one directory'' and ``{\tt .}'
 \subsection*{Tip and Bill Calculator}
 
 This laboratory assignment asks you to write a Java program named ``{\tt Lab3.java}'' that will calculate the tip, the
-total bill for the user, and each person's share of the restaurant bill (if there are more than two people). In
+total bill for the user, and each person's share of the restaurant bill (if there are two or more people). In
 particular, your program needs to do the following: 
+
+\vspace*{-.1in}
 \begin{enumerate}
 \item Ask the user to enter their name (remember to save the user's input into a variable).
 \item Display a friendly and appropriate welcome message to the user using his or her name. 
@@ -74,6 +76,7 @@ particular, your program needs to do the following:
 \item Display to the user an exit message that is suitable for an academic setting.
 \end{enumerate}
 
+\noindent
 A sample run of this program is shown below:
 \begin{verbatim}
       jjumadinova@aldenv5:~/lab3$ javac Lab3.java
@@ -98,10 +101,10 @@ A sample run of this program is shown below:
 Some points to remember as your complete this assignment:
 \begin{itemize}
 \item You will need to use the {\tt Scanner} class. Don't forget to import it at the top of your program. You may refer to
-  class examples for samples of {\tt Scanner} usage. 
+  class examples for code samples demonstrating the use of the {\tt Scanner}. 
 \item Think carefully about what data type you want to use for your variables.
-\item Your program only needs to have one method {\tt main}.
-\item To display a dollar sign you can just type ``\$'' inside the string of your print statement. 
+\item Your program only needs to have one {\tt main} method.
+\item To display a dollar sign you can just type ``\$'' inside the string of your output statement. 
 \item Note that your program will alternate between printing and computing---this 
 is okay!
 \end{itemize}
@@ -140,7 +143,7 @@ the instructor if you have questions about assignment submission.
 \vspace{-0.1in}
 \subsection*{A Special Challenge}
 
-You may decide to try to format your floating point valued output to contain only a certain number of decimal places.
+You may decide to try to format your floating-point-valued output to contain only a certain number of decimal places.
 Read ahead to Section 3.6 in Chapter 3 to see how you can do this---or ask your instructor or a teaching assistant for
 some suggestions for completing this challenge!
 
