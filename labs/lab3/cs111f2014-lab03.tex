@@ -1,0 +1,130 @@
+%!TEX root=cs111F2014-lab03.tex
+% mainfile: cs111F2014-lab03.tex
+
+\input{111pre}
+\begin{document}
+\MYTITLE{Lab 3 for Sections 03 and 04\\18 September 2014\\Due Thursday, 25 September by 2:30 pm}
+%\MYHEADERS{Lab 2}{Due 12 Sep, 2pm}
+
+\vspace{-0.15in}
+\subsection*{Objectives}
+
+To gain more experience working with variables and expressions; write a Java program with user input employing a {\tt Scanner} object and its methods appropriately.
+
+\vspace{-0.15in}
+\subsection*{General Guidelines for Labs}
+\begin{itemize}
+\item
+{\bf Work on the Alden Hall computers.} If you want to work on a different
+machine, be sure to transfer your programs to the Alden
+machines and re-run them before submitting.
+\item
+{\bf Update your repository often!} You should add, commit, 
+and push your updated files each time you work on them.  I will not grade 
+your programs until the due date has passed.
+\item
+{\bf Review the Honor Code policy.} You
+may discuss programs with others, but programs that are nearly identical
+to others will be taken as evidence of violating the Honor Code.
+\end{itemize}
+
+\vspace{-0.15in}
+\subsection*{Reading Assignment}
+
+Review sections 2.1--2.6 in your textbook. 
+
+\vspace{-0.15in}
+\subsection*{Create a New Directory and Upload the Template}
+
+In your {\tt cs111F2014-<your user name>} directory type the command ``{\tt mkdir lab3}'' to create a new directory for the third laboratory.
+\noindent Type ``{\tt cd lab3}'' to change into this new directory.  
+
+\noindent{\bf Creating the File:} Type ``{\tt gvim Lab3.java}''. Begin your program by including the ``{\tt Template.java}'' file
+that you created during the last laboratory session (if you don't have one, you can still create one if 
+you'd like---it will save you time!). Assuming that your {\tt Template.java} file is
+inside {\tt labs} directory, but not inside {\tt lab3} directory, you need to type:
+{\tt :r../Template.java} in {\tt gvim} to upload your template program. See last week's laboratory assignment
+for more information about the template.
+
+\vspace{-0.15in}
+\subsection*{Tip and Bill Calculator}
+This laboratory assignment asks you to write a Java program named ``{\tt Lab3.java}'' that will calculate the tip, the total bill for the user and each person's share of the restaurant bill (if there are more than two people). In particular, your program needs to do the following: 
+\begin{enumerate}
+\item Ask the user to enter their name (remember to save user's input into an appropriate variable).
+\item Display the welcome message to the user using his or her name (something nice and G-rated).
+\item Ask the user to enter the restaurant's bill amount (remember to save user's input into an appropriate variable). You should allow for floating point values.
+\item Ask the user to enter the desired tip percentage as a number between $0$ and $100$ or as a decimal number between $0$ and $1$. You have to decide which range you want to use for your program and specify it when prompting for user's input (remember to save user's input into an appropriate variable).
+\item Calculate the tip as $tip = \frac{percentage}{100} \times bill$ if percentage ranges between $0$ and $100$ or as $tip = percentage \times bill$ if percentage ranges between $0$ and $1$.
+\item Calculate the total bill as $total\_bill = bill+tip$
+\item Display to the user:
+	\begin{itemize}
+		\item The original bill (before the tip)
+		\item The tip amount
+		\item The total bill (including the tip)
+	\end{itemize}
+\item Ask the user how many people will be splitting the total bill (remember to save user's input into a variable).
+\item Calculate each person's share. For example if you saved the number of people splitting the bill into a variable called $numPeople$, then you would calculate each person's share as $share = \frac{total\_bill}{numPeople}$. You should think (or rethink) about the data types you are using and whether a data conversion is required at this point. 
+\item Display an exit message to the user (something nice and G-rated).
+\end{enumerate}
+
+A sample run of this program is shown below:
+\begin{verbatim}
+      jjumadinova@aldenv5:~/lab3$ javac Lab3.java
+      jjumadinova@aldenv5:~/lab3$ java Lab3
+      Janyl Jumadinova
+      Lab 3
+      Wed Sept 17 13:15:39 EDT 2014
+      
+      Please enter your name: Janyl
+      Janyl, welcome to the Tip Calculator!
+      Please enter the amount of your bill: 50
+      Please enter the percentage that you want to tip: 15
+      Your original bill was $50
+      Your tip amount is $7.5
+      Your total bill is $57.50
+      How many people will be splitting the bill? 2
+      Each person should pay $28.75
+      Have a nice day! Thank you for using our service.
+   
+\end{verbatim}
+\vspace{-0.2in}
+Some pointers to remember:
+\begin{itemize}
+\item You will need to use {\tt Scanner} class. Don't forget to import it. You may refer to class examples for samples of {\tt Scanner} usage. 
+\item Think carefully about what data type you want to use for your variables.
+\item Your program only needs to have one method {\tt main}.
+\item To display a dollar sign you can just type ``\$'' inside the string of your print statement. 
+\item Note that your program will alternate between printing and computing---this 
+is okay!
+\end{itemize}
+
+\vspace{-0.2in}
+\subsection*{Required Deliverables}
+For this assignment you are invited to submit electronic versions of the following deliverables through the Bitbucket repository. As you complete this step, you should make sure that you
+created a {\tt lab3/} directory within the Git repository.  Then, you can save all of the required deliverables in the
+{\tt lab3/} directory---please see the course instructor or a teaching assistant if you are not able to create your
+directory properly. 
+
+\begin{enumerate}
+
+	\item A completed, properly commented and formatted {\tt Lab3.java} program. Please make sure that your program prints your name, the lab number, and the date
+as the first few output lines of every program you write, and that it includes the comment header file with the Honor code, your name, date and the description of the program.
+
+        \item \textbf{Three} outputs from running {\tt Lab3} in the terminal window three times with three different user inputs for the bill, tip and the number of people splitting the bill. You may use {\tt gvim} to save all three of your outputs as
+          follows: using the mouse, select everything from the ``{\tt java Lab2}'' command to the end of your output.
+          Right-click on the selected text and copy it.  Type ``{\tt gvim output}''---note that this {\em not} a Java
+          program!---and use the ``Edit/Paste'' menu item to paste your program's output into the file.  Now, use ``{\tt
+          :w}'' or the ``File/Save'' menu item to save this file.
+
+\end{enumerate}
+\vspace{-0.1in}
+Share your program and the output file with me through your Git repository by correctly using ``{\tt git add}'', ``{\tt
+git commit}'', and ``{\tt git push}'' commands. When you are done, please ensure that the Bitbucket Web site has
+a {\tt lab3/} directory in your repository with the two files called {\tt Lab3.java} and {\tt output}. You should see 
+the instructor if you have questions about assignment submission.
+
+\vspace{-0.1in}
+\subsection*{A Special Challenge}
+You may decide to try to format your floating point valued output to contain only a certain number of decimal places. Read ahead to Chapter 3.6 to see how you can do this or ask your instructor or a teaching assistant!
+
+\end{document}
