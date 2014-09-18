@@ -1,0 +1,106 @@
+%!TEX root=cs111F2014-practical03.tex
+% mainfile: cs111F2014-practical03.tex
+
+\input{111pre}
+\begin{document}
+\MYTITLE{Practical 3\\18--19 September 2014\\Due in Bitbucket by midnight of the day of your practical \\ ``Checkmark'' grade}
+
+\subsection*{Summary}
+
+As a means of practicing with user input and output and the declaration of variables, and the creation of expressions in
+the Java programming language, you will write a ``Mad Libs'' program involving words, numbers, and some calculations.
+Then, using the {\tt git add}, {\tt git commit}, and {\tt git push} commands you should upload it to your Git repository
+hosted by Bitbucket.  
+
+\noindent
+If you have never heard of Mad Libs, please visit this Web site: \url{http://www.madlibs.com/}. 
+
+\subsection*{Review the Textbook}
+
+Be sure to read Sections 3.1 through 3.6 of your book to learn more about variables, data types, expressions, and user
+input.  As you review this material, try to make a list of questions about concepts that you do not yet fully
+understand.  In addition to discussing these questions with the teaching assistants and the course instructor, try to
+answer them as your complete this assignment.
+
+\subsection*{Exercise: Print Something ``Interesting''}
+
+Your program should ask the user to enter words and numbers, then print out
+a story using those words and numbers. The numbers should be used to
+calculate something which will also be printed out. See Figure \ref{mad}
+for an example, but I hope you will create your own story!
+
+\begin{figure}[htbp]
+\begin{Verbatim}[commandchars=\\\{\}]
+aldenv27:rec4 rroos$ \textcolor{red}{javac MadLib.java}
+aldenv27:rec4 rroos$ \textcolor{red}{java MadLib}
+Your name, Practical 4
+Thu Feb 07 13:11:17 EST 2013
+
+Enter a singular noun: \textcolor{red}{noggin}
+Enter an adjective: \textcolor{red}{verboten}
+Enter another adjective: \textcolor{red}{glitzy}
+Enter a non-zero whole number: \textcolor{red}{32}
+Enter another non-zero whole number: \textcolor{red}{42}
+Enter any number: \textcolor{red}{5.43}
+Enter a singular verb: \textcolor{red}{snooze}
+
+----------------------------------
+
+    Third-Grade Word Problem
+
+If you own 32 verboten noggins,
+and you purchase 42 glitzy noggins,
+how many more noggins do you need to snooze 5.43 noggins?
+
+Answer: You need -68.57 more noggins.
+\end{Verbatim}
+\caption{Sample ``Mad Libs'' output; user input is in red}
+\label{mad}
+\end{figure}
+
+Have fun!
+
+Remember to {\tt import java.util.Scanner} and to create a {\tt Scanner}
+variable (named {\tt scan}, but you can name it something else if you want);
+use things like \verb$... = scan.next()$, \verb$... = scan.nextInt()$, and
+\verb$... = scan.nextDouble()$ to read in strings, integers, and general
+numbers. Output should be neat and make good use of white space and
+labeling.
+
+At the end of the period, or by midnight of the day of your practical,
+upload the file you just created (only the {\tt .java} file, nothing else).
+
+If you were unable to complete the exercise and have nothing to upload,
+please send me an email with the subject line ``Practical 4'' and
+tell me what problems you encountered so that I can help you. (Actually,
+email me if you had any problems or questions, even if you uploaded something.)
+
+
+\subsection*{General Guidelines for Practical Sessions}
+\begin{itemize}
+\item
+{\bf Experiment!} 
+Practical sessions are for learning by doing
+without the pressure of grades or ``right/wrong'' answers. So try
+things!  The best way to learn is by trying things out.
+\item
+{\bf Submit \textbf{\textit{something}}.} Your grade is just 0 or 1,
+depending on whether or not you attempt the work and upload something to 
+Sakai. 
+\item
+{\bf Try to Finish During Class.} Practical exercises are not intended
+to be the equal of laboratory assignments. If you are simply a slow
+typist, I've given you until the end of the day, but ideally you should
+upload a file, even a non-working one, by the end of the class period and 
+be finished with it.
+\item
+{\bf Help One Another!} 
+If your neighbor is struggling and you know what
+to do, offer your help. Don't ``do the work'' for them, but advise them on what
+to type or how to handle things.
+\item
+{\bf Review the Honor Code policy on the syllabus.} Remember that you
+may discuss programs with others, but programs that are nearly identical
+to others will be taken as evidence of violating the Honor Code.
+\end{itemize}
+\end{document}
