@@ -1,0 +1,107 @@
+%!TEX root=cs111F2014-lab04.tex
+% mainfile: cs111F2014-lab04.tex
+
+\input{111pre}
+\begin{document}
+\MYTITLE{Lab 4 for Sections 03 and 04\\25 September 2014\\
+Due Thursday, 2 October by 2:30pm }
+
+\subsection*{Objectives}
+\vspace{-0.05in}
+
+To gain more experience using graphics methods in Java; to learn to creatively use appropriate methods to produce a
+stunning piece of art; to get familiar with how two Java classes may interact. 
+
+\subsection*{General Guidelines for Labs}
+\vspace{-0.05in}
+\begin{itemize}
+\item
+{\bf Work on the Alden Hall computers.} If you want to work on a different
+machine, be sure to transfer your programs to the Alden
+machines and re-run them before submitting.
+\item
+{\bf Update your repository often!} You should add, commit, 
+and push your updated files each time you work on them.  I will not grade 
+your programs until the due date has passed.
+\item
+{\bf Review the Honor Code policy.} You
+may discuss programs with others, but programs that are nearly identical
+to others will be taken as evidence of violating the Honor Code.
+\end{itemize}
+
+\subsection*{Reading Assignment}
+\vspace{-0.05in}
+To learn more about Java graphics, please review Sections 2.7--2.9 in your textbook. 
+
+\subsection*{Obtain the Given Template Programs}
+\vspace{-0.05in}
+
+In the course's ``share'' repository, after you type {\tt git pull} command, go to the {\tt lab4/} directory, where you
+will find two Java programs: {\tt Lab4Display.java} and {\tt Lab4.java}. Using the graphical file browser or the
+terminal window, copy the {\tt lab4/} directory from the ``share'' repository to your own {\tt cs111F2014-<your user
+name>} repository inside {\tt labs/} directory.
+
+\subsection*{Using Java to Create a Masterpiece}
+
+In {\tt Lab4Display.java} program, you need to add a comment header with the Honor pledge, your name, date, lab number,
+and the purpose of the program. Then you need to modify the line that starts with ``{\tt JFrame window}'' by printing
+your own name. This is all you need to do for this class! You should also note that you may change the size of the
+window by modifying the width and the height in the ``{\tt window.setSize(600, 400);}'' line. 
+
+In {\tt Lab4.java} program you will create your drawing. First, add a comment header to this class as well.  Then, try
+to come up with some interesting, yet simple image ideas: a cactus in a pot, a hat on a face, a fish in the sea, or
+something more innovative.  Then try to figure out a way to draw them using only rectangles, ovals, arcs, and straight
+lines.  Finally, try to translate your idea using Java methods like {\tt fillRect}, {\tt drawOval}, {\tt fillArc}, and
+{\tt drawLine}. Notice that the name of the graphics object is {\tt page}, so to use a method {\tt fillRect} you will
+need do something like: {\tt page.fillRect(10,10,50,50)} as shown in class.  You may find it helpful to create your
+drawing on paper first! Please see the course instructor or a teaching assistant if you have a question.
+
+\subsubsection*{Program Requirements}
+\begin{itemize}
+\item The {\tt paint} method in the {\tt Lab4} class must have at least \textbf{ten} objects (these could be things like rectangles, ovals, arcs, strings, or lines), of at least \textbf{three} different types.
+\item Your drawing should be a concrete representation of something, it can not be just randomly placed rectangles and
+  ovals without a clear meaning. 
+\item Your program should declare and use integer variables to keep track of
+the location of the object(s) instead of only using numeric literals. 
+\end{itemize}
+
+\begin{sloppypar}
+Remember to compile both files ({\tt Lab4.java} and {\tt Lab4Display.java}), you may use the ``{\tt javac *.java}''
+command to compile all the {\.java} files in your directory. You only need to run {\tt Lab4Display.java} since it is the
+one that contains the {\tt main} method, and then look for the pop-up window (with a Java symbol). You should compile and run
+your programs incrementally after drawing each object, instead of waiting until you finish entering commands for your
+entire drawing. 
+\end{sloppypar}
+
+\subsection*{Required Deliverables}
+
+In addition to submitting signed and printed versions of all materials, for this assignment you are invited to submit
+electronic versions of the following deliverables through the Bitbucket repository. As you complete this step, you
+should make sure that you created a {\tt lab4/} directory within the Git repository.  Then, you can save all of the
+required deliverables in the {\tt lab4/} directory---please see the course instructor or a teaching assistant if you are
+not able to create your directory properly. 
+
+\begin{enumerate}
+
+        \item A completed, properly commented and formatted {\tt Lab4.java} and {\tt Lab4Display.java} program. Please
+          make sure that your programs  include the comment header file with the Honor code, your name, date and the
+          description of the program.
+
+        \item An output (your drawing) from running {\tt Lab4Display} in the terminal window. You can take a screenshot
+          of your output, paste in into another software application (e.g., LibreOffice or gimp) and save it. Please see
+          the instructor or a teaching assistant if you have questions about creating an electronic version of your
+          output.
+
+\end{enumerate}
+
+\vspace{-0.1in}
+
+Share your program and the output file with me through your Git repository by correctly using ``{\tt git add}'', ``{\tt
+git commit}'', and ``{\tt git push}'' commands. When you are done, please ensure that the Bitbucket Web site has a {\tt
+lab4/} directory in your repository with the three files called {\tt Lab4.java}, {\tt Lab4Display.java}, and {\tt
+output}. You should see the instructor if you have questions about assignment submission using the {\tt git} commands.
+
+
+
+
+\end{document}
