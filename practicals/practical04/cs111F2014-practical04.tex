@@ -19,7 +19,7 @@ Bitbucket.
 \subsection*{Review Additional Resources}
 \vspace*{-.05in}
 
-Since your textbook does not include an informative discussion about {\tt gvim}, you will need to review some additional print
+Since your textbook does not include a detailed discussion about {\tt gvim}, you will need to review some additional print
 and online resources that explain how to become more adept at editing the text of a Java program.  First, please take
 turns scanning the chapters in the ``Practical Vim'' book that the course instructor brings to the practical session. If
 you want to further improve your ``essential Vim skills'' so that you can ``edit text at the speed of thought'', then
@@ -35,13 +35,15 @@ explains that this Vim distribution is ``designed for programming'', which is ex
 can learn more about spf13-vim by visiting the following Web sites.  As you are reading this material, please ask a
 course instructor or a teaching assistant if you encounter something that is hard to understand.
 
+\vspace*{-.1in}
 \begin{itemize}
+  \setlength{\itemsep}{.01in}
   \item The main spf13-vim Web site: \url{http://vim.spf13.com/}
   \item Explaining the benefits of spf13-vim: \url{http://spf13.com/post/why-i-use-spf13-vim/}
   \item The GitHub page for spf13-vim: \url{https://github.com/spf13/spf13-vim}
 \end{itemize}
 
-\vspace*{-.20in}
+\vspace*{-.30in}
 \subsection*{Installing and Using spf13-vim} 
 \vspace*{-.05in}
 
@@ -57,36 +59,71 @@ will not be able to improve your configuration of {\tt gvim}. Once you have type
 programs will be downloaded and installed by a package manager.  Try to observe what is happening and take notes about
 what you see. Do you recognize the names of any of the {\tt gvim} plugins as they are being installed?
 
+Now you are ready to use your improved version of {\tt gvim}.  Using your terminal window, please go into the {\tt
+practicals/practical01/} directory to find the {\tt Kinetic.java} program that you studied during the first practical
+assignment. You can edit this file by typing the command ``{\tt gvim Kinetic.java}'' in your terminal. Please carefully
+study the new design of {\tt gvim}---what are five ways in which it is now different from the ``default'' configuration that
+you were using previously? To best answer this question, you should add
+some new lines of code to {\tt Kinetic.java}.
 
+There are many steps that you can take to further configure the {\tt gvim} text editor.  For instance, by using the
+``Edit/Color Scheme'' menu item you can change the way in which {\tt gvim} uses color to highlight the syntactic
+elements of a Java program. Additionally, spf13-vim installs many plugins that you can use to write Java programs more
+efficiently.  If you study the main spf13-vim Web site, you will notice that some of the plugins are activated by
+pressing the ``{\tt <Leader>}'' key when you are in command mode; your current configuration of {\tt gvim} uses the
+comma key (i.e., ``{\tt ,}'') as the leader key. After adjusting the color scheme to suite your taste, you should learn
+how to use at least one of the plugins that spf13-vim has installed.  How does your chosen plugin work?  What features
+does it provide? Do you plan to use this plugin on a regular basis? Why or why not? 
 
+Learning how to write Java programs in {\tt gvim} is similar to learning a new human language.  That is, the {\tt gvim}
+text editor has its own ``language'' that you can learn.  For instance, pressing the ``{\tt =}'' key in {\tt gvim}'s
+command mode will format a line of text with proper indentation.  In addition, the ``{\tt gg}'' and ``{\tt G}'' commands
+respectfully move the {\tt gvim} cursor to the top and bottom of your Java program.  Knowing these facts, what do you
+think that the ``{\tt gg=G}'' command does? Of course, {\tt gvim}'s language includes a wide variety of additional
+commands like ``{\tt u}'', ``{\tt d}'', ``{\tt dd}'', and ``{\tt dip}''.  How do these commands allow you to manipulate
+your Java program?
+
+\vspace*{-.15in}
+\subsection*{Completing the Practical Assignment}
+\vspace*{-.15in}
+
+To complete this practical assignment, you should create a {\tt practicals/practical04/} directory in your Bitbucket
+repository. Then, you should use your newly configured version of {\tt gvim} to create a file called ``{\tt
+  responses}''. Inside of this file, you should provide an answer to all of the questions that were posed in this
+assignment sheet. That is, you can retype the question that you see in the assignment sheet and then write your answer
+below it. For example, one of the questions that the assignment poses is ``how does your chosen plugin work?'' Finally,
+you should turn in a screenshot that shows your re-configured {\tt gvim} editing the {\tt Kinetic.java} program.
+
+% \newpage
 \vspace*{-.15in}
 \subsection*{General Guidelines for Practical Sessions}
 \vspace*{-.05in}
+
 \begin{itemize}
 
-\item {\bf Experiment!} Practical sessions are for learning by doing without the pressure of grades or ``right/wrong''
-  answers. So try things!  The best way to learn is by trying things out.
+% \item {\bf Experiment!} Practical sessions are for learning by doing without the pressure of grades or ``right/wrong''
+%   answers. So try things!  The best way to learn is by trying things out.
 
 \item {\bf Submit \textbf{\textit{Something}}.} Your grade for this assignment is a ``checkmark'' indicating whether you
   did or did not complete the work and submit something to the Bitbucket repository using the ``{\tt git add}'', ``{\tt
     git commit}'', and ``{\tt git push}'' commands.
 
-\item {\bf Practice Key Laboratory Skills.} As you are completing this assignment, practice using the {\tt {\tt gvim}} text
-  editor and the Ubuntu terminal until you can easily use their most important features.  Additionally, ask
-  a teaching assistant or a course instructor to teach you some of the advanced features of {\tt {\tt gvim}} and the
-  terminal, thereby helping you to work more effectively. 
+% \item {\bf Practice Key Laboratory Skills.} As you are completing this assignment, practice using the {\tt {\tt gvim}} text
+%   editor and the Ubuntu terminal until you can easily use their most important features.  Additionally, ask
+%   a teaching assistant or a course instructor to teach you some of the advanced features of {\tt {\tt gvim}} and the
+%   terminal, thereby helping you to work more effectively. 
 
-\item {\bf Try to Finish During the Class Session.} Practical exercises are not intended to be the equal of the
-  laboratory assignments. If you are simply a slow typist, I've given you until the end of the day, but ideally you
-  should upload a file, even a non-working one, by the end of the class period. You also should ensure that, for this
-  assignment and all subsequent assignments, you can confidently upload files to your Git repository during the
-  practical session.
+% \item {\bf Try to Finish During the Class Session.} Practical exercises are not intended to be the equal of the
+%   laboratory assignments. If you are simply a slow typist, I've given you until the end of the day, but ideally you
+%   should upload a file, even a non-working one, by the end of the class period. You also should ensure that, for this
+%   assignment and all subsequent assignments, you can confidently upload files to your Git repository during the
+%   practical session.
 
-\item {\bf Help One Another!} If your neighbor is struggling and you know what to do, offer your help. Don't ``do the
-  work'' for them, but advise them on what to type or how to handle things. If you are stuck on a part of this practical
-  session and you could not find any insights in either your textbook or online sources, formulate an intelligent
-  question to ask your neighbor, a teaching assistant, or a course instructor. Try to strike the right balance between
-  asking for help when you cannot solve a problem and working independently to find a solution.
+% \item {\bf Help One Another!} If your neighbor is struggling and you know what to do, offer your help. Don't ``do the
+%   work'' for them, but advise them on what to type or how to handle things. If you are stuck on a part of this practical
+%   session and you could not find any insights in either your textbook or online sources, formulate an intelligent
+%   question to ask your neighbor, a teaching assistant, or a course instructor. Try to strike the right balance between
+%   asking for help when you cannot solve a problem and working independently to find a solution.
 
 \item {\bf Update Your Repository Often!} You should {\tt add}, {\tt commit}, and {\tt push} your updated files each
   time you work on them, always including descriptive messages about each code change.
@@ -94,5 +131,6 @@ what you see. Do you recognize the names of any of the {\tt gvim} plugins as the
 \item {\bf Review the Honor Code Policy on the Syllabus.} Remember that while you may discuss programs with other
   students in the course, programs that are nearly identical to, or merely variations on, the work of others will be
   taken as evidence of violating the Honor Code.
+
 \end{itemize}
 \end{document}
