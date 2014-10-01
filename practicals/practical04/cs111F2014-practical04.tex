@@ -1,0 +1,108 @@
+%!TEX root=cs111F2014-practical04.tex
+% mainfile: cs111F2014-practical04.tex
+
+\input{111pre}
+\begin{document}
+\MYTITLE{Practical 4\\2--3 October 2014\\Due in Bitbucket by midnight of the day of your practical \\ ``Checkmark'' grade}
+
+\vspace*{-.2in}
+\subsection*{Summary}
+\vspace*{-.05in}
+
+As a means for becoming more proficient when editing Java programs, you will customize your GVim text editor, observe
+and document the changes that are evident after customization, and then explore additional commands that you can use in
+GVim to quickly manipulate Java code.  Then, using the {\tt git add}, {\tt git commit}, and {\tt git push} commands you
+should upload a written reflection on your experiences to your Git repository hosted by Bitbucket.  
+
+\vspace*{-.15in}
+\subsection*{Review Additional Resources}
+\vspace*{-.05in}
+
+Since your textbook does not include an informative discussion about GVim, you will need to review some additional print
+and online resources that explain how to become more adept at editing the text of a Java program.  First, please take
+turns scanning the chapters in the ``Practical Vim'' book that the course instructor brings to the practical session. If
+you want to further improve your ``essential Vim skills'' so that you can ``edit text at the speed of thought'', then
+you should also visit the \url{http://vimcasts.org/} Web site to watch the screencasts and read the articles about Vim.
+
+\vspace*{-.15in}
+\subsection*{Exercise: Implement a ``Mad Libs'' Program} 
+\vspace*{-.05in}
+Your program should ask the user to enter words and numbers, then print out a story using those words and numbers. The
+numbers should be used to calculate something which will also be printed out. See Figure \ref{mad} for an example---but,
+of course, you should create your own story!
+
+\begin{figure}[tb]
+\begin{Verbatim}[commandchars=\\\{\}]
+aldenv27:gkapfham$ \textcolor{red}{javac MadLib.java}
+aldenv27:gkapfham$ \textcolor{red}{java MadLib}
+Gregory M. Kapfhammer, Practical 3
+Thu Sep 17 13:11:17 EST 2014
+
+Enter a singular noun: \textcolor{red}{noggin}
+Enter an adjective: \textcolor{red}{verboten}
+Enter another adjective: \textcolor{red}{glitzy}
+Enter a non-zero whole number: \textcolor{red}{32}
+Enter another non-zero whole number: \textcolor{red}{42}
+Enter any number: \textcolor{red}{5.43}
+Enter a singular verb: \textcolor{red}{snooze}
+
+----------------------------------
+
+Third-Grade Word Problem
+
+If you own 32 verboten noggins,
+and you purchase 42 glitzy noggins,
+how many more noggins do you need to snooze 5.43 noggins?
+
+Answer: You need -68.57 more noggins.
+\end{Verbatim}
+\vspace*{-.1in}
+\caption{Sample ``Mad Libs'' output with user input highlighted in red.}
+\label{mad}
+\end{figure}
+
+% \begin{sloppypar}
+\noindent Remember to ``{\tt import java.util.Scanner}'' at the top of your Java program and to declare a {\tt Scanner}
+variable (named, for instance, {\tt scan}---but you can name it something else if you want). Please use statements like
+``{\tt... = scan.next()}'', ``{\tt... = scan.nextInt()}'', and ``{\tt... = scan.\\nextDouble()}'' to read in strings,
+integers, and double values. Your program should produce output that is neat and your program's source code must make
+good use of white space and labeling.
+% \end{sloppypar}
+
+\vspace*{-.15in}
+\subsection*{General Guidelines for Practical Sessions}
+\vspace*{-.05in}
+\begin{itemize}
+
+\item {\bf Experiment!} Practical sessions are for learning by doing without the pressure of grades or ``right/wrong''
+  answers. So try things!  The best way to learn is by trying things out.
+
+\item {\bf Submit \textbf{\textit{Something}}.} Your grade for this assignment is a ``checkmark'' indicating whether you
+  did or did not complete the work and submit something to the Bitbucket repository using the ``{\tt git add}'', ``{\tt
+    git commit}'', and ``{\tt git push}'' commands.
+
+\item {\bf Practice Key Laboratory Skills.} As you are completing this assignment, practice using the {\tt gvim} text
+  editor and the Ubuntu terminal until you can easily use their most important features.  Additionally, ask
+  a teaching assistant or a course instructor to teach you some of the advanced features of {\tt gvim} and the
+  terminal, thereby helping you to work more effectively. 
+
+\item {\bf Try to Finish During the Class Session.} Practical exercises are not intended to be the equal of the
+  laboratory assignments. If you are simply a slow typist, I've given you until the end of the day, but ideally you
+  should upload a file, even a non-working one, by the end of the class period. You also should ensure that, for this
+  assignment and all subsequent assignments, you can confidently upload files to your Git repository during the
+  practical session.
+
+\item {\bf Help One Another!} If your neighbor is struggling and you know what to do, offer your help. Don't ``do the
+  work'' for them, but advise them on what to type or how to handle things. If you are stuck on a part of this practical
+  session and you could not find any insights in either your textbook or online sources, formulate an intelligent
+  question to ask your neighbor, a teaching assistant, or a course instructor. Try to strike the right balance between
+  asking for help when you cannot solve a problem and working independently to find a solution.
+
+\item {\bf Update Your Repository Often!} You should {\tt add}, {\tt commit}, and {\tt push} your updated files each
+  time you work on them, always including descriptive messages about each code change.
+
+\item {\bf Review the Honor Code Policy on the Syllabus.} Remember that while you may discuss programs with other
+  students in the course, programs that are nearly identical to, or merely variations on, the work of others will be
+  taken as evidence of violating the Honor Code.
+\end{itemize}
+\end{document}
