@@ -74,6 +74,14 @@ input and output code to the {\tt CommandLineGeometer.java} file. Whenever possi
 pattern established in the provided source code. Please see a course instructor if you have questions!
 \end{sloppypar}
 
+As you continue to critically review the source code of the {\tt CommandLineGeometer}, you will notice that it does not
+always consistently produce output for the user.  For example, even though it displays the user-input radius before
+calling {\tt calculateSphereVolume}, it does not appropriately display the sides of the triangle for the {\tt
+  computeTriangleArea} method---can you please add in this feature? Moreover, none of the output of the {\tt double}
+variables in the {\tt CommandLineGeometer} is formatted in a consistent fashion. To solve this problem, you should use
+one of the techniques described in Section 3.6 of your textbook to format the output of all decimals to contain four
+decimal points. For instance, you may consider creating an instance of the {\tt DecimalFormat} class.
+
 \subsection*{Required Deliverables}
 
 This assignment invites you to submit electronic versions of the following deliverables through the Bitbucket repository
