@@ -12,7 +12,7 @@ In this laboratory assignment, you will learn more about using the {\tt java.lan
 calculations, further explore the creation of formatted output, learn how to use enumerated types, and practice calling
 methods in another Java class.  Additionally, since real-world software developers often have to debug source code
 created by other developers and add features to existing code, you will participate in a ``bug hunt'' and add new
-source code to an existing system. Ultimately, you will create a working program that comprised of two Java classes.
+source code to an existing system. Ultimately, you will create a working program comprised of two Java classes.
 
 \vspace*{-.1in}
 \subsection*{General Guidelines for Labs}
@@ -35,15 +35,16 @@ to others will be taken as evidence of violating the Honor Code.
 \vspace*{-.2in}
 \subsection*{Reading Assignment}
 
-After reviewing all of the assignment sheets for the past laboratory and practical sessions and the course slides and notes,
-you should read Sections 3.5 through 3.8 of your textbook.
+After reviewing all of the assignment sheets for the past laboratory and practical sessions and the course slides and
+notes, you should read Sections 3.5 through 3.8 of your textbook. To enhance your understanding of some points in this
+lab you may additionally review Figures 4.7 and 4.8
 
 \vspace*{-.1in}
 \subsection*{Participating in a ``Bug Hunt''}
 
 After changing into the {\tt cs111F2014-share/} directory, which contains our course's version control repository, you
 should type the command ``{\tt git pull}'' to download the source code for this laboratory assignment. Now, change into
-the {\tt labs/lab6} directory and use {\tt gvim} to study the source code of the {\tt CommandLineGeometer.java} and {\tt
+the {\tt labs/lab6/} directory and use {\tt gvim} to study the source code of the {\tt CommandLineGeometer.java} and {\tt
   GeometricCalculator.java} files. What methods do these classes provide? How do they work? Does any of this code look
 incorrect? Why?
 
@@ -82,36 +83,77 @@ variables in the {\tt CommandLineGeometer} is formatted in a consistent fashion.
 one of the techniques described in Section 3.6 of your textbook to format the output of all decimals to contain four
 decimal points. For instance, you may consider creating an instance of the {\tt DecimalFormat} class.
 
+Finally, please notice that none of the provided code is properly commented.  As part of this assignment, you should add
+detailed comments to your code, following the textbook's standard. Please see the instructor if you are
+not sure how or where to add comments to your program.
+
+\vspace*{-.1in}
+\subsection*{Exploring Features of Java}
+
+The {\tt CommandLineGeometer} program uses an enumerated type, as described in Section 3.7, to store specific values in
+a variable.  Intuitively, an enumerated type allows a variable to take on one of a pre-specified set of values or
+levels.  In this case, the {\tt GeometricShape} enumerated type can take on three possible values.  What are they? Why
+is it useful to declare and use this type of variable?
+
+You will notice that this laboratory assignment organizes the methods into two separate classes, as you have seen in
+past assignments and in-class exercises. In particular, the {\tt CommandLineGeometer} provides the user interface for
+our program and the {\tt GeometricCalculator} furnishes the methods that perform the required computations.  If you want
+to make changes to the way in which the program accepts input or produces output, then you will need to modify the {\tt
+  CommandLineGeometer}. Otherwise, if you want to modify the way in which the program performs a computation, or add a
+new computation, then you must make changes to the {\tt GeometricCalculator}. Overall, these two Java classes complete
+their work by following a pattern similar to that which is outlined in Figure 4.7 of your textbook. Please see the
+instructor if you have questions about this code organization.
+
+Additionally, it is important to note that this assignment asks you to add new methods to the {\tt
+  GeometricCalculator.java} file.  To complete this task, you should directly copy the pattern that you see in the
+provided methods, only making changes to implement the new functionality.  Also, these methods accept parameters, of
+type {\tt double}, that are passed from the {\tt main} method in the {\tt CommandLineGeometer} to one of the
+``calculate'' methods in the {\tt GeometricCalculator}. You should also notice that all of the methods return a {\tt
+  double} variable to the method that calls it.  Intuitively, the parameters are the ``input'' to a method and the return
+values are the ``output'' of the method.  When you create the required new methods, you should follow the pattern of the
+previously implemented method, ensuring that you have the same types of input and output.
+
+\vspace*{-.1in}
 \subsection*{Required Deliverables}
 
 This assignment invites you to submit electronic versions of the following deliverables through the Bitbucket repository
 that you created during the first practical assignment.  As you complete this step, you should make sure that you
-created a {\tt lab2/} directory within the Git repository.  Then, you can save all of the required deliverables in the
-{\tt lab2/} directory---please see the course instructor or a teaching assistant if you are not able to create your
+created a {\tt lab6/} directory within your Git repository.  Then, you can save all of the required deliverables in the
+{\tt lab6/} directory---please see the course instructor or a teaching assistant if you are not able to create your
 directory properly.  Additionally, students should submit signed and printed versions of all the required deliverables.
 
+\vspace*{-.05in}
 \begin{enumerate}
+    \setlength{\itemsep}{0pt}
+      \item A completed and properly commented and formatted {\tt CommandLineGeometer.java} class.
 
-	\item A completed, properly commented and formatted {\tt Lab2.java} program.
+        \item A completed and properly commented and formatted {\tt GeometricCalculator} class.
 
         \item The output from running {\tt Lab2} in the terminal window. You may use {\tt gvim} to save your output as
-          follows: using the mouse, select everything from the ``{\tt java Lab2}'' command to the end of your output.
-          Right-click on the selected text and copy it.  Type ``{\tt gvim output}''---note that this {\em not} a Java
-          program!---and use the ``Edit/Paste'' menu item to paste your program's output into the file.  Now, use ``{\tt
-          :w}'' or the ``File/Save'' menu item to save this file.
+          follows: using the mouse, select everything from the ``{\tt java CommandLineGeometer}'' command to the end of
+          your output.  Right-click on the selected text and copy it.  Type ``{\tt gvim output}''---note that this {\em
+            not} a Java program!---and use the ``Edit/Paste'' menu item to paste the output into the file.  Now, use
+          ``{\tt :w}'' or the ``File/Save'' menu item to save this file.
+
+        \item A written reflection on the challenges that you faced during the completion of this laboratory assignment.
+          Again using {\tt gvim} text editor, you can input your reflections into a file called ``{\tt reflection}'' and
+          then save this file in your Bitbucket repository.
 
 \end{enumerate}
+\vspace*{-.05in}
 
 Share your program and the output file with me through your Git repository by correctly using ``{\tt git add}'', ``{\tt
-git commit}'', and ``{\tt git push}'' commands. When you are done, please ensure that the Bitbucket Web site has
-a {\tt lab2/} directory in your repository with the two files called {\tt Lab2.java} and {\tt output}. You should see 
-the instructor if you have questions about assignment submission.
+  git commit}'', and ``{\tt git push}'' commands. When you are done, please ensure that the Bitbucket Web site has a
+{\tt lab6/} directory in your repository with the five files called {\tt CommandLineGeometer.java}, {\tt
+  GeometricCalculator.java}, {\tt output}, and {\tt reflection}. 
+
+% You should see the instructor if you have questions about assignment submission.
 
 In adherence to the Honor Code, students should complete this assignment on an individual basis. While it is appropriate
 for students in this class to have high-level conversations about the assignment, it is necessary to distinguish
 carefully between the student who discusses the principles underlying a problem with others and the student who produces
 assignments that are identical to, or merely variations on, someone else's work.  With the exception of the source code
-that was provided in the Git repository, deliverables that are nearly identical to the work of others will be taken as
-evidence of violating the \mbox{Honor Code}.  
+that was provided by the course instructor through the Git repository, deliverables that are nearly identical to the
+work of others will be taken as evidence of violating the \mbox{Honor Code}.  
 
 \end{document}
