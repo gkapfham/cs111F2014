@@ -14,6 +14,7 @@ methods in another Java class.  Additionally, since real-world software develope
 created by other developers and add features to existing code, you will participate in a ``bug hunt'' and add new
 source code to an existing system. Ultimately, you will create a working program that comprised of two Java classes.
 
+\vspace*{-.1in}
 \subsection*{General Guidelines for Labs}
 
 \begin{itemize}
@@ -31,15 +32,33 @@ may discuss programs with others, but programs that are nearly identical
 to others will be taken as evidence of violating the Honor Code.
 \end{itemize}
 
+\vspace*{-.2in}
 \subsection*{Reading Assignment}
 
-Please review the handout on ``Tips on Using Linux and Gvim'' (available in the shared repository in the ``handouts''
-  directory).  Also review lecture slides and Sections 2.2--2.6 in your textbook.
-
-\subsection*{Create a Program Template}
+After reviewing all of the assignment sheets for the past laboratory and practical sessions and the course slides and notes,
+you should read Sections 3.5 through 3.8 of your textbook.
 
 \vspace*{-.1in}
-\subsection*{Write a Java Program to Perform a Simple Calculation}
+\subsection*{Participating in a ``Bug Hunt''}
+
+After changing into the {\tt cs111F2014-share/} directory, which contains our course's version control repository, you
+should type the command ``{\tt git pull}'' to download the source code for this laboratory assignment. Now, change into
+the {\tt labs/lab6} directory and use {\tt gvim} to study the source code of the {\tt CommandLineGeometer.java} and {\tt
+  GeometricCalculator.java} files. What methods do these classes provide? How do they work? Does any of this code look
+incorrect? Why?
+
+After carefully reviewing the source code and PP 3.6, 3.7, and 3.9 on page 158 of your textbook and then compiling and
+running the {\tt CommandLineGeometer} class, you should notice that there are several defects in this program. As
+such, you will need to take part in a ``bug hunt'' to find and fix all of the problems! First, you should find the
+method responsible for calculating the volume of a sphere. Using the equation in PP 3.6 as a reference point, what is
+the defect in this method?
+
+The {\tt GeometricCalculator} also provides a method to calculate a triangle's area.  Once again, there is a
+mistake in this method.  Can you find and fix it? How did you know that this was the bug? If you investigate the source
+code of the method for calculating the volume of a cylinder, you will notice that there is another defect lurking in the
+source code. Wait! If you carefully study the way in which the {\tt CommandLineGeometer} calls the method
+provided by the {\tt GeometricCalculator} and then displays the resulting output, you will realize that there is another
+bug in this program. Make sure you have found all of the problems before continuing with this assignment.
 
 \subsection*{Required Deliverables}
 
