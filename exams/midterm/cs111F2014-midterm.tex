@@ -39,7 +39,7 @@ What are the input(s), output(s), and behavior(s) of the Java compiler?
 
 \vspace{.75in}
 \item {\bf [3 points]}
-How many different values can be represented using 7 bits? Why?
+How many different unique values can be represented using 7 bits? Why?
 
 \bigskip
 \bigskip
@@ -48,7 +48,12 @@ How many different values can be represented using 7 bits? Why?
 
 \item {\bf [2 points]}
 Give examples of at least two Java classes that are part of {\tt java.util} package.
-\vspace{.5in}
+% \vspace{.5in}
+
+\bigskip
+\bigskip
+\bigskip
+\bigskip
 
 \item {\bf [2 points]}
   After you use ``{\tt git add}'' for the {\tt Midterm.java} program in your local Git repository, what command(s) do
@@ -70,20 +75,35 @@ message (including spaces separating the words and numbers) when executed:
 \item \verb$System.out.println("The sum of 3 and 6 is " + (3+6));$
 \item \verb$System.out.println("The sum of " 3 " and " 6 " is " (3+6));$
 \item \verb$System.out.println("The sum of " + 3 + " and " + (3+3) + " is " + (3+3));$
+\item \verb$System.out.println("The sum of " + 3 + " and " + (3+3) + " is " + (3));$
 \end{enumerate}
 
 \bigskip
 
 \item {\bf [2 points]}
-Which of the following Java expressions has a value equal to 25:
+Which of the following Java expressions has a value equal to 25?
 \begin{enumerate}
 \item \verb$100 / 2 * 2$
 \item \verb$50 % 25$
 \item \verb$25 % 50$
 \item \verb$25 + 50 / 3$
+\item \verb$250 + 50 / 3$
 \end{enumerate}
 
 \bigskip
+
+\item {\bf [2 points]}
+Which of the following Java expressions has a value equal to 0?
+\begin{enumerate}
+  \item {\tt 8 \% 3}
+  \item {\tt (8 + 2) * 3 / 1}
+  \item {\tt (8 \% 3)}
+  \item {\tt 8 \% 2}
+  \item {\tt 3 \% 2}
+\end{enumerate}
+
+\bigskip
+
 
 \item {\bf [3 points]}
 What is printed by the following Java statements? 
@@ -92,42 +112,56 @@ What is printed by the following Java statements?
 %indicate a space).
 \begin{verbatim}
        int a = 10, b = 7;
+       int c = 2;
+       double d, e;
        System.out.println("a * b + 5 = " + (a * b) + " + 5");
        System.out.println("\\\\//");
        System.out.println("a + b = " + a + b);
 \end{verbatim}
-
 \vspace{1.0in}
+
+\newpage
 \item {\bf [4 points]}
-Using correct operator precedence, what values would be printed by the following
-print statements?
+Using correct operator precedence, what values do the following statements print?
+
 \begin{verbatim}
-System.out.print ( ( 34 - 4 ) \% 4 / ( 12 -10 ) );
-
-
-
-
-\end{verbatim}
-\begin{verbatim}
-System.out.print ( 34 - 4 \% 4 / 12 - 10); 
-
-
-
-
+System.out.print ( ( 10 + 4 ) * 3 % 8 * ( 2 + 3 ) ); 		
 \end{verbatim}
 
-\item {\bf [16 points]}
+\vspace*{-.175in}
+The output is: \mbox{\underline{\hspace{3in}}}
+
+\begin{verbatim}
+System.out.print ( 10 + 4 * 3 % 8 * 2 + 3);				    
+\end{verbatim}	
+
+\vspace*{-.175in}
+The output is: \mbox{\underline{\hspace{3in}}}
+
+\medskip
+
+% \begin{verbatim}
+% System.out.print ( ( 34 - 4 ) \% 4 / ( 12 -10 ) );
+
+% \end{verbatim}
+% \begin{verbatim}
+% System.out.print ( 34 - 4 \% 4 / 12 - 10); 
+
+% \end{verbatim}
+
+\item {\bf [8 points]}
 Write a complete Java program that does the following: 
 \begin{quote}
-Print a message telling the user to type a word\\
-Read in a single word typed by the user at the keyboard\\
-Print the word back out
+Displays your name and the date. \\
+Prints a message telling the user to type a word. \\
+Reads in a single word typed by the user at the keyboard. \\
+Prints the word back out. 
 \end{quote}
 You do \underline{not} need to include 
-comments; your program does \underline{not} need to print your 
-name and the date. However, all other parts of the program must be
+comments explaining the purpose of each line of code.
+However, all other parts of the program must be
 there---the class, the main method, the ``\{'' and ``\}'' characters,
-the {\tt import} statements, etc.
+the {\tt import} statements, and all other relevant Java components.
 
 Please try to be neat; please try to align things like ``\{'' and ``\}''
 characters; please try to clearly distinguish between upper-case and
@@ -135,28 +169,28 @@ lower-case letters (so that I will know, for instance, whether
 you wrote ``{\tt system}'' with a small ``{\tt s}'' or ``{\tt System}''
 with a capital ``{\tt S}'').
 
-\vspace{3in}
+\vspace{1.5in}
 
 \item {\bf [5 points]}
-Assume that your terminal screen currently contains the following information
-(assume that you are user ``{\tt jjumadinova}''):
+Assume that your terminal screen currently contains the following information:
+% (assume that you are user ``{\tt jjumadinova}''):
 \begin{center}
 \begin{minipage}{3in}
 \begin{verbatim}
-jjumadinova@aldenv150 ~/cs111$ ls
+gkapfham@aldenv150 ~/cs111$ ls
 lab1     lab2    Template.java
-jjumadinova@aldenv150 ~/cs111$ 
+gkapfham@aldenv150 ~/cs111$ 
 \end{verbatim}
 \end{minipage}
 \end{center}
 
-What Linux commands would you use to perform the following tasks? 
+What GVim and/or Linux commands would you use to perform the following tasks? 
 \begin{itemize}
 \item create a new directory named {\tt midterm} within your current directory
 \item make {\tt midterm} the new current directory (move into directory {\tt midterm})
 \item make a copy of {\tt Template.java}, naming the copy {\tt
 Midterm.java}
-\item compile and run {\tt Midterm} class
+\item compile and run the {\tt Midterm} class
 \end{itemize}
 
 \vspace{2in}
@@ -177,59 +211,76 @@ value. All you need to do is determine the two quantities described
 above and print them out,
 assuming the cost of a cup of tea is \$3.
 
-\vspace{3.5in}
+\vspace{3in}
 
-\item {\bf [6 points]}
+\item {\bf [10 points]}
 Define each of the following terms and give examples if appropriate:
 \begin{enumerate}
-\item compiler
+\item RGB color value 
 
 \bigskip
 \bigskip
 \bigskip
-\item primitive data type
-
-\bigskip
-\bigskip
-\bigskip
-
-\item casting
+\item Primitive data type
 
 \bigskip
 \bigskip
 \bigskip
 
-\item promotion
+\item Date type casting
+
 \bigskip
 \bigskip
 \bigskip
+
+\item String concatenation 
+\bigskip
+\bigskip
+\bigskip
+
+\item Reserved word 
+\bigskip
+\bigskip
+\bigskip
+
 \end{enumerate}
 
 \item {\bf [5 points]}
 Which of the following are allowable as possible variable names in your Java program? Circle all that are allowable.
-\begin{itemize}
-\item[(a)] iNum
-\item[(b)] Grade
-\item[(c)] test\#1
-\item[(d)] 1st\_rank
-\item[(e)] white tiger
-\item[(f)] TIGER
-\item[(g)] sea\_level\_2014
-\item[(h)] Tree(Leaves)
-\item[(g)] leavesOnTree
-\end{itemize}
+For this question the definition of the word ``allowable'' is that the variable name will not cause the Java compiler to produce an
+error or a warning.
+
+\begin{enumerate}
+  \item \%Grade\%
+  \item public
+  \item iNum
+  \item Grade
+  \item test\#1
+  \item 1st\_rank
+  \item white tiger
+  \item TIGER
+    \item void
+  \item sea\_level\_2014
+  \item Tree(Leaves)
+  \item leavesOnTree
+    \item +Increase
+  \item Midterm\&Examination
+    \item \#count
+\end{enumerate}
 \bigskip
 
-\item {\bf [5 points]}
-Fill in the missing statement or statements to set 
-variable $x$ to a random integer between -5
-and 5 (including but not exceeding 5), i.e., a number in the range -5, -4, -3, \ldots , 4, 5,
-and set variable $y$ to a random {\tt double} value between -20 and 0 (exclusive, i.e. up to 0 but not including 0).
+\item {\bf [6 points]} Fill in the missing statement or statements to set variable {\tt x} to a random integer between
+  -5 (inclusive) and 5 (exclusive).  This means that {\tt x} should include the value of -5 but exclude the value of 5
+  and thus take on a number in the range -5, -4, -3, \ldots, 4. You should also set variable {\tt y} to a random {\tt
+  float} value between 0.0 and 6.0, exclusive. As such, this means that {\tt y} must take on a number in the range 0.0,
+  \ldots, 5.999999. Finally, your program should use a {\tt Math} static method to print out the maximum value of either
+  {\tt x} or {\tt y}.
+
 \begin{Verbatim}[commandchars=\\\{\}]
 
        Random rand = new Random();
        int x;
-       double y;
+       float y;
        \framebox{\rule{4in}{0in}\rule{0in}{2in}}
 \end{Verbatim}
 
@@ -308,16 +359,13 @@ What are the final values of variables {\tt e}, {\tt f}, {\tt g}, and
 \bigskip
 \verb$h = $\underline{\hspace{.5in}}
 
-\bigskip
-\item {\bf [8 points]}
-Suppose {\tt s} is a {\tt String} variable containing a line of text.
-You may assume that the line of text may contain any mixture of
-letters, spaces, numbers, punctuation marks, etc. You may also assume
-that the string has at least two characters in it.
+\bigskip \item {\bf [8 points]} Suppose {\tt s} is a {\tt String} variable containing a line of text.  You may assume
+that the line of text may contain any mixture of letters, spaces, numbers, punctuation marks, etc. You may also assume
+that the {\tt String} has at least two characters in it.
 
-Complete the Java statements needed to print each of the following
-values. If you need
-more than one statement, extra room has been provided:
+Complete the Java statements needed to print each of the following values. If you need more than one statement, extra
+room has been provided above the {\tt print} statement:
+
 \begin{enumerate}
 \item
 The length of the string {\tt s}:
