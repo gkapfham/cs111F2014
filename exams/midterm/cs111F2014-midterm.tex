@@ -20,7 +20,7 @@ Midterm Exam\\
 100 points
 
 \vspace{1in}
-Name (please print legibly) \underline{\hspace{3in}}\\
+Name (please print legibly): \underline{\hspace{3in}}\\
 
 \bigskip
 Signature for Honor Code: \underline{\hspace{3in}}\\
@@ -47,7 +47,7 @@ How many different unique values can be represented using 7 bits? Why?
 \bigskip
 
 \item {\bf [2 points]}
-Give examples of at least two Java classes that are part of {\tt java.util} package.
+Give examples of two Java classes that are part of the {\tt java.util} package.
 % \vspace{.5in}
 
 \bigskip
@@ -57,7 +57,7 @@ Give examples of at least two Java classes that are part of {\tt java.util} pack
 
 \item {\bf [2 points]}
   After you use ``{\tt git add}'' for the {\tt Midterm.java} program in your local Git repository, what command(s) do
-  you need to use to update your repository on Bitbucket so that it appears on the Bitbucket servers? Write the commands
+  you need to run to update your repository on Bitbucket so that it appears on the Bitbucket servers? Write the commands
   as you would type them in your terminal. You may assume that you are in the same directory as the {\tt Midterm.java}
   file.  
 
@@ -65,7 +65,7 @@ Give examples of at least two Java classes that are part of {\tt java.util} pack
 \newpage
 
 \item {\bf [2 points]}
-Which of the following statements correctly displays the following
+Which of the following statements correctly displays the below 
 message (including spaces separating the words and numbers) when executed:
 \begin{center}
 \verb$The sum of 3 and 6 is 9$
@@ -95,11 +95,11 @@ Which of the following Java expressions has a value equal to 25?
 \item {\bf [2 points]}
 Which of the following Java expressions has a value equal to 0?
 \begin{enumerate}
-  \item {\tt 8 \% 3}
-  \item {\tt (8 + 2) * 3 / 1}
   \item {\tt (8 \% 3)}
-  \item {\tt 8 \% 2}
-  \item {\tt 3 \% 2}
+  \item {\tt (8 + 2) * 3 / 1}
+  \item {\tt (18 \% 3)}
+  \item {\tt (8 \% 2)}
+  \item {\tt (3 + 2) * 3 / 1}
 \end{enumerate}
 
 \bigskip
@@ -115,8 +115,8 @@ What is printed by the following Java statements?
        int c = 2;
        double d, e;
        System.out.println("a * b + 5 = " + (a * b) + " + 5");
-       System.out.println("\\\\//");
        System.out.println("a + b = " + a + b);
+       System.out.println("\\\\//");
 \end{verbatim}
 \vspace{1.0in}
 
@@ -151,12 +151,13 @@ The output is: \mbox{\underline{\hspace{3in}}}
 
 \item {\bf [8 points]}
 Write a complete Java program that does the following: 
-\begin{quote}
-Displays your name and the date. \\
-Prints a message telling the user to type a word. \\
-Reads in a single word typed by the user at the keyboard. \\
-Prints the word back out. 
-\end{quote}
+\begin{itemize}
+\setlength{\itemsep}{0pt}
+\item Prints your name and the date. 
+\item Prints a message telling the user to type a word. 
+\item Reads in a single word typed by the user at the keyboard. 
+\item Prints the word back out. 
+\end{itemize}
 You do \underline{not} need to include 
 comments explaining the purpose of each line of code.
 However, all other parts of the program must be
@@ -186,11 +187,11 @@ gkapfham@aldenv150 ~/cs111$
 
 What GVim and/or Linux commands would you use to perform the following tasks? 
 \begin{itemize}
-\item create a new directory named {\tt midterm} within your current directory
-\item make {\tt midterm} the new current directory (move into directory {\tt midterm})
-\item make a copy of {\tt Template.java}, naming the copy {\tt
-Midterm.java}
-\item compile and run the {\tt Midterm} class
+\setlength{\itemsep}{0pt}
+\item Create a new directory named {\tt midterm} within your current directory.
+\item Make {\tt midterm/} the new current directory (i.e., ``move into'' the {\tt midterm/} directory).
+\item Start GVim and insert the {\tt Template.java} into the {\tt Midterm.java} file.
+\item Compile and run the {\tt Midterm} class in the terminal window.
 \end{itemize}
 
 \vspace{2in}
@@ -221,13 +222,13 @@ Define each of the following terms and give examples if appropriate:
 \bigskip
 \bigskip
 \bigskip
-\item Primitive data type
+\item Object reference alias
 
 \bigskip
 \bigskip
 \bigskip
 
-\item Date type casting
+\item Data type casting
 
 \bigskip
 \bigskip
@@ -272,9 +273,9 @@ error or a warning.
 \item {\bf [6 points]} Fill in the missing statement or statements to set variable {\tt x} to a random integer between
   -5 (inclusive) and 5 (exclusive).  This means that {\tt x} should include the value of -5 but exclude the value of 5
   and thus take on a number in the range -5, -4, -3, \ldots, 4. You should also set variable {\tt y} to a random {\tt
-  float} value between 0.0 and 6.0, exclusive. As such, this means that {\tt y} must take on a number in the range 0.0,
-  \ldots, 5.999999. Finally, your program should use a {\tt Math} static method to print out the maximum value of either
-  {\tt x} or {\tt y}.
+    float} value between 0.0 (inclusive) and 6.0 (exclusive). As such, this means that {\tt y} must take on a number in
+  the range 0.0, \ldots, 5.999999. Finally, your program should use a {\tt Math} static method to print out the maximum
+  value of either {\tt x} or 0.
 
 \begin{Verbatim}[commandchars=\\\{\}]
 
@@ -347,7 +348,7 @@ What are the final values of variables {\tt e}, {\tt f}, {\tt g}, and
        e = (int) (2*g);
        f = (int) (2*h);
 \end{verbatim}
-{\bf Answer:}\\
+{\bf Answers}\\
 \verb$e = $\underline{\hspace{.5in}}
 
 \bigskip
@@ -364,7 +365,7 @@ that the line of text may contain any mixture of letters, spaces, numbers, punct
 that the {\tt String} has at least two characters in it.
 
 Complete the Java statements needed to print each of the following values. If you need more than one statement, extra
-room has been provided above the {\tt print} statement:
+room has been provided above each {\tt println} statement:
 
 \begin{enumerate}
 \item
@@ -411,18 +412,16 @@ The last two characters of {\tt s}:
 \end{enumerate}
 
 \bigskip
-\item {\bf [8 points]}
-Each of the following sequences of Java statements contains an
-error. State what the error is.
+\item {\bf [15 points]}
+Find and then explain what the error is in each of the following code segments.
 \begin{enumerate}
 \item \mbox{}
 
 \begin{verbatim}
-     public static void main(String [ ] args);
+     public static void main(String [] args);
      {
           System.out.println("Computer Science is fun!");
      }
-     
      
      
      
@@ -440,13 +439,11 @@ error. State what the error is.
      
      
      
-     
 \end{verbatim}
 \item \mbox{}
 
 \begin{verbatim}
      Random r = new Random;
-     
      
      
      
@@ -462,31 +459,73 @@ error. State what the error is.
      
      
      
+\end{verbatim}
+
+\item \mbox{}
+
+\begin{verbatim}
+     Import java.util.ArrayList;
+     
+     
+     
+     
      
 \end{verbatim}
 \end{enumerate}
 
+\item{\bf [10 points]} Basic mathematics and the Java programming language both use a coordinate system---however, they
+  are different! Please create two properly labelled diagrams that separately show a traditional coordinate system and
+  the Java coordinate system. To receive full credit for this question, you must label all key elements of the two
+  distinct diagrams.
 
-\item{\bf [8 points]}
-Here is a portion of a Java program:
-\begin{verbatim}
-        ...
-      float num1 = 5.3;
-      int num2 = (int) num1 % 2;
-      int result = ++num2;
-      System.out.printf("Number 1 is %-10f %n Number 2 is %-10d %n 
-      					Result is %-10d ", num1, num2, result);
-        ...
-\end{verbatim}
-What output does it produce? You can indicate spaces using a character like ``\verb*$ $''.
+  \vspace*{1.1in}
 
-\vspace{1.2in}
-\item {\bf [8 points]}
-Assume that a {\tt DecimalFormat} class has been imported and assume that variable named {\tt num} of type {\tt double} has been input by the user. Write Java statements to calculate the square root of {\tt num} and print it with 2 decimal places using an appropriate method from the {\tt DecimalFormat} class. Remember, you will need to create an instance of the {\tt DecimalFormat} (declare and initialize). 
-\begin{verbatim}
-       ...
-      double num = scan.nextDouble();
-      // your statements
+\item{\bf [10 points]} Because Java is a strongly typed programming language, each data value is associated with a
+  particular type. Please provide five examples of primitive types, explaining and giving an example of the types of
+  data values that they store.  In addition, please give five examples of object (i.e., non-primitive) types, again
+  explaining and giving an example of the types of data values that they can store. Record your responses in the
+  following lists.
+
+  {\bf Five Primitive Types}
+  \begin{enumerate}
+  \setlength{\itemsep}{.25in}
+    \item 
+    \item 
+    \item
+    \item
+    \item
+  \end{enumerate}
+
+  \vspace*{.1in}
+  {\bf Five Object Types}
+  \begin{enumerate}
+  \setlength{\itemsep}{.25in}
+    \item 
+    \item 
+    \item
+    \item
+    \item
+  \end{enumerate}
+% \item{\bf [8 points]}
+% Here is a portion of a Java program:
+% \begin{verbatim}
+%         ...
+%       float num1 = 5.3;
+%       int num2 = (int) num1 % 2;
+%       int result = ++num2;
+%       System.out.printf("Number 1 is %-10f %n Number 2 is %-10d %n 
+%       					Result is %-10d ", num1, num2, result);
+%         ...
+% \end{verbatim}
+% What output does it produce? You can indicate spaces using a character like ``\verb*$ $''.
+
+% \vspace{1.2in}
+% \item {\bf [8 points]}
+% Assume that a {\tt DecimalFormat} class has been imported and assume that variable named {\tt num} of type {\tt double} has been input by the user. Write Java statements to calculate the square root of {\tt num} and print it with 2 decimal places using an appropriate method from the {\tt DecimalFormat} class. Remember, you will need to create an instance of the {\tt DecimalFormat} (declare and initialize). 
+% \begin{verbatim}
+%        ...
+%       double num = scan.nextDouble();
+%       // your statements
       
       
       
@@ -500,7 +539,7 @@ Assume that a {\tt DecimalFormat} class has been imported and assume that variab
       
    
 
-\end{verbatim}
+% \end{verbatim}
 
 \end{enumerate}
  
