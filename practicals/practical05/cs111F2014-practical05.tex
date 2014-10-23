@@ -9,12 +9,12 @@
 \subsection*{Summary}
 \vspace*{-.05in}
 
-As a means of practicing the extension of your own classes and methods and better understanding the structure of
-different classes, you will study the given Java programs and modify them by adding more functionality to the given
+As a means of both practicing the extension of your own classes and methods and better understanding the structure of
+different classes, you will study the given Java files and modify them by adding more functionality to certain 
 methods.  Additionally, you will use the Lightweight Java Visualizer (LJV) to automatically create diagrams, like those
 seen in Chapter 4, that depict the state of Java objects.  Then, using the ``{\tt git add}'', ``{\tt git commit}'', and
-``{\tt git push}'' commands you will upload your modified programs, object visualizations, and the output you obtain
-from running your programs to your Git repository hosted by Bitbucket.  
+``{\tt git push}'' commands you will upload your modified source code, object visualizations, and the output you obtain
+from running the {\tt Practical5} program to your Git repository hosted by Bitbucket.  
 
 \vspace*{-.15in}
 \subsection*{Review the Textbook}
@@ -24,7 +24,7 @@ Be sure to read Sections 4.1 through 4.4 of your textbook to learn more about wr
 methods.  Please ensure that, as you read these sections, you study the technical diagrams of an object's state, as
 found on pages 167 and 180 of the textbook. As you review this material, try to make a list of questions about concepts
 that you do not yet fully understand.  In addition to discussing these questions with the teaching assistants and the
-course instructor, take your own steps to answering them as you complete this assignment.
+course instructor, please take your own steps to answering them as you complete this assignment.
 
 \vspace*{-.15in}
 \subsection*{Save and Study the Provided Classes}
@@ -36,7 +36,7 @@ from the course repository. Using the strategy that was described in a previous 
 your own Bitbucket repository in a directory called {\tt practical05/}. Study these programs first and make sure you
 understand them. Can you better understand the structure and behavior of the methods provided by these classes by
 drawing a technical diagram like the one in Figure 4.7 of your textbook? To compile them, you can type ``{\tt javac
-  Practical5.java}'' in your terminal window; to run them, please type type ``{\tt java Practical5}''.
+  Practical5.java}'' in your terminal window; to run them, please type ``{\tt java Practical5}''.
 \end{sloppypar}
 
 \vspace*{-.15in}
@@ -55,19 +55,19 @@ drawing a technical diagram like the one in Figure 4.7 of your textbook? To comp
 
   \item Please find the constructor for the in the {\tt Octopus.java} file.  You will notice that, even though an
     instance of the {\tt Octopus} class has instance variables like {\tt weight} and {\tt name}, these variables are not
-    initialized by the constructor. Assuming that the value of $-1$, indicating that the value has not yet been set, is
-    an acceptable starting value for both variables, please add to the constructor assignment statements to initialize
-    them.
+    initialized by the constructor. Assuming that the value of $-1$, indicating that the variable has not yet been set,
+    is an acceptable starting value for both variables, please add to the constructor assignment statements initializing
+    them to $-1$.
     
 % \item \noindent Edit the file {\tt Practical5.java} and look for the place where variable {\tt ocky} is defined to be a
 %   {\tt new Octopus}. Add an ``age'' to this so that we are specifying two things, not one, in the construction.  Delete
 %   or comment out the ``{\tt ocky.setAge(10)}'' method call in the next line. 
 
-  \item Please notice that the current constructor for {\tt Octopus} only accepts the ``{\tt String n}'' parameter that
-    allows you to specify the name of the object.  Since an {\tt Octopus} also has an {\tt age} and a {\tt weight}, you
-    should write a new constructor that has three formal parameters---one for each of these instance variables---and
-    initializes all of them correctly. You can use the ``{\tt Account}'' example in Section 4.4 as a source of
-    inspiration for the way in which you add an improved constructor for the {\tt Octopus} class.
+  \item You should also notice that the current constructor for {\tt Octopus} only accepts the ``{\tt String n}''
+    parameter that allows you to specify the name of the object.  Since an {\tt Octopus} also has an {\tt age} and a
+    {\tt weight}, you should write a new constructor that has three formal parameters---one for each of these instance
+    variables---and initializes all of them correctly. You can use the ``{\tt Account}'' example in Section 4.4 as a
+    source of inspiration for the way in which you add an improved constructor for the {\tt Octopus} class.
 
 \end{itemize} 
 
@@ -91,9 +91,9 @@ drawing a technical diagram like the one in Figure 4.7 of your textbook? To comp
 \end{itemize}
 \end{enumerate}
 
-\vspace*{-.35in}
+\vspace*{-.30in}
 \subsection*{Visualize the Objects} 
-\vspace*{-.05in}
+\vspace*{-.1in}
 
 \begin{enumerate}
 \item 
@@ -139,7 +139,7 @@ drawing a technical diagram like the one in Figure 4.7 of your textbook? To comp
 
 To finish this assignment and earn a ``checkmark'', you should submit, through your Bitbucket repository, the {\tt
   Octopus.java} and {\tt Practical5.java} files you edited. You should also upload the three PDF files, as created by
-running the {\tt java Practical5} program, in the repository.
+running the ``{\tt java Practical5}'' program, in the repository.
 
 \vspace*{-.15in}
 \subsection*{General Guidelines for Practical Sessions}
@@ -148,13 +148,13 @@ running the {\tt java Practical5} program, in the repository.
 
 \item {\bf Submit \textbf{\textit{Something}}.} Your grade for this assignment is a ``checkmark'' indicating whether you
   did or did not complete the work and submit something to the Bitbucket repository. Please update your repository
-  regularly and make sure to upload the final versions on time.
+  regularly and make sure to upload the final files on time.
 
 % \item {\bf Update Your Repository Often!} You should {\tt add}, {\tt commit}, and {\tt push} your updated files each
 %   time you work on them, always including descriptive messages about each code change.
 
-\item {\bf Review the Honor Code Policy on the Syllabus.} Remember that while you may discuss your writing with other
-  students in the course, text that is nearly identical to, or merely variations on, the work of others will be
+\item {\bf Review the Honor Code Policy on the Syllabus.} Remember that while you may discuss your work with other
+  students in the course, code that is nearly identical to, or merely variations on, the work of others will be
   taken as evidence of violating the \mbox{Honor Code}.
 \end{itemize}
 
