@@ -55,8 +55,9 @@ drawing a technical diagram like the one in Figure 4.7 of your textbook? To comp
 
   \item Please find the constructor for the in the {\tt Octopus.java} file.  You will notice that, even though an
     instance of the {\tt Octopus} class has instance variables like {\tt weight} and {\tt name}, these variables are not
-    initialized by the constructor. Assuming that the value of $-1$ is an acceptable starting value for the age of an
-    {\tt Octopus}, please add to the constructor assignment statements to initialize these variables.
+    initialized by the constructor. Assuming that the value of $-1$, indicating that the value has not yet been set, is
+    an acceptable starting value for both variables, please add to the constructor assignment statements to initialize
+    them.
     
 % \item \noindent Edit the file {\tt Practical5.java} and look for the place where variable {\tt ocky} is defined to be a
 %   {\tt new Octopus}. Add an ``age'' to this so that we are specifying two things, not one, in the construction.  Delete
@@ -66,9 +67,7 @@ drawing a technical diagram like the one in Figure 4.7 of your textbook? To comp
     allows you to specify the name of the object.  Since an {\tt Octopus} also has an {\tt age} and a {\tt
       weight}, you should write a new constructor that has three formal parameters, one for each of these instance
     variables, and initializes all of them correctly. You can use the example in Section 4.4 as inspiration for the way
-    in which you modify the constructor for the {\tt Octopus} class---please see the instructor if you have questions.
-
-\item \noindent Recompile and re-run the program and see if it correctly provides the age you specified.
+    in which you modify the constructor for the {\tt Octopus} class--age you specified.
 
 \end{itemize} 
 
