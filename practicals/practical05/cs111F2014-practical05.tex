@@ -1,0 +1,94 @@
+%!TEX root=cs111F2014-practical05.tex
+% mainfile: cs111F2014-practical05.tex
+
+\input{111pre}
+\begin{document}
+\MYTITLE{Practical 5\\16--17 October 2014\\Due in Bitbucket by midnight of the day of your practical \\ ``Checkmark'' grade}
+
+%\vspace*{-.2in}
+\subsection*{Summary}
+\vspace*{-.05in}
+As a means of practicing creating your own classes and methods and experimenting with the structure of different classes, you will study the given Java programs and modify them by adding more functionality to the given methods.  Then, using the ``{\tt git add}'', ``{\tt git
+  commit}'', and ``{\tt git push}'' commands you should upload your modified programs and the output you obtain from running your programs to your Git
+repository hosted by Bitbucket.  
+
+\vspace*{-.15in}
+\subsection*{Review the Textbook}
+\vspace*{-.05in}
+Be sure to read Sections 4.1 through 4.3 of your book to learn more about writing your own classes, constructors and methods.  As you review this material, try to make a list of questions about concepts that you do not yet fully
+understand.  In addition to discussing these questions with the teaching assistants and the course instructor, try to
+answer them as you complete this assignment.
+
+\vspace*{-.15in}
+\subsection*{Save the Example Programs}
+\vspace*{-.05in}
+Get the files ``{\tt Octopus.java}'', ``{\tt Utensil.java},'' and
+``{\tt Practical5.java}'' from the course repository. Copy these files 
+into your own Bitbucket repository into a directory called {\tt /practical05}. Study 
+these programs first and make sure you understand them. To compile them, type
+{\tt javac *.java} and to run them, type {\tt java Practical5}.
+
+\vspace*{-.15in}
+\subsection*{Modify the Programs} 
+\vspace*{-.05in}
+\begin{enumerate}
+\item 
+\begin{itemize}
+\item 
+Edit the file {\tt Octopus.java} and find the constructor in this class. In the constructor,
+there is one parameter {\tt n}, which contains a {\tt String}. 
+Change this by adding one more parameter, {\tt a}, of type {\tt int}.
+This is the age of the octopus. Save this in the appropriate instance
+variable (imitating what was done for the name). 
+\item 
+\noindent Edit the file {\tt Practical5.java} and look for the place where variable
+{\tt ocky} is defined to be a {\tt new Octopus}. Add an ``age'' to this
+so that we are specifying two things, not one, in the construction.
+Delete or comment out the ``{\tt ocky.setAge(10)}'' method call in the next line. 
+\item 
+\noindent Recompile and re-run the program and see if it correctly provides the age
+you specified.
+\end{itemize} \newpage
+\item 
+\begin{itemize}
+\item
+Edit the file {\tt Practical5.java}. Declare a second {\tt Octopus} variable (don't
+just change the name of the one that's there---create another one) and
+assign it any name and age that you want. 
+\item
+\noindent Create a second {\tt Utensil} of any type you wish, imitating the declaration and
+initialization of {\tt spat}.
+Assign a cost and a color to this utensil. Assign this utensil to the new
+Octopus you created. 
+\item
+\noindent Print out the name, age, weight, and favorite utensil of your new octopus.
+Print out the type, cost, and color of your new utensil.
+\end{itemize}
+\end{enumerate}
+
+\vspace*{-.15in}
+\subsection*{Completing the Practical Assignment}
+\vspace*{-.1in}
+To finish this assignment and earn a ``checkmark'', you should 
+submit the {\tt Octopus.java} and {\tt Practical5.java} files you just edited
+in your Bitbucket repository by
+using appropriate {\tt git} commands.
+
+\vspace*{-.15in}
+\subsection*{General Guidelines for Practical Sessions}
+\vspace*{-.05in}
+\begin{itemize}
+\item {\bf Submit \textbf{\textit{Something}}.} Your grade for this assignment is a ``checkmark'' indicating whether you
+  did or did not complete the work and submit something to the Bitbucket repository using the ``{\tt git add}'', ``{\tt
+    git commit}'', and ``{\tt git push}'' commands.
+
+\item {\bf Update Your Repository Often!} You should {\tt add}, {\tt commit}, and {\tt push} your updated files each
+  time you work on them, always including descriptive messages about each code change.
+
+\item {\bf Review the Honor Code Policy on the Syllabus.} Remember that while you may discuss your writing with other
+  students in the course, text that is nearly identical to, or merely variations on, the work of others will be
+  taken as evidence of violating the \mbox{Honor Code}.
+\end{itemize}
+
+
+\end{document}
