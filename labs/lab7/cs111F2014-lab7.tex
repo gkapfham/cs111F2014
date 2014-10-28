@@ -1,0 +1,113 @@
+\input{111pre}
+\begin{document}
+\MYTITLE{Lab 7 for Sections 03 and 04 \\ 23 October 2014\\
+Due Thursday, 30 October by 2:30pm }
+
+\vspace{-0.2in}
+\subsection*{Objectives}
+\vspace{-0.05in}
+
+To gain more experience in writing Java classes and methods, learn about the interactions between Java classes and
+methods, and practice reusing and extending existing Java programs.  
+
+\vspace{-0.2in}
+\subsection*{General Guidelines for Labs}
+\vspace{-0.05in}
+\begin{itemize}
+\item
+{\bf Work on the Alden Hall computers.} If you want to work on a different
+machine, be sure to transfer your programs to the Alden
+machines and re-run them before submitting.
+\item
+{\bf Update your repository often!} You should add, commit, 
+and push your updated files each time you work on them.  I will not grade 
+your programs until the due date has passed.
+\item
+{\bf Review the Honor Code policy.} You
+may discuss programs with others, but programs that are nearly identical
+to others will be taken as evidence of violating the Honor Code.
+\end{itemize}
+
+\vspace{-0.2in}
+\subsection*{Reading Assignment}
+\vspace{-0.05in}
+
+To learn more about Java classes, methods and their structure, review Sections 4.1--4.5 in your textbook, paying
+particular attention to details about parameter passing in Java.
+
+\vspace{-0.2in}
+\subsection*{Creating a Java Class and Methods for Your Masterpiece}
+\vspace{-0.05in}
+
+\noindent In this laboratory assignment, you will reuse the programs from the fourth laboratory assignment. As you
+recall, in {\tt Lab4.java} you have created a Java drawing using the methods from Java's ``{\tt Graphics}'' class, which
+was called from {\tt Lab4Display.java}. For this laboratory assignment you will create a new Java class, called {\tt
+Lab7Drawing.java}, and write your own methods that will draw different parts of your masterpiece by reusing statements
+from {\tt Lab4.java}. In other words, instead of writing all Java commands to produce your Java drawing inside the
+``{\tt paint}'' method in {\tt Lab4.java}, your goal is to separate the parts of your drawing into  distinct pieces that
+can be drawn separately. Please see the course instructor if you have questions about these tasks.
+
+\noindent Below is the list of programs you will need to either extend or create:
+
+\begin{itemize}
+
+\item Reuse {\tt Lab4Display.java}:  All you need to do is change the comment header, and rename this program to {\tt
+  Lab7Display.java}. Remember to change the name of the class as well as the name of the file---otherwise, this class will
+  not compile correctly!
+
+\item Create {\tt Lab7Drawing.java}: This class will represent your ``drawable'' object from laboratory assignment four.  This class should have instance variables (for example, {\tt x} and {\tt y} coordinates), a constructor and
+  methods that draw various parts of the drawing from your laboratory assignment four submission. For example, if
+  you created an animal in {\tt Lab4.java}, then now you may decide to separate such drawing into three methods, where
+  one method will draw the face, another method will draw the body, and the third method will fill the background and
+  create a visual of the grass. After you create the instance variables, a constructor, and decide which methods you
+  want to create, you can just copy and paste appropriate lines of code from {\tt Lab4.java} into new methods that you
+  will create in {\tt Lab7Drawing}.
+
+\item Modify {\tt Lab4.java}:  First, rename this program to {\tt Lab7.java}. Then, inside the {\tt paint} method you
+  need to create an instance of the {\tt Lab7Drawing} class and call the appropriate methods that you created in {\tt
+  Lab7Drawing} class so that you are able to reproduce your drawing from laboratory four. Please note that the {\tt page}
+  may need to be a parameter passed to your methods. Of course, the methods that you create in your {\tt
+  Lab7Drawing.java} program may have more than one parameter, but they will most likely need to have at least one ``{\tt
+  Graphics page}'' object. The snippet of the method declaration below, from {\tt Lab4.java}, should remind you where
+  the {\tt page} parameter comes from; please see the instructor if this is confusing. 
+  
+  \begin{verbatim} public void paint(Graphics page) { ... } \end{verbatim} \vspace{-0.1in}
+  \end{itemize}
+
+\vspace{-0.25in} 
+\subsubsection*{Program Requirements}
+\vspace{-0.05in}
+\begin{itemize}
+\item The {\tt Lab7Drawing}  class must have at least two instance variables, a constructor, and at least three methods
+  that you create to draw different parts of your masterpiece. 
+\item You must recreate your original graphic. If you would like to add something to it at this time, you may do so.
+  But, please do not create a completely new masterpiece!
+\end{itemize}
+\vspace{-0.1in}
+Remember to compile three files ({\tt Lab7.java}, {\tt Lab7Drawing.java} and {\tt Lab7Display.java}), you may use the
+``{\tt javac *.java}'' command to compile all the {\tt .java} files in your directory. You only need to run {\tt
+Lab7Display.java} since it is the one that contains the {\tt main} method, and then look for the pop up window (with a
+Java symbol). You should compile and run your programs incrementally after creating  each method, instead of waiting
+until you finish creating methods for your entire drawing---this approach will best ensure that you do not create
+a defective program.
+
+\vspace{-0.2in}
+\subsection*{Required Deliverables}
+\vspace{-0.05in}
+For this assignment you are invited to submit electronic versions of the following deliverables through the Bitbucket repository. As you complete this step, you should make sure that you
+created a {\tt lab7/} directory within the repository; then, you can save all of the deliverables here. 
+\vspace{-0.05in}
+\begin{enumerate}
+	\item A completed, properly commented and formatted {\tt Lab7.java, Lab7Drawing.java} and \\ {\tt Lab7Display.java} program. Please make sure that your programs  include the comment header file with the Honor code, your name, date and the description of the program.
+
+        \item An output (your drawing) from running {\tt Lab7Display} in the terminal window.
+\end{enumerate}
+\vspace{-0.1in}
+
+In addition to turning in signed and printed copies of your code and output, please share your program and the output
+file with me through your Git repository by correctly using the ``{\tt git add}'', ``{\tt git commit}'', and ``{\tt git
+push}'' commands. When you are done, please ensure that the Bitbucket Web site has a {\tt lab7/} directory in your
+repository with the four files called {\tt Lab7.java, Lab7Drawing.java}, {\tt Lab7Display.java}, and {\tt output}. You
+should see the instructor or a teaching assistant if you have questions about submitting this assignment.
+
+\end{document}
