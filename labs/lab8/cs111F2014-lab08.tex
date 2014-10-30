@@ -38,29 +38,44 @@ to others will be taken as evidence of violating the Honor Code.
 \vspace{-0.05in}
 
 To learn more about {\tt if} statement and boolean expressions, review Sections 5.1--5.3, and to review material on
-constructing classes and methods, read Sections 4.1--4.5.  Students who are not familiar with the Sudoku grame are
+constructing classes and methods, read Sections 4.1--4.5.  Students who are not familiar with the Sudoku game are
 encouraged to review \url{http://en.wikipedia.org/wiki/Sudoku}.
 
 \vspace{-0.1in}
-\subsection*{Create a new directory and two Java programs}
+\subsection*{Create a New Directory and Two Java Programs}
 \vspace{-0.05in}
-In your own {\tt cs111F2014-<your user name>} repository inside {\tt labs} directory, create a directory called {\tt lab8}. Type ``{\tt cd lab8}'' to move to the new directory. Then using {\tt gvim} create a {\tt Lab8.java} and {\tt Lab8Main.java} files.
+
+In your own {\tt cs111F2014-<your user name>} repository inside the {\tt labs/} directory, create a directory called {\tt
+  lab8}. Type ``{\tt cd lab8}'' to move to the new directory. Then using {\tt gvim} create {\tt Lab8.java} and {\tt
+  Lab8Main.java} files that will store your solution to this laboratory assignment.
 
 \vspace{-0.1in}
-\subsection*{Sudoku Checker}
+\subsection*{Implementing a Sudoku Checker}
 \vspace{-0.05in}
-Sudoku is a logic-based placement puzzle. The aim of this puzzle is to enter a numerical digit from 1 through 9 in each cell of a 9×9 grid made up of 3×3 subgrids (called ``regions''), starting with various digits given in some cells (the ``givens''). Each row, column, and region must contain only one instance of each numeral.
 
-\noindent For this lab, you are going to write a Sudoku validator for 4x4 grids made up of 2x2 regions instead of 9x9 grids made up of 3x3 regions.  Sudoku puzzles that use 4x4 grids only use the numerical digits 1 through 4 instead of 1 through 9.
+Sudoku is a logic-based placement puzzle. The aim of this puzzle is to enter a numerical digit from 1 through 9 in each
+cell of a 9x9 grid made up of 3x3 subgrids (called ``regions''), starting with various digits given in some cells (the
+  ``givens''). Each row, column, and region must contain only one instance of each valid numeral.
 
-\noindent Here are two correct 4x4 Sudoku grids:\\
+\noindent For this lab, you are going to write a Sudoku validator for 4x4 grids made up of 2x2 regions instead of 9x9
+grids made up of 3x3 regions.  In contrast to the previously explained full grids, Sudoku puzzles that use 4x4 grids
+only use the numerical digits 1 through 4 instead of 1 through 9.
+
+\noindent Here are two correct 4x4 Sudoku grids:
+
+\vspace*{.01in}
 \includegraphics[scale=0.3]{grids}
 
-\noindent Notice how each row, column and region has the individual numbers from 1 through 4 used only once.  This means that the values used in each row, column and region must add up to 10 (1 + 2 + 3 + 4).  This is how we will check our 4x4 Sudoku grids for this assignment.
+\noindent Notice how each row, column, and region has the individual numbers from 1 through 4 used only once.  This means
+that the values used in each row, column and region must add up to 10 because of the fact that (1 + 2 + 3 + 4) = 10.  This is
+how your program will check our 4x4 Sudoku grids.
 
-\noindent Allow your user to enter their Sudoku grids row-by-row, separating each of the four values by a space and hitting ENTER at the end of the row.
+\noindent Allow your user to enter their Sudoku grids row-by-row, requiring that they separate each of the four values
+by a space and that they hit ENTER at the end of the row.
 
-\noindent When the user has entered all 16 values into the program, you should output validation checks for each region, row and column.  An example run can be seen below.
+\noindent When the user has entered all 16 values into the program, you should output validation checks for each region,
+row, and column.  An example run can be seen below.
+
 \begin{verbatim}
 Welcome to the Sudoku Checker v1.0!
 
@@ -90,51 +105,56 @@ COL-2:GOOD
 COL-3:GOOD
 COL-4:GOOD
 
-SUDO:VALID
+SUDOKU GRID IS VALID!
 \end{verbatim}
 
-\noindent Your program does not have to check for the numbers 1 through 4 being used uniquely in each row, column and region.  In other words, don't worry about validating their input to make sure they only enter the digits 1, 2, 3 or 4 and only enter them once per row, column and region.  
-You simply need to check that each row, column and region adds up to 10. This simplistic type of checking will, however, allow some bad Sudoku grids to be validated as good. This is ok. 
+\newpage
+
+\noindent Your program does not have to check for the numbers 1 through 4 being used uniquely in each row, column and
+region.  In other words, don't worry about validating their input to make sure they only enter the digits 1, 2, 3, or 4
+and only enter them once per row, column, and region.  You simply need to check that each row, column, and region adds up
+to 10. This simplistic type of checking will, however, allow some bad Sudoku grids to be validated as good---this is
+acceptable. 
 
 \noindent Rows, columns and regions are identified as found below:\\
+
+\vspace*{.01in}
 \includegraphics[scale=0.5]{sud}
 
 \subsubsection*{{\tt Lab8Main} Class}
 
-To test your implementation of the {\tt Lab8} class, use the following code for Lab8Main.java.
+To use the {\tt SudokuChecker} class, follow this template for the {\tt SudokuCheckerMain.java} file:
 \begin{verbatim}
-public class Lab8Main
+public class SudokuCheckerMain
 {
      public static void main ( String args[] )
      {
-          Lab8 foo = new Lab8();
-          foo.getGrid();
-          foo.checkGrid();
+          SudokuChecker checker = new SudokuChecker();
+          // TODO: output the required welcome message
+          checker.getGrid();
+          checker.checkGrid();
      }
 }
 \end{verbatim}
 
-\subsubsection*{ {\tt Lab 8} Class}
-\noindent The basic structure of {\tt Lab8.java} is as follows:
+\subsubsection*{{\tt SudokuChecker} Class}
+
+\noindent The basic structure of {\tt SudokuChecker.java} is as follows:
 \begin{verbatim}
 import java.util.Scanner;
 
-public class Lab8
+public class SudokuChecker
 {
-
-     // put private data members here
-
-     // put constructor here
-
-     // put getGrid() here
-
-     // put checkGrid() here
+     // TODO: put private data members here
+     // TODO: put constructor here
+     // TODO: put getGrid() here
+     // TODO: put checkGrid() here
 }
 \end{verbatim}
-The UML diagram for {\tt Lab8} is:
+The UML diagram for {\tt SudokuChecker} is:
 \begin{tabular}{|l|}
 \hline
-\textbf{ Lab8} \\
+\textbf{SudokuChecker} \\
 \hline
 - w1 : Integer\\
 - w2 : Integer\\
@@ -153,14 +173,16 @@ The UML diagram for {\tt Lab8} is:
 - z3 : Integer\\
 - z4 : Integer\\
 \hline
-$<<constructor>>$ Lab8 ( )\\
+$<<constructor>>$ SudokuChecker( )\\
 \hline
 + getGrid ( )\\
 + checkGrid ( )\\
 \hline
 \end{tabular}
 
-\noindent What follows is a short description of what each data member represents and what each method does:\\
+\vspace*{.05in}
+\noindent This is a short description of what each data member represents and what each method does:\\
+
 \begin{tabular}{|l|p{10cm}|}
 \hline
 {\tt w1, w2, w3, w4} &  \\
