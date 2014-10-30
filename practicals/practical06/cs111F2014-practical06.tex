@@ -12,8 +12,8 @@
 In this practical you will create and then call methods that determine if certain events occurred during the year given
 by the user. For this task you will use {\tt if/else} statements and boolean logic operators such as ``{\tt \&\&}'' or
 ``{\tt ||}''.  Finally, using the ``{\tt git add}'', ``{\tt git  commit}'', and ``{\tt git push}'' commands you will
-upload your modified programs and the output you obtain from running your program to your Git repository hosted by
-Bitbucket.  
+upload your modified source code files and the output you obtain from running your program to your Git repository hosted
+by Bitbucket.  
 
 \vspace*{-.1in}
 \subsection*{Review the Textbook}
@@ -29,7 +29,7 @@ expressions.  Please review Chapter 4 if you have questions about modifying Java
 Get the files ``{\tt YearChecker.java}'' and ``{\tt Practical6Main.java}'' from the shared course Git repository. Using
 the technique from a previous assignment, copy these files into your own Bitbucket repository into a directory called
 ``{\tt practical06/}''. Study these programs first and make sure you understand them. Please note that these programs
-are not complete, and will not run correctly.
+are not complete and will not run correctly.
 
 \vspace*{-.1in}
 \subsection*{A Program Inspired by ``Through All the Years''}
@@ -40,13 +40,13 @@ YearChecker.java}, you will write methods that, for the user's input from {\tt P
 the following events occurs that year: \begin{itemize}
 
 \item
-it is a leap year
+it is designated as a leap year
 
 \item
 the emergence of the 17-year cicadas (more specifically, Brood II)
 
 \item
-a peak year of sunspot activity
+it is predicted to be a peak year of sunspot activity
 
 \end{itemize}
 
@@ -55,9 +55,9 @@ year, it is a leap year if it is divisible by 400. For instance, 1968 and 1972 a
 by 4; 1967 and 1970 are not.  The year 2000 is a leap year because it is divisible by 400; however, 1900 is not (even
 though 1900 is divisible by 4---century years are treated differently).
 
-\noindent The 17-year cicadas emerge from underground every 17 years. There are several ``broods''---the one we are
-interested in emerged in 2013. That is, any year that differs from 2013 by a multiple of 17 is also an emergence year (e.g.,
-2040, 1996, 1928, and 3713).
+\noindent The 17-year cicadas emerge from underground every 17 years. There are several ``broods''---the one in which we
+have interest emerged most recently in 2013. That is, any year that differs from 2013 by a multiple of 17 is also an
+emergence year for Brood II (e.g., 2040, 1996, 1928, and 3713).
 
 \noindent Sunspot activity usually peaks every 11 years. The year 2013 was supposed to be such a ``solar max'' year.
 This means that any year that differs from 2013 by a multiple of 11 should also be a solar max year. For instance, 2002,
@@ -66,7 +66,7 @@ This means that any year that differs from 2013 by a multiple of 11 should also 
 \noindent Here is the sample output from running the program with the year 1452 as input:
 
 \begin{Verbatim}[commandchars=\\\{\}]
-      ewire23-29:practical6 jjumadinova$ \textcolor{red}{java Practical6Main}
+      aldenv112:practical6 jjumadinova$ \textcolor{red}{java Practical6Main}
             
       Enter a year between 1000 and 3000: \textcolor{red}{1452}
       1452 is a leap year
@@ -75,7 +75,7 @@ This means that any year that differs from 2013 by a multiple of 11 should also 
       Thank you for using this program! 
 \end{Verbatim}
 
-\noindent In addition to incrementally compiling your program, you should thoroughly test it as well! Try the above
+\noindent In addition to regularly compiling your program, you should thoroughly test it as well! Try the above
 date, the other dates mentioned in the assignment, and some of your own as well.
 
 \vspace*{-.1in}
@@ -85,7 +85,7 @@ date, the other dates mentioned in the assignment, and some of your own as well.
 
 \item Edit the file {\tt YearChecker.java} and find the constructor in this class. Make sure you understand what the
   constructor initializes, when it gets called, what method calls it, and what happens after it is executed. Please ask
-  the instructors or the teaching assistants if you are not clear about the purpose of the constructors. 
+  the instructors or the teaching assistants if you are not clear about the purpose and behavior of the constructor. 
 
 \item  Edit the file {\tt YearChecker.java} and find three methods {\tt isLeapYear(), isCicadaYear(),} and {\tt
   isSunspotYear()}.  You task for this practical is to implement the conditional logic that these methods need to
