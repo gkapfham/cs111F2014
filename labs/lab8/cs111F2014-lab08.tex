@@ -46,8 +46,8 @@ encouraged to review \url{http://en.wikipedia.org/wiki/Sudoku}.
 \vspace{-0.05in}
 
 In your own {\tt cs111F2014-<your user name>} repository inside the {\tt labs/} directory, create a directory called {\tt
-  lab8}. Type ``{\tt cd lab8}'' to move to the new directory. Then using {\tt gvim} create {\tt Lab8.java} and {\tt
-  Lab8Main.java} files that will store your solution to this laboratory assignment.
+  lab8}. Type ``{\tt cd lab8}'' to move to the new directory. Then using {\tt gvim} create {\tt SudokuChecker.java} and {\tt
+  SudokuCheckerMain.java} files that will store your solution to this laboratory assignment.
 
 \vspace{-0.1in}
 \subsection*{Implementing a Sudoku Checker}
@@ -121,7 +121,7 @@ acceptable.
 \vspace*{.01in}
 \includegraphics[scale=0.5]{sud}
 
-\subsubsection*{{\tt Lab8Main} Class}
+\subsubsection*{{\tt SudokuCheckerMain} Class}
 
 To use the {\tt SudokuChecker} class, follow this template for the {\tt SudokuCheckerMain.java} file:
 \begin{verbatim}
@@ -188,34 +188,46 @@ $<<constructor>>$ SudokuChecker( )\\
 {\tt w1, w2, w3, w4} &  \\
 {\tt x1, x2, x3, x4} & \\
 {\tt y1, y2, y3, y4} & \\
-{\tt z1, z2, z3, z4}	&  Private data members that will store the numbers the user inputs.  {\tt w1} through {\tt w4} are for the first row, {\tt x1} through {\tt x4} are for the second row, etc.  Do not have any other private data members in your class.\\
+{\tt z1, z2, z3, z4}	&  Private data members that will store the numbers the user inputs.  Variables {\tt w1} through {\tt w4}
+are for the first row, {\tt x1} through {\tt x4} are for the second row, etc.  You should not have any other private data members in your class.\\
 \hline
-Lab8()	&This is the constructor.  It should display welcome greetings, explaining the rules of the 4x4 Sudoku grid we're processing.\\
+SudokuChecker()	&This is the constructor.  It should initialize each of the private data members to the value of 0, indicating
+that the user has not yet assigned a value to the data member. \\
 \hline
+
 getGrid()	& This public method should read the Sudoku grid from the user row by row, using spaces between values in each row.\\
 \hline 
 checkGrid() &	This public method uses the private data members to test whether or not the given values are a valid Sudoku grid.\\
-& Your method does not have to check for the numbers 1 through 4 being used uniquely in each row, column and region.  In other words, don't worry about validating their input to make sure they only enter the digits 1, 2, 3 or 4 and only enter them once per row, column and region. \\ 
-& When producing your output, you must first validate the regions, then the rows and then the columns.  Each region, row and column validation should appear on a line by itself. \\
+& Your method does not have to check for the numbers 1 through 4 being used uniquely in each row, column, and region.
+In other words, don't worry about validating their input to make sure they only enter the digits 1, 2, 3, or 4 and only
+enter them once per row, column, and region. \\ 
+& When producing your output, you must first validate the regions, then the rows, and then the columns.  Each region,
+row, and column validation should appear on a line by itself. \\
 \hline
 \end{tabular}
 
 \vspace{-0.05in}
 \subsection*{Points to Think About}
 \vspace{-0.05in}
-Since we have not talked about programming concepts such as arrays yet (you can not use them), you will need to input your 16 values into 16 separate variables.  Some suggestions would be a1, a2, a3 and a4 for the first row and then b1, b2, b3 and b4 for the second row, and so on.
-Once you validate that one row is good or not good, the rest of the program should essentially be a matter of copy and paste, replacing variables where appropriate.
-The ``toughest'' part of this program is determining whether or not you have a good Sudoku or not.  One suggestion would be to keep track of a variable the counts the number of things that are invalid and if that variable's value is 0 at the end of the program, you have a valid Sudoku.
 
-\vspace{-0.05in}
+Since we have not talked about programming concepts such as arrays yet---in fact, you should not use them to complete
+this assignment---you will need to input your 16 values into 16 separate variables.  Some suggestions would be {\tt w1},
+{\tt w2}, {\tt w3}, and {\tt w4} for the first row and then {\tt x1}, {\tt x2}, {\tt x3}, and {\tt x4} for the second
+row, and so on.  Once you validate that one row is good or not good, the rest of the program should essentially be a
+matter of ``copy and paste'', replacing variables where appropriate.  The most challenging part of this program is
+determining whether or not you have a good Sudoku configuration or not.  One suggestion would be to keep track of a
+variable the counts the number of things that are invalid and, if that variable's value is 0 at the end of the program,
+you have a valid Sudoku board. Please see the instructor if you have questions about these matters.
+
+\vspace{-0.2in}
 \subsection*{Additional Program Requirements}
 \vspace{-0.05in}
 \begin{itemize}
 \item Make sure your program prints your name, the lab number, and the date. 
 \item Make sure your program contains the comment header with the honor pledge, your name, lab number, date, and the purpose of the program. 
-\item Make sure your program is documented properly, with the comments throughout your program whenever appropriate. 
+\item Make sure your program is documented properly, with the descriptive and useful comments throughout your program whenever appropriate. 
 \item Make sure your output
-is neat (no missing spaces, no typos, etc.) and that your program is neat (indenting, etc.).
+  is neat (e.g., no missing spaces and no typos) and that your program is neatly formatted (e.g., the indenting is correct).
 \item \textbf{You may not use array structures or loops for this assignment.}
 \end{itemize}
 
@@ -228,21 +240,22 @@ repository and in a signed and printed format.
 
 \vspace{-0.05in}
 \begin{enumerate}
-  \item A completed, properly commented and formatted {\tt Lab8.java} and {\tt Lab8Main.java} programs.
+    \setlength{\itemsep}{0pt}
+  \item Completed and properly formatted {\tt SudokuChecker.java} and {\tt SudokuCheckerMain.java} files.
 
-  \item An output document containing an output obtained after running the {\tt Lab8Main} program.
+  \item An output file containing outputs obtained from running {\tt SudokuCheckerMain} five times.
         
 \end{enumerate}
 \vspace{-0.05in}
 
-\noindent As you complete this step, you should make sure that you created a {\tt lab8/} directory within the Git
+\noindent As you complete this step, you should make sure that you created a {\tt lab8/} directory within your Git
 repository.  Then, you can save all of the required deliverables in the {\tt lab8/} directory---please see the course
 instructor or a teaching assistant if you are not able to create your directory properly. 
 
-\noindent In addition to turning in signed and printed copies of your code and output, share your program and the output
+\noindent In addition to turning in signed and printed copies of your code and output, share your source code and the output
 file with me through your Git repository by correctly using ``{\tt git add}'', ``{\tt git commit}'', and ``{\tt git
   push}'' commands. When you are done, please ensure that the Bitbucket Web site has a {\tt lab8/} directory in your
-repository with the two files called {\tt Lab8.java, Lab8Main.java} and {\tt output}. Please see the course instructor
+repository with the both two Java files in the list of deliverables and the {\tt output} file. Please see the instructor
 if you have questions about assignment submission.
 
 % In addition to turning in signed and printed copies of your code and output, please share your program and the output
