@@ -11,7 +11,7 @@ Due Thursday, 6 November by 2:30pm }
 \vspace{-0.05in}
 
 To enhance your experience with designing and implementing your own Java classes, including the completion of tasks such
-picking the right the instance variables, and creating both the constructors and the methods.  Additionally, to practice
+as picking the right the instance variables and creating both the constructors and the methods.  Additionally, to practice
 using compound {\tt if/else} statements as part of a solution to a real-world problem involving a popular and well-known
 game.
 
@@ -45,17 +45,18 @@ encouraged to review \url{http://en.wikipedia.org/wiki/Sudoku}.
 \subsection*{Create a New Directory and Two Java Programs}
 \vspace{-0.05in}
 
-In your own {\tt cs111F2014-<your user name>} repository inside the {\tt labs/} directory, create a directory called {\tt
-  lab8}. Type ``{\tt cd lab8}'' to move to the new directory. Then using {\tt gvim} create {\tt SudokuChecker.java} and {\tt
-  SudokuCheckerMain.java} files that will store your solution to this laboratory assignment.
+In your own {\tt cs111F2014-<your user name>} repository inside the {\tt labs/} directory, create a directory called
+{\tt lab8}. Type ``{\tt cd lab8}'' to move to the new directory. Then, using {\tt gvim}, you should create {\tt
+  SudokuChecker.java} and {\tt SudokuCheckerMain.java} files that will store your solution to this laboratory
+assignment. Remember to use the Java program template from a previous lab!
 
 \vspace{-0.1in}
 \subsection*{Implementing a Sudoku Checker}
 \vspace{-0.05in}
 
 Sudoku is a logic-based placement puzzle. The aim of this puzzle is to enter a numerical digit from 1 through 9 in each
-cell of a 9x9 grid made up of 3x3 subgrids (called ``regions''), starting with various digits given in some cells (the
-  ``givens''). Each row, column, and region must contain only one instance of each valid numeral.
+cell of a 9x9 grid made up of 3x3 subgrids (called the ``regions''), starting with various digits given in some cells
+(called the ``givens''). Each row, column, and region must contain only one instance of each valid numeral.
 
 \noindent For this lab, you are going to write a Sudoku validator for 4x4 grids made up of 2x2 regions instead of 9x9
 grids made up of 3x3 regions.  In contrast to the previously explained full grids, Sudoku puzzles that use 4x4 grids
@@ -67,8 +68,8 @@ only use the numerical digits 1 through 4 instead of 1 through 9.
 \includegraphics[scale=0.3]{grids}
 
 \noindent Notice how each row, column, and region has the individual numbers from 1 through 4 used only once.  This means
-that the values used in each row, column and region must add up to 10 because of the fact that (1 + 2 + 3 + 4) = 10.  This is
-how your program will check our 4x4 Sudoku grids.
+that the values used in each row, column, and region must add up to 10 because of the fact that (1 + 2 + 3 + 4) = 10.  This is
+how your program will check the 4x4 Sudoku grids.
 
 \noindent Allow your user to enter their Sudoku grids row-by-row, requiring that they separate each of the four values
 by a space and that they hit ENTER at the end of the row.
@@ -77,9 +78,9 @@ by a space and that they hit ENTER at the end of the row.
 row, and column.  An example run can be seen below.
 
 \begin{verbatim}
-Welcome to the Sudoku Checker v1.0!
+Welcome to the Sudoku Checker!
 
-This program checks simple, small, 4x4 Sudoku grids for correctness. 
+This program checks simple and small 4x4 Sudoku grids for correctness. 
 Each column, row and 2x2 region contains the numbers 1 through 4 only once.
 
 To check your Sudoku, enter your board one row at a time, 
@@ -110,13 +111,13 @@ SUDOKU GRID IS VALID!
 
 \newpage
 
-\noindent Your program does not have to check for the numbers 1 through 4 being used uniquely in each row, column and
-region.  In other words, don't worry about validating their input to make sure they only enter the digits 1, 2, 3, or 4
-and only enter them once per row, column, and region.  You simply need to check that each row, column, and region adds up
-to 10. This simplistic type of checking will, however, allow some bad Sudoku grids to be validated as good---this is
-acceptable. 
+\noindent Your program does not have to check for the numbers 1 through 4 being used uniquely in each row, column, and
+region.  In other words, don't worry about validating the user's input to make sure they only enter the digits 1, 2, 3,
+or 4 and only enter them once per row, column, and region.  You simply need to check that each row, column, and region
+adds up to 10. This simplistic type of checking will, however, allow some bad Sudoku grids to be validated as
+good---this is acceptable. 
 
-\noindent Rows, columns and regions are identified as found below:\\
+\noindent Rows, columns, and regions are identified as found below:\\
 
 \vspace*{.01in}
 \includegraphics[scale=0.5]{sud}
@@ -199,7 +200,7 @@ getGrid()	& This public method should read the Sudoku grid from the user row by 
 \hline 
 checkGrid() &	This public method uses the private data members to test whether or not the given values are a valid Sudoku grid.\\
 & Your method does not have to check for the numbers 1 through 4 being used uniquely in each row, column, and region.
-In other words, don't worry about validating their input to make sure they only enter the digits 1, 2, 3, or 4 and only
+In other words, don't worry about validating the user's input to make sure they only enter the digits 1, 2, 3, or 4 and only
 enter them once per row, column, and region. \\ 
 & When producing your output, you must first validate the regions, then the rows, and then the columns.  Each region,
 row, and column validation should appear on a line by itself. \\
@@ -215,7 +216,7 @@ this assignment---you will need to input your 16 values into 16 separate variabl
 {\tt w2}, {\tt w3}, and {\tt w4} for the first row and then {\tt x1}, {\tt x2}, {\tt x3}, and {\tt x4} for the second
 row, and so on.  Once you validate that one row is good or not good, the rest of the program should essentially be a
 matter of ``copy and paste'', replacing variables where appropriate.  The most challenging part of this program is
-determining whether or not you have a good Sudoku configuration or not.  One suggestion would be to keep track of a
+determining whether or not you have a good Sudoku configuration.  One suggestion would be to keep track of a
 variable the counts the number of things that are invalid and, if that variable's value is 0 at the end of the program,
 you have a valid Sudoku board. Please see the instructor if you have questions about these matters.
 
@@ -224,7 +225,7 @@ you have a valid Sudoku board. Please see the instructor if you have questions a
 \vspace{-0.05in}
 \begin{itemize}
 \item Make sure your program prints your name, the lab number, and the date. 
-\item Make sure your program contains the comment header with the honor pledge, your name, lab number, date, and the purpose of the program. 
+\item Make sure your program contains the comment header with the honor code pledge, your name, lab number, date, and the purpose of the program. 
 \item Make sure your program is documented properly, with the descriptive and useful comments throughout your program whenever appropriate. 
 \item Make sure your output
   is neat (e.g., no missing spaces and no typos) and that your program is neatly formatted (e.g., the indenting is correct).
@@ -255,7 +256,7 @@ instructor or a teaching assistant if you are not able to create your directory 
 \noindent In addition to turning in signed and printed copies of your code and output, share your source code and the output
 file with me through your Git repository by correctly using ``{\tt git add}'', ``{\tt git commit}'', and ``{\tt git
   push}'' commands. When you are done, please ensure that the Bitbucket Web site has a {\tt lab8/} directory in your
-repository with the both two Java files in the list of deliverables and the {\tt output} file. Please see the instructor
+repository with the two Java files in the list of deliverables and the {\tt output} file. Please see the instructor
 if you have questions about assignment submission.
 
 % In addition to turning in signed and printed copies of your code and output, please share your program and the output
