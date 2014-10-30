@@ -7,7 +7,6 @@
 // during a specific year.
 //*****************************
 
-
 import java.util.Date;
 import java.util.Scanner;
 public class Practical6Main
@@ -21,9 +20,9 @@ public class Practical6Main
         System.out.println("Please enter a year between 1000 and 3000!");
         userInput = scan.nextInt();
 
-        Practical6 activities = new Practical6(userInput);
+        YearChecker activities = new YearChecker(userInput);
 
-	// TO DO: include method calls
+        // TO DO: include method calls
 
         System.out.println("Thank you for using this program.");
     }
