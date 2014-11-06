@@ -64,12 +64,52 @@ the {\tt TodoList} class, you may want to use the Lightweight Java Visualizer (L
 assignment, to create an diagram of its structure in the computer's memory.
 
 \vspace{-0.1in}
-\subsection*{Implementing a Sudoku Checker}
+\subsection*{Understanding the Todo List Manager System}
 \vspace{-0.05in}
 
-SUDOKU GRID IS VALID!
-\end{verbatim}
+The current implementation of the todo list manager reads from a file called ``{\tt todo.txt}'', an example of which is
+included below this paragraph. An individual line in the ``{\tt todo.txt}'' file always adheres to the format
+``Priority, Category, Task'' where ``A'' is the most important priority (with ``B'' being the next level, and so on),
+``Understand'' being an example of a category, and ``Use the LJV to see the TodoList'' is a task.
 
+\vspace{-0.05in}
+\begin{verbatim}
+A, Understand, Draw a diagram(s) to explain classes
+A, Understand, Use the LJV to see TodoList
+B, Explain, Add comments to all of the Todo classes 
+\end{verbatim}
+\vspace{-0.05in}
+
+\vspace{-0.1in}
+\subsection*{Implementing New Features}
+\vspace{-0.05in}
+
+The final version of your todo list manager should provide features to read the todo list, search for specific tasks
+according to both priority and category, mark a task as done, and list all of the current tasks.  Currently, the system
+does include the source code for implement the priority-search and category-search features.
+
+\vspace{-0.05in}
+\begin{verbatim}
+Welcome to the Todo List Manager!
+What operation would you like to perform?
+Available options: read, priority-search, category-search, done, list, quit
+read
+list
+0, A,  Understand,  Draw a diagram(s) to explain classes, done? false
+1, A,  Understand,  Use the LJV to see TodoList, done? false
+2, B,  Explain,  Add comments to all of the Todo classes , done? false
+done
+What is the id of the task?
+1
+list
+0, A,  Understand,  Draw a diagram(s) to explain classes, done? false
+1, A,  Understand,  Use the LJV to see TodoList, done? true
+2, B,  Explain,  Add comments to all of the Todo classes , done? false
+quit
+\end{verbatim}
+\vspace{-0.05in}
+
+\vspace{-0.05in}
 \vspace{-0.2in}
 \subsection*{Required Deliverables}
 \vspace{-0.05in}
