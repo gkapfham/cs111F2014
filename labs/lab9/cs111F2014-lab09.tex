@@ -1,0 +1,195 @@
+%!TEX root=cs111F2014-lab09.tex
+% mainfile: cs111F2014-lab09.tex
+
+\input{111pre}
+\begin{document}
+\MYTITLE{Lab 9 for Sections 03 and 04 \\ 6 November 2014\\
+Due Thursday, 13 November by 2:30pm }
+
+\vspace{-0.2in}
+\subsection*{Objectives}
+\vspace{-0.05in}
+
+To enhance your experience with designing and implementing your own Java classes, including the completion of tasks such
+as picking the right the instance variables and creating both the constructors and the methods.  Additionally, to practice
+using compound {\tt if/else} statements as part of a solution to a real-world problem involving a popular and well-known
+game.
+
+\vspace{-0.15in}
+\subsection*{General Guidelines for Labs}
+\vspace{-0.05in}
+
+\begin{itemize}
+\item
+{\bf Work on the Alden Hall computers.} If you want to work on a different
+machine, be sure to transfer your programs to the Alden
+machines and re-run them before submitting.
+\item
+  {\bf Update your repository often!} You should {\tt add}, {\tt commit}, 
+  and {\tt push} your updated files each time you work on them.  I will not grade 
+your programs until the due date has passed.
+\item
+{\bf Review the Honor Code policy.} You
+may discuss programs with others, but programs that are nearly identical
+to others will be taken as evidence of violating the Honor Code.
+\end{itemize}
+
+\vspace{-0.15in}
+\subsection*{Reading Assignment}
+\vspace{-0.05in}
+
+To learn more about {\tt if} statement and boolean expressions, review Sections 5.1--5.3, and to review material on
+constructing classes and methods, read Sections 4.1--4.5.  Students who are not familiar with the Sudoku game are
+encouraged to review \url{http://en.wikipedia.org/wiki/Sudoku}.
+
+\vspace{-0.1in}
+\subsection*{Create a New Directory and Two Java Programs}
+\vspace{-0.05in}
+
+In your own {\tt cs111F2014-<your user name>} repository inside the {\tt labs/} directory, create a directory called
+{\tt lab8}. Type ``{\tt cd lab8}'' to move to the new directory. Then, using {\tt gvim}, you should create {\tt
+  SudokuChecker.java} and {\tt SudokuCheckerMain.java} files that will store your solution to this laboratory
+assignment. Remember to use the Java program template from a previous lab!
+
+\vspace{-0.1in}
+\subsection*{Implementing a Sudoku Checker}
+\vspace{-0.05in}
+
+
+
+
+
+
+
+
+\begin{verbatim}
+
+
+
+
+
+
+
+SUDOKU GRID IS VALID!
+\end{verbatim}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\vspace{-0.2in}
+\subsection*{Required Deliverables}
+\vspace{-0.05in}
+
+For this assignment you are invited to submit electronic versions of the following deliverables through both the Bitbucket
+repository and in a signed and printed format.
+
+\vspace{-0.05in}
+\begin{enumerate}
+    \setlength{\itemsep}{0pt}
+  \item Completed and properly formatted {\tt SudokuChecker.java} and {\tt SudokuCheckerMain.java} files.
+
+  \item An output file containing outputs obtained from running {\tt SudokuCheckerMain} five times.
+        
+\end{enumerate}
+\vspace{-0.05in}
+
+\noindent As you complete this step, you should make sure that you created a {\tt lab8/} directory within your Git
+repository.  Then, you can save all of the required deliverables in the {\tt lab8/} directory---please see the course
+instructor or a teaching assistant if you are not able to create your directory properly. 
+
+\noindent In addition to turning in signed and printed copies of your code and output, share your source code and the output
+file with me through your Git repository by correctly using ``{\tt git add}'', ``{\tt git commit}'', and ``{\tt git
+  push}'' commands. When you are done, please ensure that the Bitbucket Web site has a {\tt lab8/} directory in your
+repository with the two Java files in the list of deliverables and the {\tt output} file. Please see the instructor
+if you have questions about assignment submission.
+
+% In addition to turning in signed and printed copies of your code and output, please share your program and the output
+% file with me through your Git repository by correctly using the ``{\tt git add}'', ``{\tt git commit}'', and ``{\tt git
+% push}'' commands. When you are done, please ensure that the Bitbucket Web site has a {\tt lab8/} directory in your
+% repository with the four files called {\tt Lab8.java}, {\tt Lab8Main.java}, and {\tt output}. You
+% should see the instructor or a teaching assistant if you have questions about submitting this assignment.
+
+In adherence to the Honor Code, students should complete this assignment on an individual basis. While it is appropriate
+for students in this class to have high-level conversations about the assignment, it is necessary to distinguish
+carefully between the student who discusses the principles underlying a problem with others and the student who produces
+assignments that are identical to, or merely variations on, someone else's work.  Deliverables that are nearly identical
+to the work of others will be taken as evidence of violating the \mbox{Honor Code}.  
+
+\end{document}
+
+\begin{verbatim}
+Sample Run
+
+Welcome to the Sudoku Checker v1.0!
+
+This program checks simple, small, 4x4 Sudoku grids for correctness. Each column, row and 2x2 region contains the numbers 1 through 4 only once.
+
+To check your Sudoku, enter your board one row at a time, with each digit separated by a space.  Hit ENTER at the end of a row.
+
+Enter Row 1: 1 2 3 4
+Enter Row 2: 3 4 2 1
+Enter Row 3: 1 2 3 4
+Enter Row 4: 4 3 2 1
+
+Thank you.  Now checking ...
+
+REG-1:GOOD
+REG-2:GOOD
+REG-3:GOOD
+REG-4:GOOD
+ROW-1:GOOD
+ROW-2:GOOD
+ROW-3:GOOD
+ROW-4:GOOD
+COL-1:BAD
+COL-2:BAD
+COL-3:GOOD
+COL-4:GOOD
+
+SUDO:INVALID
+
+
+
+Sample Run
+Welcome to the Sudoku Checker v1.0!
+
+This program checks simple, small, 4x4 Sudoku grids for correctness. Each column, row and 2x2 region contains the numbers 1 through 4 only once.
+
+To check your Sudoku, enter your board one row at a time, with each digit separated by a space.  Hit ENTER at the end of a row.
+
+Enter Row 1: 3 2 4 1
+Enter Row 2: 4 1 3 2
+Enter Row 3: 1 4 2 3
+Enter Row 4: 2 3 1 4
+
+REG-1:GOOD
+REG-2:GOOD
+REG-3:GOOD
+REG-4:GOOD
+ROW-1:GOOD
+ROW-2:GOOD
+ROW-3:GOOD
+ROW-4:GOOD
+COL-1:GOOD
+COL-2:GOOD
+COL-3:GOOD
+COL-4:GOOD
+
+SUDO:VALID
+
+\end{verbatim}
+
+
+
+\end{document}
