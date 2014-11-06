@@ -69,11 +69,11 @@ assignment, to create an diagram of its structure in the computer's memory.
 
 The current implementation of the todo list manager reads from a file called ``{\tt todo.txt}'', an example of which is
 included below this paragraph. An individual line in the ``{\tt todo.txt}'' file always adheres to the format
-``Priority, Category, Task'' where ``A'' is the most important priority (with ``B'' being the next level, and so on),
-``Understand'' being an example of a category, and ``Use the LJV to see the TodoList'' is a task.  Following this format
-for a task, you should consider adding in all of items that you must complete in order to successfully finish this
-laboratory assignment. That is, you can actually use your todo list manager to assist you as you complete both this
-project, later practical and laboratory assignments, and the final project!
+``Priority, Category, Task'' where ``{\tt A}'' is the most important priority (with ``{\tt B}'' being the next level,
+  and so on), ``{\tt Understand}'' being an example of a category, and ``{\tt Use the LJV to see the TodoList}'' is a
+task.  Following this format for a task, you should consider adding in all of items that you must complete in order to
+successfully finish this laboratory assignment. That is, you can actually use your todo list manager to assist you as
+you complete both this project, later practical and laboratory assignments, and the final project!
 
 \vspace{-0.05in}
 \begin{verbatim}
@@ -122,14 +122,15 @@ operations will involve you using a {\tt java.util.Iterator} to iterate through 
   TodoItem} class. 
 
 When you are performing a priority-search, you will need to collect and return all of the {\tt TodoItem}s that match the
-provided priority level.  For instance, using the example todo list on the previous page, a request for the ``A''
-priority tasks would return those with id values of zero and one. Similarly, the use of the category-search operation
+provided priority level.  For instance, using the example todo list on the previous page, a request for the ``{\tt A}''
+priority tasks would return those with {\tt id} values of zero and one. Similarly, the use of the category-search operation
 will require you to iterator through all of the {\tt TodoItem}s managed by a {\tt TodoList} as you find those that match
 the requested category. Again using the aforementioned todo list, this operation would also return the first two tasks.
-The {\tt markTaskAsDone} method, as shown below, gives a concrete example of how to iterate through the {\tt todoItems},
-using conditional logic to check if a specific {\tt todoItem} has the requested {\tt toMarkId}. You can use this method
-as a template for those methods that you must implement.
+The {\tt markTaskAsDone} method, as shown below, gives a concrete example of how to iterate through the {\tt todoItems}
+and use conditional logic to check if a specific {\tt todoItem} has the requested {\tt toMarkId}. You can use this
+method as a for those methods that you must implement.
 
+\vspace{-0.1in}
 \begin{verbatim}
     public void markTaskAsDone(int toMarkId) {
         Iterator iterator = todoItems.iterator();
@@ -142,28 +143,36 @@ as a template for those methods that you must implement.
     }
 \end{verbatim}
 
-\vspace{-0.1in}
+% Students who would like to further enhance their todo list manager should think about adding additional features to
+% their program.  For example, can you save the modified list back to the ``{\tt todo.txt}'' file?
+
+\vspace{-0.3in}
 \subsection*{Required Deliverables}
 \vspace{-0.05in}
 
-For this assignment you are invited to submit electronic versions of the following deliverables through both the Bitbucket
+For this assignment you are invited to submit versions of the following deliverables through both the Bitbucket
 repository and in a signed and printed format.
 
-\vspace{-0.05in}
+\vspace{-0.1in}
 \begin{enumerate}
     \setlength{\itemsep}{0pt}
-  \item Completed and properly formatted {\tt SudokuChecker.java} and {\tt SudokuCheckerMain.java} files.
 
-  \item An output file containing outputs obtained from running {\tt SudokuCheckerMain} five times.
+  \item Completed, fully commented, and properly formatted versions of the three source code files.
+
+  \item A written reflection, saved in {\tt reflection}, about the challenges you faced during this lab.
+
+  \item An output file, called {\tt output}, containing outputs from five runs of {\tt TodoListMain}.
+
+  \item The final version of the {\tt todo.txt} file that you used to both test and complete this lab.
         
 \end{enumerate}
-\vspace{-0.05in}
+\vspace{-0.1in}
 
-In addition to turning in signed and printed copies of your code and output, share your source code and the output
-file with me through your Git repository by correctly using ``{\tt git add}'', ``{\tt git commit}'', and ``{\tt git
+In addition to turning in signed and printed copies of your code and output, share your source code and other required
+files with me through your Git repository by correctly using ``{\tt git add}'', ``{\tt git commit}'', and ``{\tt git
   push}'' commands. When you are done, please ensure that the Bitbucket Web site has a {\tt lab9/} directory in your
-repository with the two Java files in the list of deliverables and the {\tt output} file. Please see the instructor
-if you have questions about assignment submission.
+repository with the two Java files in the list of deliverables and the {\tt output} file. Please see the instructor if
+you have questions about assignment submission.
 
 % In addition to turning in signed and printed copies of your code and output, please share your program and the output
 % file with me through your Git repository by correctly using the ``{\tt git add}'', ``{\tt git commit}'', and ``{\tt git
