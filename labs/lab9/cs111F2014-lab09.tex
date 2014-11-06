@@ -11,8 +11,9 @@ Due Thursday, 13 November by 2:30pm }
 \vspace{-0.05in}
 
 To further enhance your experience with designing, implementing, and enhancing Java methods, including the completion of
-tasks such as creating and calling methods that use complex conditional logic and iteration constructs.  Additionally,
-to practice using Java methods that read input from a text file with the {\tt java.util.Scanner}.
+tasks such as creating and calling methods that use boolean expressions, complex conditional logic, and iteration
+constructs.  Additionally, to practice using Java methods that read input from a text file with the {\tt
+  java.util.Scanner}.
 
 \vspace{-0.15in}
 \subsection*{General Guidelines for Labs}
@@ -30,7 +31,7 @@ your programs until the due date has passed.
 \item
 {\bf Review the Honor Code policy.} You
 may discuss programs with others, but programs that are nearly identical
-to others will be taken as evidence of violating the Honor Code.
+to others' will be taken as evidence of violating the Honor Code.
 \end{itemize}
 
 \vspace{-0.15in}
@@ -48,12 +49,13 @@ familiar with text-based todo list management tools are encouraged to review, as
 \subsection*{Create a New Directory and Starting the Project}
 \vspace{-0.05in}
 
-After changing into the {\tt cs111F2014-share/} directory, which contains our course's version control repository, you
-should type the command ``{\tt git pull}'' to download the source code for this laboratory assignment.  In your own {\tt
-  cs111F2014-<your user name>} repository inside the {\tt labs/} directory, create a directory called {\tt lab9}. Using
-the method described in a previous laboratory assignment, please copy the source code from the share repository to your
-own repository. Now, change into the {\tt labs/lab9/} directory, in your own Git repository, and use {\tt gvim} to study
-the source code of the provided files. What methods do these classes provide? How do they work? 
+After changing into the ``{\tt cs111F2014-share/}'' directory, which contains our course's version control repository,
+you should type the command ``{\tt git pull}'' to download the source code for this laboratory assignment.  In your own
+``{\tt cs111F2014-<your user name>}'' repository inside the ``{\tt labs/}'' directory, create a directory called ``{\tt
+  lab9}''. Using the method described in a previous laboratory assignment, please copy the source code from the share
+repository to your own repository. Now, change into the ``{\tt labs/lab9/}'' directory, in your own Git repository, and
+use ``{\tt gvim}'' to study the source code of the provided files. What methods do these classes provide? How do they
+work? 
 
 The Java classes that you have downloaded provide the preliminary features for a complete todo list manager program. As
 part of this assignment, you will document all of the provided source code and then add new methods that furnish new
@@ -64,7 +66,7 @@ the {\tt TodoList} class, you may want to use the Lightweight Java Visualizer (L
 assignment, to create an diagram of its structure in the computer's memory.
 
 \vspace{-0.1in}
-\subsection*{Understanding the Todo List Manager System}
+\subsection*{Understanding the Todo List Manager}
 \vspace{-0.05in}
 
 The current implementation of the todo list manager reads from a file called ``{\tt todo.txt}'', an example of which is
@@ -72,8 +74,8 @@ included below this paragraph. An individual line in the ``{\tt todo.txt}'' file
 ``Priority, Category, Task'' where ``{\tt A}'' is the most important priority (with ``{\tt B}'' being the next level,
   and so on), ``{\tt Understand}'' being an example of a category, and ``{\tt Use the LJV to see the TodoList}'' is a
 task.  Following this format for a task, you should consider adding in all of items that you must complete in order to
-successfully finish this laboratory assignment. That is, you can actually use your todo list manager to assist you as
-you complete both this project, later practical and laboratory assignments, and the final project!
+successfully finish this laboratory assignment. That is, you can actually use your todo list manager to assist as
+you complete both this project, later practical and laboratory assignments, and the upcoming final project!
 
 \vspace{-0.05in}
 \begin{verbatim}
@@ -89,9 +91,10 @@ B, Explain, Add comments to all of the Todo classes
 
 The final version of your todo list manager should provide features to read the todo list, search for specific tasks
 according to both priority and category, mark a task as done, and list all of the current tasks.  Currently, the system
-does include the source code to implement the priority-search and category-search features. However, you can see from
-the following output that the todo list manager can already read the todo list from the file, mark a task as done, list
-the existing tasks, and stop running the program. Can you also compile and run this program?
+does not include the source code to implement the priority-search and category-search features. Yet, you can see
+from the following output that the todo list manager can already read the todo list from the file, mark a task as done,
+list the existing tasks, and stop running the program. Can you also compile and run this program and produce this
+output?
 
 \vspace{-0.05in}
 \begin{verbatim}
@@ -115,9 +118,9 @@ quit
 \vspace{-0.05in}
 
 To complete this assignment, you are responsible for adding all of the source code that is needed to implement the
-priority-search and category-search features. This means that you will first have to add code that can determine which
-the user has input the words ``{\tt priority-search}'' or ``{\tt category-search}''---what file should contain this
-code?  Next, you will need to finish implementing the methods that perform these operations.  Both of these
+priority-search and category-search features. This means that you will first have to add code that can determine when 
+the user has input the word ``{\tt priority-search}'' or ``{\tt category-search}''---what file should contain this
+code?  Please notice that you will need to finish implementing the methods that perform these operations! Both of these
 operations will involve you using a {\tt java.util.Iterator} to iterate through all of the instances of the {\tt
   TodoItem} class. 
 
@@ -158,20 +161,17 @@ repository and in a signed and printed format.
     \setlength{\itemsep}{0pt}
 
   \item Completed, fully commented, and properly formatted versions of the three source code files.
-
-  \item A written reflection, saved in {\tt reflection}, about the challenges you faced during this lab.
-
   \item An output file, called {\tt output}, containing outputs from five runs of {\tt TodoListMain}.
-
   \item The final version of the {\tt todo.txt} file that you used to both test and complete this lab.
+  \item A written reflection, saved in {\tt reflection}, about the challenges you faced during this lab.
         
 \end{enumerate}
 \vspace{-0.1in}
 
 In addition to turning in signed and printed copies of your code and output, share your source code and other required
 files with me through your Git repository by correctly using ``{\tt git add}'', ``{\tt git commit}'', and ``{\tt git
-  push}'' commands. When you are done, please ensure that the Bitbucket Web site has a {\tt lab9/} directory in your
-repository with the two Java files in the list of deliverables and the {\tt output} file. Please see the instructor if
+  push}'' commands. When you are done, please ensure that the Bitbucket Web site has a ``{\tt lab9/}'' directory in your
+repository with the three Java files in the list of deliverables and the other files. Please see the instructor if
 you have questions about assignment submission.
 
 % In addition to turning in signed and printed copies of your code and output, please share your program and the output
@@ -184,7 +184,7 @@ In adherence to the Honor Code, students should complete this assignment on an i
 for students in this class to have high-level conversations about the assignment, it is necessary to distinguish
 carefully between the student who discusses the principles underlying a problem with others and the student who produces
 assignments that are identical to, or merely variations on, someone else's work.  Deliverables that are nearly identical
-to the work of others will be taken as evidence of violating the \mbox{Honor Code}.  
+to the work of others will be taken as evidence of violating Allegheny College's \mbox{Honor Code}.  
 
 \end{document}
 
