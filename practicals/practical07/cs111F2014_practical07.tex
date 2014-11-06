@@ -1,0 +1,105 @@
+\input{111pre}
+\begin{document}
+
+\MYTITLE{Practical 7 \\ 6--7 November 2014 \\ Due in Bitbucket by midnight of the day of your practical \\ ``Checkmark'' grade}
+
+\subsection*{Summary}
+\vspace*{-.05in}
+In this practical you will write a Java program that will allow the user to guess a number. To complete this task you will use {\tt while} loops and {\tt if/else} statements.  Then, using the ``{\tt git add}'', ``{\tt git  commit}'', and ``{\tt git push}'' commands you will
+upload your modified source code files and the output you obtain from running your program to your Git repository hosted
+by Bitbucket.  
+
+\vspace*{-.1in}
+\subsection*{Review the Textbook}
+\vspace*{-.05in}
+You may refer to sections 5.1--5.4 in your textbook to learn more about
+{\tt if/else} statements and {\tt while} loops.  You may also refer to
+the section in this document called ``The {\tt while} Loop Overview''
+for an example of using a {\tt while} loop in a Java Program.
+
+\vspace*{-.1in}
+\subsection*{Guessing Game}
+\vspace*{-.05in}
+Write a Java program that will play a guessing game with the user of the program.
+The user must try to guess a number between $1$ and $100$. If the user's
+guess is wrong, print out a helpful hint, such as ``that's too high'' or
+``that's too low''. Keep repeating this until the user guesses correctly.
+
+Your Java program should complete the following tasks:
+\begin{itemize}
+\item Print your name, practical number, and the date.
+\item 
+Declare and initialize a variable of type {\tt int} to be equal to some
+randomly generated number in the range between 1 and 100; this is the correct answer that the user will try to guess.
+\item
+\textbf{Repeatedly} ask the user to enter a number until the user is able to guess the correct answer.
+\item
+Print out an appropriate statement if the user's input is equal to the correct answer.
+\item 
+Print out ``Too low!" or another appropriate statement if the number entered by the user is less than the correct answer.
+\item
+Print out ``Too high!" or another appropriate statement if the number entered by the user is greater than the correct answer.
+\item Print out how many tries it took the user to guess the correct answer.
+\end{itemize}
+
+\vspace*{-.1in}
+\subsection*{Completing the Practical Assignment}
+\vspace*{-.1in}
+Create one Java file, called {\tt Practical7.java} for this assignment.
+This class will contain the main method where you will implement a
+solution to the problem outlined on the previous page.
+
+\noindent To finish this assignment and earn a ``checkmark'', you should submit the
+{\tt Practical7.java} file in your Bitbucket repository by using
+the appropriate {\tt git} commands. You also need to submit an output file,
+called {\tt output}, with at least one run of your program.
+
+\vspace{-0.1in}
+\subsection*{The {\tt while} Loop Overview}
+\vspace*{-.05in}
+The general form of a {\tt while} loop is:
+\begin{Verbatim}[commandchars=\\\{\}]
+          while (\textcolor{red}{\it condition} )
+          \{
+                \textcolor{red}{\it ... one or more Java statements ...}
+          \}
+\end{Verbatim}
+\vspace{-0.15in}
+As long as the \textcolor{red}{\it condition} is true, the body of the loop
+will execute, and the loop will
+keep repeating. The condition is tested at the ``top'' of the loop.
+
+\noindent Here is an example that shows how to keep generating random throws of a pair of dice
+until a ``double'' (both dice are the same) is rolled:
+\vspace{-0.2in}
+\begin{verbatim}
+          ...
+        int d1 = -1, d2 = -2; // two dice (initialized to different values)
+        int numTries = 0;
+        while (d1 != d2) // keep generating random rolls until two are equal
+        {
+            d1 = rand.nextInt(6)+1;
+            d2 = rand.nextInt(6)+1;
+            numTries++;
+        }
+        System.out.println("After " + numTries + " rolls of the dice, two were equal");
+          ...
+\end{verbatim}
+
+\vspace*{-.15in}
+\subsection*{General Guidelines for Practical Sessions}
+\vspace*{-.05in}
+\begin{itemize}
+\item {\bf Submit \textbf{\textit{Something}}.} Your grade for this assignment is a ``checkmark'' indicating whether you
+  did or did not complete the work and submit something to the Bitbucket repository using the ``{\tt git add}'', ``{\tt
+    git commit}'', and ``{\tt git push}'' commands.
+
+\item {\bf Update Your Repository Often!} You should {\tt add}, {\tt commit}, and {\tt push} your updated files each
+  time you work on them, always including descriptive messages about each code change.
+
+\item {\bf Review the Honor Code Policy on the Syllabus.} Remember that while you may discuss your work with other
+  students in the course, code that is nearly identical to, or merely variations on, the work of others will be
+  taken as evidence of violating the \mbox{Honor Code}.
+
+\end{itemize}
+\end{document}
