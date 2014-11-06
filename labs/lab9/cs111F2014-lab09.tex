@@ -10,10 +10,9 @@ Due Thursday, 13 November by 2:30pm }
 \subsection*{Objectives}
 \vspace{-0.05in}
 
-To enhance your experience with designing and implementing your own Java classes, including the completion of tasks such
-as picking the right the instance variables and creating both the constructors and the methods.  Additionally, to practice
-using compound {\tt if/else} statements as part of a solution to a real-world problem involving a popular and well-known
-game.
+To further enhance your experience with designing, implementing, and enhancing Java methods, including the completion of
+tasks such as creating and calling methods that use complex conditional logic and iteration constructs.  Additionally,
+to practice using Java methods that read input from a text file with the {\tt java.util.Scanner}.
 
 \vspace{-0.15in}
 \subsection*{General Guidelines for Labs}
@@ -40,19 +39,29 @@ to others will be taken as evidence of violating the Honor Code.
 
 To continue to learn more about {\tt if/else if/else} statements and boolean expressions, please again review Sections
 5.1--5.3. Since this assignment will also require you to continue to use Java classes and methods, you should once again
-review Sections 4.1--4.5.  To best prepare for the new content in this laboratory assignment, you should also study 
+review Sections 4.1--4.5.  To best prepare for the new content in this laboratory assignment, you should also study
 Sections 5.1--5.6, paying particularly close attention to the material about {\tt while} loops, {\tt break} and {\tt
-  continue} statements, iterators, and the {\tt java.util.ArrayList} class. Students who are not familiar with
-text-based todo list management tools are encouraged to review, as an example, \url{http://todotxt.com/}.
+  continue} statements, text file input, iterators, and the {\tt java.util.ArrayList} class. Students who are not
+familiar with text-based todo list management tools are encouraged to review, as an example, \url{http://todotxt.com/}.
 
 \vspace{-0.1in}
-\subsection*{Create a New Directory and Two Java Programs}
+\subsection*{Create a New Directory and Starting the Project}
 \vspace{-0.05in}
 
-In your own {\tt cs111F2014-<your user name>} repository inside the {\tt labs/} directory, create a directory called
-{\tt lab8}. Type ``{\tt cd lab8}'' to move to the new directory. Then, using {\tt gvim}, you should create {\tt
-  SudokuChecker.java} and {\tt SudokuCheckerMain.java} files that will store your solution to this laboratory
-assignment. Remember to use the Java program template from a previous lab!
+After changing into the {\tt cs111F2014-share/} directory, which contains our course's version control repository, you
+should type the command ``{\tt git pull}'' to download the source code for this laboratory assignment.  In your own {\tt
+  cs111F2014-<your user name>} repository inside the {\tt labs/} directory, create a directory called {\tt lab9}. Using
+the method described in a previous laboratory assignment, please copy the source code from the share repository to your
+own repository. Now, change into the {\tt labs/lab9/} directory, in your own Git repository, and use {\tt gvim} to study
+the source code of the provided files. What methods do these classes provide? How do they work? 
+
+The Java classes that you have downloaded provide the preliminary features for a complete todo list manager program. As
+part of this assignment, you will document all of the provided source code and then add new methods that furnish new
+features.  Then, you will run this program multiple times to demonstrate the correctness of the finished system. To
+start this assignment, it is a good idea to draw diagrams like the ones in Figures 4.4 and 4.7 to understand both the
+classes involved in the program and the flow of control between method invocations. Next, to understand the structure of
+the {\tt TodoList} class, you may want to use the Lightweight Java Visualizer (LJV), as explained in a previous
+assignment, to create an diagram of its structure in the computer's memory.
 
 \vspace{-0.1in}
 \subsection*{Implementing a Sudoku Checker}
