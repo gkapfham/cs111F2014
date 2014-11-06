@@ -70,11 +70,14 @@ assignment, to create an diagram of its structure in the computer's memory.
 The current implementation of the todo list manager reads from a file called ``{\tt todo.txt}'', an example of which is
 included below this paragraph. An individual line in the ``{\tt todo.txt}'' file always adheres to the format
 ``Priority, Category, Task'' where ``A'' is the most important priority (with ``B'' being the next level, and so on),
-``Understand'' being an example of a category, and ``Use the LJV to see the TodoList'' is a task.
+``Understand'' being an example of a category, and ``Use the LJV to see the TodoList'' is a task.  Following this format
+for a task, you should consider adding in all of items that you must complete in order to successfully finish this
+laboratory assignment. That is, you can actually use your todo list manager to assist you as you complete both this
+project, later practical and laboratory assignments, and the final project!
 
 \vspace{-0.05in}
 \begin{verbatim}
-A, Understand, Draw a diagram(s) to explain classes
+A, Understand, Draw diagram(s) to explain classes
 A, Understand, Use the LJV to see TodoList
 B, Explain, Add comments to all of the Todo classes 
 \end{verbatim}
@@ -86,7 +89,9 @@ B, Explain, Add comments to all of the Todo classes
 
 The final version of your todo list manager should provide features to read the todo list, search for specific tasks
 according to both priority and category, mark a task as done, and list all of the current tasks.  Currently, the system
-does include the source code for implement the priority-search and category-search features.
+does include the source code to implement the priority-search and category-search features. However, you can see from
+the following output that the todo list manager can already read the todo list from the file, mark a task as done, list
+the existing tasks, and stop running the program. Can you also compile and run this program?
 
 \vspace{-0.05in}
 \begin{verbatim}
@@ -95,14 +100,14 @@ What operation would you like to perform?
 Available options: read, priority-search, category-search, done, list, quit
 read
 list
-0, A,  Understand,  Draw a diagram(s) to explain classes, done? false
+0, A,  Understand,  Draw diagram(s) to explain classes, done? false
 1, A,  Understand,  Use the LJV to see TodoList, done? false
 2, B,  Explain,  Add comments to all of the Todo classes , done? false
 done
 What is the id of the task?
 1
 list
-0, A,  Understand,  Draw a diagram(s) to explain classes, done? false
+0, A,  Understand,  Draw diagram(s) to explain classes, done? false
 1, A,  Understand,  Use the LJV to see TodoList, done? true
 2, B,  Explain,  Add comments to all of the Todo classes , done? false
 quit
