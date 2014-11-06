@@ -83,7 +83,7 @@ B, Explain, Add comments to all of the Todo classes
 \end{verbatim}
 \vspace{-0.05in}
 
-\vspace{-0.1in}
+\vspace{-0.15in}
 \subsection*{Implementing New Features}
 \vspace{-0.05in}
 
@@ -114,8 +114,35 @@ quit
 \end{verbatim}
 \vspace{-0.05in}
 
-\vspace{-0.05in}
-\vspace{-0.2in}
+To complete this assignment, you are responsible for adding all of the source code that is needed to implement the
+priority-search and category-search features. This means that you will first have to add code that can determine which
+the user has input the words ``{\tt priority-search}'' or ``{\tt category-search}''---what file should contain this
+code?  Next, you will need to finish implementing the methods that perform these operations.  Both of these
+operations will involve you using a {\tt java.util.Iterator} to iterate through all of the instances of the {\tt
+  TodoItem} class. 
+
+When you are performing a priority-search, you will need to collect and return all of the {\tt TodoItem}s that match the
+provided priority level.  For instance, using the example todo list on the previous page, a request for the ``A''
+priority tasks would return those with id values of zero and one. Similarly, the use of the category-search operation
+will require you to iterator through all of the {\tt TodoItem}s managed by a {\tt TodoList} as you find those that match
+the requested category. Again using the aforementioned todo list, this operation would also return the first two tasks.
+The {\tt markTaskAsDone} method, as shown below, gives a concrete example of how to iterate through the {\tt todoItems},
+using conditional logic to check if a specific {\tt todoItem} has the requested {\tt toMarkId}. You can use this method
+as a template for those methods that you must implement.
+
+\begin{verbatim}
+    public void markTaskAsDone(int toMarkId) {
+        Iterator iterator = todoItems.iterator();
+        while(iterator.hasNext()) {
+            TodoItem todoItem = (TodoItem)iterator.next();
+            if(todoItem.getId() == toMarkId) {
+                todoItem.markDone();
+            }
+        }
+    }
+\end{verbatim}
+
+\vspace{-0.1in}
 \subsection*{Required Deliverables}
 \vspace{-0.05in}
 
@@ -132,11 +159,7 @@ repository and in a signed and printed format.
 \end{enumerate}
 \vspace{-0.05in}
 
-\noindent As you complete this step, you should make sure that you created a {\tt lab9/} directory within your Git
-repository.  Then, you can save all of the required deliverables in the {\tt lab9/} directory---please see the course
-instructor or a teaching assistant if you are not able to create your directory properly. 
-
-\noindent In addition to turning in signed and printed copies of your code and output, share your source code and the output
+In addition to turning in signed and printed copies of your code and output, share your source code and the output
 file with me through your Git repository by correctly using ``{\tt git add}'', ``{\tt git commit}'', and ``{\tt git
   push}'' commands. When you are done, please ensure that the Bitbucket Web site has a {\tt lab9/} directory in your
 repository with the two Java files in the list of deliverables and the {\tt output} file. Please see the instructor
