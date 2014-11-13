@@ -68,46 +68,54 @@ What is a boolean expression? Give two examples, explaining their purpose.
 \bigskip
 
 \item {\bf [6 points]}
-Write the Linux commands to create a new directory directory named ``{\tt quiz}'',
-change to that directory, and begin editing a file named ``{\tt Quiz.java}'' using
-the GVim editor.
+  Assuming that {\tt a} and {\tt b} are boolean values that can take on the value of either {\tt true} or {\tt false},
+  please provide the complete truth tables for ``{\tt a \&\& b}'' and ``{\tt a || b}''.
 
-\vspace{2in}
+\vspace{1.2in}
 
-\item {\bf[10 points]} Using correct operator precedence for the Java programming language, what values would be printed
-  by the following two {\tt print} statements?
+\item {\bf[10 points]} Given the following declarations, what is the value of each of these expressions?
 
+  \begin{verbatim}
+  int value1 = 5, value2 = 10;
+  boolean done = true;
+  \end{verbatim}
+
+  \vspace*{-.35in}
+  
 \begin{verbatim}
-System.out.print ( ( 10 + 4 ) * 3 % 8 * ( 2 + 3 ) ); 		
+((value1 < value2) || done)
 \end{verbatim}
 
 \vspace*{-.175in}
-The output is: \mbox{\underline{\hspace{3in}}}
+The value is: \mbox{\underline{\hspace{3in}}}
 
 \begin{verbatim}
-System.out.print ( 10 + 4 * 3 % 8 * 2 + 3);				    
+(done || !done)
 \end{verbatim}	
 
 \vspace*{-.175in}
-The output is: \mbox{\underline{\hspace{3in}}}
+The value is: \mbox{\underline{\hspace{3in}}}
+
 \item {\bf [15 points]}
 
-What output is produced by the following Java program? Show everything that
-is printed by the program's ``{\tt System.out.println}'' statements.
+What output is produced by the following Java program that uses conditional logic? 
 \begin{verbatim}
-          public class Quiz
-          {
-              public static void main(String[] args)
-              {
+          public class ConditionalLogic {
+              public static void main(String[] args) {
+                  boolean label = true;
                   double x = 2.0;
                   int y = 10;
-          
                   x = x * y;
                   y = y % 7;
-          
-                  System.out.println("x = " + x);
-                  System.out.println("y = " + y);
-                  System.out.println("\\ \\ \n / /");
+
+                  if(x<2) {
+                    System.out.println("x = " + x);
+                    System.out.println("y = " + y);
+                  }
+
+                  if(label) {
+                    System.out.println("\\ \\ \n / /");
+                  }
               }
           }
 \end{verbatim}
