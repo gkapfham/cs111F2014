@@ -11,9 +11,9 @@ Due Thursday, 20 November by 2:30pm }
 \vspace{-0.05in}
 
 To learn more about how to use iteration constructs, such as the {\tt for} loop, when writing Java programs. In
-addition, to explore some of the advanced graphics features that Java provides.  Finally, to learn how to conduct an
-empirical study, using operating system timers, to evaluate how the number of {\tt for} loop iterations influences the
-execution time of a Java program.
+addition, to explore some of the advanced graphical features that Java provides.  Finally, to learn how to conduct an
+empirical study, using operating system timers, to evaluate how the number of loop iterations influences the execution
+time of a Java program.
 
 \vspace{-0.15in}
 \subsection*{General Guidelines for Labs}
@@ -38,11 +38,12 @@ to others' will be taken as evidence of violating the Honor Code.
 \subsection*{Reading Assignment}
 \vspace{-0.05in}
 
-Review Section 6.4 to learn more about the structure and behavior of the {\tt for} loop provided by the Java programming
-language, paying close attention to the three key parts of the {\tt for} loop's declaration. To learn more about
-fractals, and the Mandelbrot set that we will visualize in this laboratory assignment, please study the following Web
-site available at \url{http://jonisalonen.com/2013/lets-draw-the-mandelbrot-set/}. Students who have never explored the
-concept of fractals are also encouraged to review \url{http://en.wikipedia.org/wiki/Mandelbrot_set}.
+Review Section 6.4 to learn more about the structure and behavior of the {\tt for} loop construct provided by the Java
+programming language, paying close attention to the three key parts of the {\tt for} loop's declaration. Additionally,
+please review Section 5.4 to refresh your knowledge of the {\tt while} loop. To learn more about fractals, and the
+Mandelbrot set that we will visualize in this laboratory assignment, please study the following Web site available at
+\url{http://jonisalonen.com/2013/lets-draw-the-mandelbrot-set/}. Students who have never explored the concept of
+fractals are also encouraged to review \url{http://en.wikipedia.org/wiki/Mandelbrot_set}.
 
 \vspace{-0.1in}
 \subsection*{Create a New Directory and Starting the Project}
@@ -55,53 +56,79 @@ you should type the command ``{\tt git pull}'' to download the source code for t
 repository to your own repository. Now, change into the ``{\tt labs/lab10/}'' directory, in your own Git repository, and
 use ``{\tt gvim}'' to study the source code of the provided files. What methods do these classes provide? How do they
 work? While you do not need to understand the details of the provided source code, you should be able to add explanatory
-comments that highlight the basic points about how this program works. Students who do not understand these two programs
-should ask the course instructor for assistance.
-
+comments that highlight the basic points about how this program operates. Students who do not understand these two programs
+should ask the instructor for assistance.
 
 \vspace{-0.1in}
-\subsection*{Understanding the Todo List Manager}
+\subsection*{Understanding and Evaluating a Fractal Generator}
 \vspace{-0.05in}
 
+Once you have developed a basic understanding of the {\tt MandelbrotBW.java} and {\tt MandelbrotColor.java} files, you
+should try to compile and run these programs. Please notice that these programs do not produce any output in the
+terminal window.  Instead, you should see that they create a graphics file in the same directory where they are stored.
+For instance, if you run the {\tt MandelbrotColor} program you will see that it creates a {\tt mandelbrot-color.png}
+file.  If you want to view the contents of this file, you can type the command ``{\tt xdg-open mandelbrot-color.png}''
+in your terminal window.  What do you now see on the screen? What are the characteristics of this image?
 
+Please use {\tt gvim} to display and edit the source code of the {\tt MandelbrotColor.java} file, noticing that it
+declares an {\tt int} variable called {\tt max} and initializes it to the value of $1000$. How does the value of this
+variable influence the time taken to create the Mandelbrot graphic? To answer this question, you can change the value of
+max to, for instance, $100$, and recompile and run ``{\tt /usr/bin/time java MandelbrotColor}'' in your terminal.  After
+running this command, the number that is postfixed with the ``{\tt user}'' label will give the amount of time need to create
+the fractal. As part of this assignment, you should set the {\tt max} variable to take on the values of $10, 100, 1000,
+\mbox{and}, 10000$, timing the execution with {\tt /usr/bin/time} and using {\tt xdg-open} to see how this changes the
+resulting visualization. Along with recording the execution time for each program configuration, you should save each
+distinct graphic with a unique name and upload it to your repository.
 
+Now, find the line in the {\tt MandelbrotColor.java} file that is written in the following fashion:
 
+{\tt colors[i] = Color.HSBtoRGB(i/256f, 1, i/(i+8f));}
 
+\noindent This line of code configures the way in which {\tt MandelbrotColor} will display the colors in the fractal.
+What happens when you change the value of ``{\tt 256f}'' to a different floating point value? Will changing this value
+influence the efficiency of the fractal generator? To answer these questions you should set this value to the values of
+$32, 64, 128, 256, 512, \mbox{and}, 1024$---while keeping the value of {\tt max} set to the default of $1000$---and then
+again use {\tt /usr/bin/time} to measure the program's performance. In addition to recording the running time for each
+program configuration, you should save each graphic with a unique name in your repository.  As you vary both this value
+and the value of the {\tt max} variable, you should determine how execution time varies and how the image changes.
 
-
-
-
-
-\vspace{-0.3in}
+\vspace{-0.15in}
 \subsection*{Required Deliverables}
 \vspace{-0.05in}
 
-For this assignment you are invited to submit versions of the following deliverables through both the Bitbucket
-repository and in a signed and printed format.
+For this assignment you should submit versions of the following deliverables through both the Bitbucket
+repository and in a signed and printed format; do not turn in the Mandelbrot graphics.
 
-\vspace{-0.1in}
+\vspace{-0.125in}
 \begin{enumerate}
     \setlength{\itemsep}{0pt}
 
-  \item Completed, fully commented, and properly formatted versions of the three source code files.
-  \item An output file, called {\tt output}, containing outputs from five runs of {\tt TodoListMain}.
-  \item The final version of the {\tt todo.txt} file that you used to both test and complete this lab.
+  \item Completed, fully commented, and properly formatted versions of the two source code files.
+  \item The black and white version of the Mandelbrot graphic, saved with the default file name.
+  \item Appropriately named versions of all of the color versions of the Mandelbrot graphics.
+  \item Data tables that show the performance timings associated with varying the two parameters.
+  \item A written report, saved in {\tt time}, explaining the trends in your Mandelbrot data tables.
+  \item A written report, saved in {\tt color}, discussing how the Mandelbrot graphic changes.
   \item A written reflection, saved in {\tt reflection}, about the challenges you faced during this lab.
         
 \end{enumerate}
 \vspace{-0.1in}
 
-In addition to turning in signed and printed copies of your code and output, share your source code and other required
-files with me through your Git repository by correctly using ``{\tt git add}'', ``{\tt git commit}'', and ``{\tt git
-  push}'' commands. When you are done, please ensure that the Bitbucket Web site has a ``{\tt lab9/}'' directory in your
-repository with the three Java files in the list of deliverables and the other files. Please see the instructor if
-you have questions about assignment submission.
+% \noindent
+Please make sure that you use the appropriate {\tt git} commands to save all of these required deliverables in the
+``{\tt lab10/}'' directory of your Git repository hosted by Bitbucket.
 
-In adherence to the Honor Code, students should complete this assignment on an individual basis. While it is appropriate
-for students in this class to have high-level conversations about the assignment, it is necessary to distinguish
-carefully between the student who discusses the principles underlying a problem with others and the student who produces
-assignments that are identical to, or merely variations on, someone else's work.  Deliverables that are nearly identical
-to the work of others will be taken as evidence of violating Allegheny College's \mbox{Honor Code}.  
+% In addition to turning in signed and printed copies of your code and output, share your source code and other required
+% files with me through your Git repository by correctly using ``{\tt git add}'', ``{\tt git commit}'', and ``{\tt git
+%   push}'' commands. When you are done, please ensure that the Bitbucket Web site has a ``{\tt lab10/}'' directory in your
+% repository with the three Java files in the list of deliverables and the other files. Please see the instructor if
+% you have questions about lab submission.
+
+% In adherence to the Honor Code, students should complete this assignment on an individual basis. While it is appropriate
+% for students in this class to have high-level conversations about the assignment, it is necessary to distinguish
+% carefully between the student who discusses the principles underlying a problem with others and the student who produces
+% assignments that are identical to, or merely variations on, someone else's work.  Deliverables that are nearly identical
+% to the work of others will be taken as evidence of violating Allegheny College's \mbox{Honor Code}.  
 
 \end{document}
 
