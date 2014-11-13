@@ -67,7 +67,7 @@ What is a boolean expression? Give two examples, explaining their purpose.
 \bigskip
 \bigskip
 
-\item {\bf [6 points]}
+\item {\bf [8 points]}
   Assuming that {\tt a} and {\tt b} are boolean values that can take on the value of either {\tt true} or {\tt false},
   please provide the complete truth tables for ``{\tt a \&\& b}'' and ``{\tt a || b}''.
 
@@ -96,7 +96,7 @@ The value is: \mbox{\underline{\hspace{3in}}}
 \vspace*{-.175in}
 The value is: \mbox{\underline{\hspace{3in}}}
 
-\item {\bf [15 points]}
+\item {\bf [16 points]}
 
 What output is produced by the following Java program that uses conditional logic? 
 \begin{verbatim}
@@ -124,44 +124,60 @@ The output is:
 \vspace{1in}
 
 \item {\bf [25 points]}
-Write the Java statements (NOT a complete program!) needed to:
+Write a complete Java program that provides the following features:
 \begin{itemize}
-\item
-Declare and initialize two {\tt int} variables named {\tt a} and {\tt b}
-(initialize them to any values you wish, as long as they
-are legal {\tt int} values)
-\item
-Declare a {\tt double} value named {\tt avg} and set it equal to the
-average of {\tt a} and {\tt b}. For instance, if you set {\tt a} to 1 and
-{\tt b} to 2, your Java program should compute the value of {\tt avg} as
-1.5. (You must use an arithmetic expression for the 
-average of {\tt a} and {\tt b}; don't
-just ``compute the answer in your head'' and assign a constant value to {\tt avg}.)
-\item
-Print the phrase ``\verb$avg = $'', followed by the value of the variable 
-{\tt avg}.
+
+  \item Read in four {\tt int} values from the user.  The first three values should be used as inputs to an averaging
+    computation and the fourth value will be a ``{\tt cutoff}'' value.
+
+  \item Read in one {\tt String} value, called the ``{\tt operation}'', from the user.
+
+  \item Compute the average of the first three {\tt int} values.
+
+  \item If {\tt operation} contains the value ``greater'', then output the average only if it is greater than the
+    user-specified {\tt cutoff} value.
+
+  \item If {\tt operation} contains the string ``smaller'', then output the average only if is less than or equal to the
+    user-specified {\tt cutoff} value.
+
 \end{itemize}
 
-\vspace{3.5in}
+\vspace{2.5in}
 
-\item {\bf [12 points]}
-Given the declarations:\\
+\item {\bf [15 points]}
+  Assume that the following variable declarations appear in the {\tt main} method.\\ 
 
-{\tt int value1;}\\
-{\tt int num1 = 17, num2 = 5;}\\
-{\tt double value2;}\\
+{\tt int value1 = 10, num1 = 17, num2 = 5;}\\
+{\tt double value2 = 19.67;}\\
 {\tt double num3 = 12.0, num4 = 2.34;}\\ 
 
- what result is stored by each of the following assignment statements? Please explain why.
+\noindent
+How many times will the body of these stand-alone {\tt while} loops execute? Please explain why.
+ 
  \begin{itemize}
- \item {\tt value1 = num1 / num2;}
+ \item
+     \begin{verbatim}
+        while(num2 > 0) {
+          num2--;
+        }
+     \end{verbatim}
  
-\vspace{0.3in}
- \item {\tt value2 = num3 / num2;}
- 
-\vspace{0.3in}
- \item {\tt value1 = (int) num3 / num2;}
- 
+% \vspace{0.3in}
+ \item 
+ \begin{verbatim}
+        while((num1-num2) > 0) {
+          value1--;
+        }
+     \end{verbatim}
+
+% \vspace{0.3in}
+ \item 
+ \begin{verbatim}
+        while(num3 > num4) {
+          num2--;
+        }
+     \end{verbatim}
+
 \vspace{0.3in}
  \end{itemize}
 
@@ -252,7 +268,6 @@ Which of the following commands will run (i.e., execute) your program?
 \medskip
 \item None of the above; the correct answer is \underline{\hspace{3in}}
 \end{enumerate}
-
 
 \bigskip
 \bigskip
