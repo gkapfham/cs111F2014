@@ -1,0 +1,254 @@
+%!TEX root=cs111f2014-quiz2.tex
+% mainfile: cs111f2014-quiz2.tex
+
+\input{111pre}
+\begin{document}
+\thispagestyle{empty}
+\MYTITLE{Quiz\\
+13--14 November 2014\\
+100 points}
+
+\begin{center}
+\parbox{4.5in}{
+Name (printed): \underline{\hspace{2.5in}}
+
+\bigskip
+Signature for Honor Code: \underline{\hspace{2.5in}}
+}
+
+\end{center}
+
+\begin{quote}
+The quiz is closed book, closed notes, and closed computer. 
+
+Place all answers on the quiz pages.
+\end{quote}
+
+\begin{enumerate}
+\item {\bf [9 points]}
+\begin{enumerate}
+\item {\bf [3 points]} 
+Explain the meaning of the term ``infinite loop''; please provide an example.
+\bigskip
+\bigskip
+\bigskip
+\item {\bf [3 points]} 
+Explain three attributes that could be associated with a {\tt Student} class.
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\item {\bf [3 points]} 
+  Explain the meaning of the logical operator associated with the ``{\tt !}'' symbol.
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\end{enumerate}
+\item {\bf [9 points]}
+\begin{enumerate}
+\item {\bf [3 points]} 
+  What are the input(s), output(s), and behavior(s) of the Java compiler?
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\item {\bf [3 points]} 
+Please describe three equality and/or relational operators provided by Java.
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\item {\bf [3 points]} 
+What is a boolean expression? Give two examples, explaining their purpose.
+\end{enumerate}
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+
+\item {\bf [6 points]}
+Write the Linux commands to create a new directory directory named ``{\tt quiz}'',
+change to that directory, and begin editing a file named ``{\tt Quiz.java}'' using
+the GVim editor.
+
+\vspace{2in}
+
+\item {\bf[10 points]} Using correct operator precedence for the Java programming language, what values would be printed
+  by the following two {\tt print} statements?
+
+\begin{verbatim}
+System.out.print ( ( 10 + 4 ) * 3 % 8 * ( 2 + 3 ) ); 		
+\end{verbatim}
+
+\vspace*{-.175in}
+The output is: \mbox{\underline{\hspace{3in}}}
+
+\begin{verbatim}
+System.out.print ( 10 + 4 * 3 % 8 * 2 + 3);				    
+\end{verbatim}	
+
+\vspace*{-.175in}
+The output is: \mbox{\underline{\hspace{3in}}}
+\item {\bf [15 points]}
+
+What output is produced by the following Java program? Show everything that
+is printed by the program's ``{\tt System.out.println}'' statements.
+\begin{verbatim}
+          public class Quiz
+          {
+              public static void main(String[] args)
+              {
+                  double x = 2.0;
+                  int y = 10;
+          
+                  x = x * y;
+                  y = y % 7;
+          
+                  System.out.println("x = " + x);
+                  System.out.println("y = " + y);
+                  System.out.println("\\ \\ \n / /");
+              }
+          }
+\end{verbatim}
+\vspace*{-.05in}
+The output is:
+\vspace{1in}
+
+\item {\bf [25 points]}
+Write the Java statements (NOT a complete program!) needed to:
+\begin{itemize}
+\item
+Declare and initialize two {\tt int} variables named {\tt a} and {\tt b}
+(initialize them to any values you wish, as long as they
+are legal {\tt int} values)
+\item
+Declare a {\tt double} value named {\tt avg} and set it equal to the
+average of {\tt a} and {\tt b}. For instance, if you set {\tt a} to 1 and
+{\tt b} to 2, your Java program should compute the value of {\tt avg} as
+1.5. (You must use an arithmetic expression for the 
+average of {\tt a} and {\tt b}; don't
+just ``compute the answer in your head'' and assign a constant value to {\tt avg}.)
+\item
+Print the phrase ``\verb$avg = $'', followed by the value of the variable 
+{\tt avg}.
+\end{itemize}
+
+\vspace{3.5in}
+
+\item {\bf [12 points]}
+Given the declarations:\\
+
+{\tt int value1;}\\
+{\tt int num1 = 17, num2 = 5;}\\
+{\tt double value2;}\\
+{\tt double num3 = 12.0, num4 = 2.34;}\\ 
+
+ what result is stored by each of the following assignment statements? Please explain why.
+ \begin{itemize}
+ \item {\tt value1 = num1 / num2;}
+ 
+\vspace{0.3in}
+ \item {\tt value2 = num3 / num2;}
+ 
+\vspace{0.3in}
+ \item {\tt value1 = (int) num3 / num2;}
+ 
+\vspace{0.3in}
+ \end{itemize}
+
+
+\item {\bf [3 points]}
+Assume you have written a program named ``{\tt Quiz.java}'' and that you have 
+successfully run the ``{\tt javac}'' command without receiving any  errors. 
+Which of the following commands will run (i.e., execute) your program?
+\begin{enumerate}
+\item \verb$Quiz.java$
+
+\medskip
+\item \verb$java Quiz.java$
+
+\medskip
+\item \verb$javac Quiz.class$
+
+\medskip 
+\item \verb$gvim Quiz.java$
+
+\medskip
+\item None of the above; the correct answer is \underline{\hspace{3in}}
+\end{enumerate}
+
+
+\bigskip
+\bigskip
+
+
+\item {\bf [3 points]}
+  The .java extension on a file means that the file:
+  \begin{enumerate}
+    \item contains Java source code
+      \medskip 
+    \item contains Java byte code
+      \medskip
+    \item contains HTML
+      \medskip 
+    \item is produced by the Java compiler called ``{\tt javac}''
+      \medskip
+    \item None of the above; the correct answer is \underline{\hspace{3in}}
+  \end{enumerate}
+
+\bigskip
+\bigskip
+
+\item {\bf [3 points]}
+  Which of the following is needed to allow a Java program to use the {\tt Date} class?
+  \begin{enumerate}
+    \item {\tt import Date;}
+      \medskip 
+    \item {\tt import java.calendar.Date;}
+      \medskip 
+    \item {\tt insert java.Date;}
+      \medskip
+    \item {\tt import java.util.Date;}
+      \medskip
+    \item None of the above; the correct answer is \underline{\hspace{3in}}
+  \end{enumerate}
+
+\bigskip
+\bigskip
+
+% \item {\bf [3 points]}
+% Which of the following is an appropriate \textbf{main} class definition ?
+% \begin{enumerate}
+% \item {\tt{public class main ( String [ ] args  )}}
+% \medskip 
+% \item {\tt{public static void main( String [ ] args )}}
+% \medskip 
+% \item {\tt{public static class main ( String [ ] args )}}
+% \medskip
+% \item {\tt{public static void main ( )}}
+% \medskip
+% \item None of the above; the correct answer is \underline{\hspace{3in}}
+% \end{enumerate}
+
+\item {\bf [3 points]}
+  Which of the following expressions will store the value of 21 in {\tt result}?
+\begin{enumerate}
+  \item {\tt result = 3 * ((19 - 4) / 2);}
+\medskip 
+  \item {\tt result = 3 * ((18 - 4) / 2);}
+\medskip 
+  \item {\tt result = 3 * ((19 - 8) / 2);}
+\medskip
+  \item {\tt result = 4 * ((18 - 4) / 2);}
+\medskip
+\item None of the above; the correct answer is \underline{\hspace{3in}}
+\end{enumerate}
+
+
+\bigskip
+\bigskip
+
+\end{enumerate}
+
+\end{document}
