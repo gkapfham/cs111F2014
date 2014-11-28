@@ -1,0 +1,73 @@
+\input{111pre}
+\begin{document}
+
+\MYTITLE{Practical 8 \\ 20--21 November 2014 \\ Due in Bitbucket by midnight of the day of your practical \\ ``Checkmark'' grade}
+
+\subsection*{Summary}
+\vspace*{-.05in}
+
+In this practical assignment, you will explore Java programs that create music using arrays and {\tt for} loops. In
+addition, you will learn more about how to set the {\tt CLASSPATH} environment variable to load a third-party Java
+archive that provides music playing and generating capabilities.
+
+\vspace*{-.1in}
+\subsection*{Review the Textbook}
+\vspace*{-.05in}
+
+To learn more about the concepts associated with arrays, please review the content in Section 8.2. Students who want to
+learn more about the {\tt for} loop can investigate Section 6.4.
+
+\vspace*{-.1in}
+\subsection*{Creating Computer-Based Music}
+\vspace*{-.05in}
+
+Please return to the ``share'' repository for this course and type the command ``{\tt git pull}''. Now, please find the
+``{\tt practical08/}'' directory and view this source code. Please note that these two Java programs will not work
+correctly unless the Java compiler and virtual machine have access to the Java archive (JAR) file available in the
+``{\tt lib}/'' directory. To make this file available you need to input the following type of command in your terminal
+window: 
+
+% \noindent
+  {\tt export CLASSPATH=<full path>/jfugue-4.0.3.jar:.}
+
+  To learn what to type for the ``{\tt <full path>}'' you should go into the ``{\tt lib/}'' directory in the ``{\tt
+practical08/}'' directory and type the command ``{\tt pwd}''.  Then, you can place this value in the aforementioned
+command. Please see the course instructor if you are having trouble with this step.
+
+Now, please compile and run the ``{\tt FrereJacques.java}'' program. What does this program do when you run it? How does
+this program use an array to create the first pattern in the song? Please note that this program will save a musical
+instrument digital interface (MIDI) file in the directory where it is executed. If you would like to play the generated
+file, you can type the following command in the terminal window: ``{\tt timidity frerejacues.mid}''. This file should
+also play on any computer or mobile device that supports MIDI. You may listen to the musical output that this program
+produces by either using the built-in speakers or connecting your own headphones.
+
+You should notice that the ``{\tt FrereJacques.java}'' program only plays the song one time. Your task for this
+practical assignment is to improve the program so that it accepts, as input from the user, the number of times that the
+song should repeat. You should add this feature to the program through the inclusion of a ``{\tt for}'' loop. That is,
+if the user input is stored in the variable called ``{\tt repeats}'', then the calls to the ``{\tt add}'' methods should
+take place for a total of ``{\tt repeats}'' number of times. Please submit the enhanced version of this program to your
+Git repository.  Students who would like to further explore music creation may also compile and run
+``{\tt CrabCanon.java}''.
+
+% To finish this assignment and earn a ``checkmark'', you should submit the
+% {\tt Practical7.java} file in your Bitbucket repository by using
+% the appropriate {\tt git} commands. You also need to submit an output file,
+% called {\tt output}, with at least one run of your program.
+
+% \vspace*{-.15in}
+% \subsection*{General Guidelines for Practical Sessions}
+% \vspace*{-.05in}
+% \begin{itemize}
+% \item {\bf Submit \textbf{\textit{Something}}.} Your grade for this assignment is a ``checkmark'' indicating whether you
+%   did or did not complete the work and submit something to the Bitbucket repository using the ``{\tt git add}'', ``{\tt
+%     git commit}'', and ``{\tt git push}'' commands.
+
+% \item {\bf Update Your Repository Often!} You should {\tt add}, {\tt commit}, and {\tt push} your updated files each
+%   time you work on them, always including descriptive messages about each code change.
+
+% \item {\bf Review the Honor Code Policy on the Syllabus.} Remember that while you may discuss your work with other
+%   students in the course, code that is nearly identical to, or merely variations on, the work of others will be
+%   taken as evidence of violating the \mbox{Honor Code}.
+
+% \end{itemize}
+\end{document}
