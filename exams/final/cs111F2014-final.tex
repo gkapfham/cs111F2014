@@ -120,7 +120,7 @@ answers on the test sheets.  \end{center}
 
 \begin{enumerate}
 
-  \item ({\bf 10 Points}) Furnish good definitions for each of the following:
+  \item ({\bf 10 Points}) Using concrete examples, furnish good definitions for each of the following:
 
 \begin{enumerate}
 
@@ -175,13 +175,13 @@ answers on the test sheets.  \end{center}
 \begin{enumerate}
 
 \item How many variables are declared?
-  \vspace*{1in}
+  \vspace*{.75in}
 
 \item What is the type of these declared variables?
-  \vspace*{1in}
+  \vspace*{.75in}
 
 \item Which of the variables are given an initial value?
-  \vspace*{1in}
+  \vspace*{.75in}
 
 \item Based on the above declarations, will the following assignment
   statement be accepted by the compiler?  Please fully justify your
@@ -195,14 +195,16 @@ answers on the test sheets.  \end{center}
 \end{minipage}
   \vspace*{1in}
 
-\item Based on the above declarations, will the following assignment
-  statement be accepted by the compiler?  Please fully justify your
-  response to this question.
-  
+\item Based on the above declarations, will the following {\tt while} loop halt when executed by the Java virtual
+  machine? Please fully justify your response to this question.
 
 \begin{minipage}{6in}
   \begin{lstlisting}
-    MAX_VALUE = 50;
+    while(MAX_VALUE > myValue) {
+      value = myValue + total;
+      myValue--;
+      count++;
+    }
   \end{lstlisting}
 \end{minipage}
 % \vspace*{1in}
@@ -393,7 +395,7 @@ Answer: \line(1,0){250}
         // perform the computation
         r = a - b * c / d + (int)Math.sqrt(a + d);
         // produce the output
-        System.out.println(" The answer is: " + r)
+        System.out.println(" The answer is: " + r);
       }
     }
   \end{lstlisting}
