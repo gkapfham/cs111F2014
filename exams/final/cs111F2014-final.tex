@@ -99,6 +99,17 @@ Pledge \line(1,0){250}
 \medskip \noindent \begin{center} The quiz is closed book, closed notes, and closed computer. \\ Please place all
 answers on the test sheets.  \end{center}
 
+\begin{center}
+  The examination is divided into four sections. \\
+  \vspace*{.3in}
+
+  \begin{tabular}{|c | c|} \hline
+    {\bf Section} & {\bf Points Earned} \\ \hline 
+    {Short Answer (30 possible)} & \hspace*{1.5in} \\ 
+    {Multiple Choice (10 possible)} & \hspace*{1.5in} \\   
+  \end{tabular}
+\end{center}
+
 \newpage
 
 \noindent
@@ -229,18 +240,18 @@ answers on the test sheets.  \end{center}
 % \vspace*{1in}
 
 \item ({\bf 2 Points})
-  Suppose that a program running in your terminal seems to be caught in an infinite loop. What command can you
-  type to stop this program from executing?
+  Which one of the following statements is a correct array declaration?
+
   \begin{enumerate}
-    \item {\tt CTRL-Q}
+    \item {\tt ArrayList list = new ArrayList();}
       \medskip 
-    \item {\tt gg=G}
+    \item {\tt ArrayList<TodoItem> = new ArrayList<TodoItem>();}
       \medskip
-    \item {\tt CTRL-c}
+    \item {\tt int primeNums = \{2, 3, 5, 7, 11, 17, 19\};}
       \medskip 
-    \item {\tt CTRL-d}
+    \item {\tt int primeNums[] = \{2, 3, 5, 7, 11, 17, 19\};}
       \medskip
-    \item {\tt terminate}
+    \item {\tt int primeNums[2] = 5;}
       \medskip
 \item None of the above; the correct answer is \underline{\hspace{3in}}
   \end{enumerate}
@@ -349,6 +360,7 @@ Answer: \line(1,0){250}
 \begin{minipage}{6in}
   \lstset{numbers=left}
   \begin{lstlisting}
+    // perform more arithmetic computations
     public class BasicComputationsTwo
     {
       public static void main(String[] args)
@@ -540,7 +552,7 @@ Answer: \fbox{%
   \item ({\bf 5 Points}) Write a ``program segment'' to set {\tt k} equal to the absolute value of {\tt j} without using
     the absolute value method (i.e., do not use the {\tt Math.abs} provided by Java).
 
-    \vspace*{2in}
+    \vspace*{4in}
 
   % \item ({\bf 5 Points} Write a method called {\tt findMinimum} that accepts two {\tt int} parameters and returns the
   %     minimum of these two values.
@@ -568,26 +580,20 @@ Answer: \fbox{%
     {\tt Parcel} should always be initialized to {\tt false}.  Write the following methods of this class:
 
   \begin{enumerate}
-    \item A three-parameter constructor that accepts an initial values
-      for the name of the sender, the delivery address, and a tracking
-      number.
 
-    \item A {\tt delivered} method that changes the delivery status of
-      a {\tt Parcel} to {\tt true}.
+    \item A three-parameter constructor that accepts an initial value for the name of the sender, the delivery address,
+      and a tracking number.
 
-    \item A zero-parameter {\tt toString} method that returns a {\tt
-      String} containing all of the information about a specific {\tt
-      Parcel}.  This method should properly format the return value
-      with clear labels and include values for the sender, address,
-      tracking number, and delivery status.
+    \item A {\tt delivered} method that changes the delivery status of a {\tt Parcel} to {\tt true}.
 
-    \item A {\tt main} method that uses the three-parameter
-      constructor to perform the following steps in order: (i) create
-      an instance of the {\tt Parcel}, (ii) print out the status of
-      the {\tt Parcel} using {\tt println}, (iii) call a method to
-      indicate that the {\tt Parcel} has been delivered, (iv) print
-      out the status of the {\tt Parcel} using {\tt println}, (v)
-      print the date and time on which the program was executed.
+    \item A zero-parameter {\tt toString} method that returns a {\tt String} containing all of the information about a
+      specific {\tt Parcel}.  This method should properly format the return value with clear labels and include values
+      for the sender, address, tracking number, the delivery status, and any other relevant information.
+
+    \item A {\tt main} method that uses the three-parameter constructor to perform the following steps in order: (i)
+      create an instance of the {\tt Parcel}, (ii) print out the status of the {\tt Parcel} using {\tt println}, (iii)
+      call a method to indicate that the {\tt Parcel} has been delivered, and (iv) print out the status of the {\tt
+        Parcel} using {\tt println}.
 
   \end{enumerate}
 
