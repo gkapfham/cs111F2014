@@ -1,0 +1,470 @@
+\documentclass[12pt]{article}             
+\textwidth = 6.5in
+\textheight = 9.05in
+\topmargin -0.5in
+\oddsidemargin 0.0in
+\evensidemargin 0.0in
+
+% set it so that subsubsections have numbers and they
+% are displayed in the TOC (maybe hard to read, might want to disable)
+
+\usepackage{epsfig}
+
+\usepackage{listings}
+
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+
+% define widow protection 
+        
+\def\widow#1{\vskip #1\vbadness10000\penalty-200\vskip-#1}
+
+% define a little section heading that doesn't go with any number
+
+\def\littlesection#1{
+\widow{2cm}
+\vskip 0.5cm
+\noindent{\bf #1}
+\vskip 0.1cm
+\noindent
+}
+
+% A paraphrase mode that makes it easy to see the stuff that shouldn't
+% stay in for the final proposal
+
+\newdimen\tmpdim
+\long\def\paraphrase#1{{\parskip=0pt\hfil\break
+\tmpdim=\hsize\advance\tmpdim by -15pt\noindent%
+\hbox to \hsize
+{\vrule\hskip 3pt\vrule\hfil\hbox to \tmpdim{\vbox{\hsize=\tmpdim
+\def\par{\leavevmode\endgraf}
+\obeyspaces \obeylines 
+\let\par=\endgraf
+\bf #1}}}}}
+
+\renewcommand{\baselinestretch}{1.2}    % must go before the begin of doc
+
+\pagestyle{empty}
+
+% go with the way that CC sets the margins
+
+\usepackage{color}
+
+\definecolor{javared}{rgb}{0.6,0,0} % for strings
+\definecolor{javagreen}{rgb}{0.25,0.5,0.35} % comments
+\definecolor{javapurple}{rgb}{0.5,0,0.35} % keywords
+\definecolor{javadocblue}{rgb}{0.25,0.35,0.75} % javadoc
+
+\begin{document}
+
+\lstset{language=Java,
+basicstyle=\ttfamily,
+keywordstyle=\color{javapurple}\bfseries,
+stringstyle=\color{javared},
+commentstyle=\color{javagreen},
+morecomment=[s][\color{javadocblue}]{/**}{*/},
+%numbers=left,
+numberstyle=\scriptsize\color{black},
+stepnumber=1,
+numbersep=7pt,
+tabsize=4,
+showspaces=false,
+showstringspaces=false}
+
+% handle widows appropriately
+\def\widow#1{\vskip #1\vbadness10000\penalty-200\vskip-#1}
+
+\begin{center}
+
+Computer Science 111: Introduction to Computer Science I \\
+Final Examination \\
+Fall 2014 \\
+
+\vspace{.25in}
+
+Name \line(1,0){250}
+
+Pledge \line(1,0){250}
+
+\end{center}
+
+\noindent
+
+% {\bf General Instructions}. Read each question carefully before answering.  The exam is closed book.  Place the answers
+% to the questions in Parts I and III in order and in the exam blue books.  Place the answers to the questions in Part II
+% in the spaces provided on these exam sheets.  Be careful to allow sufficient time to think through your answers for the
+% questions in Parts II and III.  Review your work. Write clearly in pencil.  Erase completely.  You must turn in both
+% this exam question sheet and the blue book, with your name printed \mbox{and signed.}
+
+\medskip \noindent \begin{center} The quiz is closed book, closed notes, and closed computer. \\ Please place all
+answers on the test sheets.  \end{center}
+
+\newpage
+
+\noindent
+{\bf Part I (Short Answers)}
+
+\begin{enumerate}
+
+  \item ({\bf 10 Points}) Furnish good definitions for each of the following:
+
+\begin{enumerate}
+
+\item Algorithm
+  \vspace*{1.2in}
+
+\item Escape Sequence 
+  \vspace*{1.2in}
+
+\item Object
+  \vspace*{1.2in}
+
+\item RGB value
+  \vspace*{1.2in}
+
+\item String concatenation
+  \vspace*{1.2in}
+
+\end{enumerate}
+
+% \item If a picture is made up of 256 possible colors, then how many
+%   bits would be needed to store each pixel of the picture?  Your
+%   response to this question should clearly explain why you gave the
+%   response that you did.
+
+% \item Lewis and Loftus give five steps for solving a problem.  What are they?
+
+\newpage
+
+\item ({\bf 6 Points}) What is the difference between a Java language statement, a Java byte code instruction, and a
+  machine language instruction?  Which do you create, which does the Java compiler create, and which does the Java
+  virtual machine create?
+  \vspace*{4in}
+
+\item ({\bf 4 Points}) Please distinguish between a primitive and a reference data type.  In addition to giving an
+  example of each type of data,  your response to this question should furnish a description of how each data type is
+  stored and referenced.  \newpage
+
+\item Given the following variable declarations, answer each question
+
+\hspace*{.25in}
+\begin{minipage}{6in}
+  \begin{lstlisting}
+    int count = 0, value, total;
+    final int MAX_VALUE = 100;
+    int myValue = 50;
+  \end{lstlisting}
+\end{minipage}
+
+\begin{enumerate}
+
+\item How many variables are declared?
+
+\item What is the type of these declared variables?
+
+\item Which of the variables are given an initial value?
+
+\item Based on the above declarations, will the following assignment
+  statement be accepted by the compiler?  Please fully justify your
+  response to this question.
+
+%\hspace*{.25in}
+\begin{minipage}{6in}
+  \begin{lstlisting}
+    myValue = 100;
+  \end{lstlisting}
+\end{minipage}
+
+\item Based on the above declarations, will the following assignment
+  statement be accepted by the compiler?  Please fully justify your
+  response to this question.
+
+%\hspace*{.25in}
+\begin{minipage}{6in}
+  \begin{lstlisting}
+    MAX_VALUE = 50;
+  \end{lstlisting}
+\end{minipage}
+
+\end{enumerate}
+
+\end{enumerate}
+
+\newpage
+
+\noindent
+{\bf Part II (Program Output)}
+
+\begin{enumerate}
+
+\item What is the output from the following Java program?
+
+\hspace*{.25in}
+\begin{minipage}{6in}
+  \lstset{numbers=left}
+  \begin{lstlisting}
+    public class BasicComputationsOne
+    {
+      public static void main(String[] args)
+      {
+        // declare and initialize the variables
+        double a = 4.0;
+        int b = 7;
+        int c = 5;
+        // perform the computation
+        a = a - b / 6 * c + b;
+        // create the output
+        System.out.println(" a = " + a);
+      }
+    }
+  \end{lstlisting}
+
+\end{minipage}
+
+Answer: \line(1,0){250}
+
+\item What is the output from the following Java program?
+
+\hspace*{.25in}
+\begin{minipage}{6in}
+  \lstset{numbers=left}
+  \begin{lstlisting}
+    public class BasicComputationsTwo
+    {
+      public static void main(String[] args)
+      {
+        // declare and initialize the variables
+        int a, b, c, d, r;
+        a = 1;
+        b = 5;
+        c = 10;
+        d = 15;
+        // perform the computation
+        r = a - b * c / d + (int)Math.sqrt(a + d);
+        // produce the output
+        System.out.println(" The answer is: " + r)
+      }
+    }
+  \end{lstlisting}
+
+\end{minipage}
+
+Answer: \line(1,0){250}
+
+\item What is the output from the following Java program?
+
+\hspace*{.25in}
+\begin{minipage}{6in}
+  \lstset{numbers=left}
+  \begin{lstlisting}
+import java.util.Scanner;
+import java.text.DecimalFormat;
+public class CircleStatistics
+{
+   public static void main (String[] args)
+   {
+      // declare the variables 
+      int radius;
+      double area, circumference;
+      // accept input from the user
+      Scanner scan = new Scanner (System.in);
+      System.out.print (" Enter the circle's radius: ");
+      radius = scan.nextInt();
+      // perform the computations
+      area = Math.PI * Math.pow(radius, 2);
+      circumference = 2 * Math.PI * radius;
+      // format and produce the output
+      DecimalFormat fmt = new DecimalFormat (" 0.### ");
+      System.out.println (" The circle's area: " + 
+                          fmt.format(area));
+      System.out.println (" The circle's circumference: " +
+                           fmt.format(circumference));
+   }
+}
+  \end{lstlisting}
+
+\end{minipage}
+
+Your response to this question should assume that the user inputs the
+value of 5 for the radius of the circle. Your answer to this question
+can use the fact that the following program produces the output: ``The
+value of Pi is: 3.141592653589793''
+
+\hspace*{.25in}
+\begin{minipage}{6in}
+  \lstset{numbers=left}
+  \begin{lstlisting}
+public class DetermineTheValueOfPi	
+{
+    public static void main(String[] args)
+    {
+        System.out.println(" The value of Pi is: " + Math.PI);
+    }
+}
+  \end{lstlisting}
+
+\end{minipage}
+
+Answer: \line(1,0){250}
+
+\item What is the output from the following Java program?
+
+\hspace*{.25in}
+\begin{minipage}{6in}
+  \lstset{numbers=left}
+  \begin{lstlisting}
+import java.text.NumberFormat;
+import java.util.Scanner;
+public class Wages
+{
+   public static void main (String[] args)
+   {
+      // declare and initialize the regular pay rate
+      final double RATE = 8.25;  
+      // declare and initialize the standard hours in a work week
+      final int STANDARD = 40;   
+      // declare and initialize the total payment variable 
+      double pay = 0.0;
+      // accept the number of hours that the individual worked
+      Scanner scan = new Scanner (System.in);
+      System.out.print(" Enter the number of hours worked: ");
+      int hours = scan.nextInt();
+      System.out.println();
+
+      // pay the worker the correct amount of money
+      if (hours > STANDARD) 
+      {
+         pay = STANDARD * RATE + (hours-STANDARD) * (RATE * 1.5);
+      }
+      else 
+      {
+         pay = hours * RATE;
+      }
+
+      // correctly format and produce the output
+      NumberFormat fmt = NumberFormat.getCurrencyInstance();
+      System.out.println (" Gross earnings: " + fmt.format(pay));
+   }
+}
+  \end{lstlisting}
+
+\end{minipage}
+
+Your response to this question should assume that the user inputs the value of 46.
+
+Answer: \line(1,0){250}
+
+\item What is the output from the following Java program?
+
+\hspace*{.25in}
+\begin{minipage}{6in}
+  \lstset{numbers=left}
+  \begin{lstlisting}
+    public class Stars
+    {
+     	public static void main (String[] args)
+        {
+            final int MAX_ROWS = 10;
+
+            for (int row = 1; row <= MAX_ROWS; row++)
+            {
+                    for (int star = 1; star <= row; star++)
+                    {
+                            System.out.print (" * ");
+                    }
+                    System.out.println();
+            }
+            for (int row = MAX_ROWS; row >= 0; row--)
+            {
+                    for (int star = row; star >= 0; star--)
+                        {
+                            System.out.print (" * ");
+                        }
+                    System.out.println();
+            }
+    }
+  \end{lstlisting}
+
+\end{minipage}
+
+Answer: \fbox{%
+  \parbox{0.8\linewidth}
+         {\hspace*{.1in} \newline
+\hspace*{.1in} \newline
+\hspace*{.1in} \newline
+\hspace*{.1in} \newline
+\hspace*{.1in} \newline
+\hspace*{.1in} \newline
+\hspace*{.1in} \newline
+\hspace*{.1in} \newline
+\hspace*{.1in}}
+
+}
+
+ %\line(1,0){250}
+
+\end{enumerate}
+
+\newpage
+
+\noindent
+{\bf Section III (Segments, Methods, Programs)}
+
+\begin{enumerate}
+
+\item Write a program segment to set {\tt k} equal to the absolute
+  value of {\tt j} without using the absolute value method (i.e., do
+  not use the {\tt Math.abs} provided by Java).
+
+\item Write a class method called {\tt findMinimum} that accepts two
+  {\tt int} parameters and returns the minimum of these two values.
+
+\item Write a class method called {\tt findMaximum} that accepts two
+  {\tt double} parameters and returns the maximum of these two values.
+
+\item Write a class method named {\tt oddPos} that has one parameter
+  representing an integer {\tt n} and returns {\tt true} if
+  {\tt n} is an odd positive integer (e.g., 1,3,5,7,\ldots) and {\tt
+    false} otherwise.
+
+\item Write a class method called {\tt readIntArray} that takes one
+  argument {\tt n} and will read and return the {\tt n} elements of an
+  integer array.  After importing the {\tt java.util.Scanner} class at
+  the very top of your program, the class method should use an
+  instance of {\tt java.util.Scanner} to input values from the user.
+
+\item Write a class that represents a {\tt Parcel} for a delivery
+  service.  Each {\tt Parcel} must have a sender, a delivery address,
+  and a tracking number that all should be represented as {\tt
+    String}s.  A {\tt Parcel} must also have a delivery status
+  variable of type {\tt boolean}.  Finally, the delivery status of a
+  new {\tt Parcel} should always be initialized to {\tt false}.  Write
+  the following methods of this class:
+
+  \begin{enumerate}
+    \item A three-parameter constructor that accepts an initial values
+      for the name of the sender, the delivery address, and a tracking
+      number.
+
+    \item A {\tt delivered} method that changes the delivery status of
+      a {\tt Parcel} to {\tt true}.
+
+    \item A zero-parameter {\tt toString} method that returns a {\tt
+      String} containing all of the information about a specific {\tt
+      Parcel}.  This method should properly format the return value
+      with clear labels and include values for the sender, address,
+      tracking number, and delivery status.
+
+    \item A {\tt main} method that uses the three-parameter
+      constructor to perform the following steps in order: (i) create
+      an instance of the {\tt Parcel}, (ii) print out the status of
+      the {\tt Parcel} using {\tt println}, (iii) call a method to
+      indicate that the {\tt Parcel} has been delivered, (iv) print
+      out the status of the {\tt Parcel} using {\tt println}, (v)
+      print the date and time on which the program was executed.
+
+  \end{enumerate}
+
+\end{enumerate}
+
+\end{document}
