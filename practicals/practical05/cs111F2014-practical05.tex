@@ -10,11 +10,11 @@
 \vspace*{-.05in}
 
 As a means of both practicing the extension of your own classes and methods and better understanding the structure of
-different classes, you will study the given Java files and modify them by adding more functionality to certain 
+different classes, you will study the given Java files and modify them by adding more functionality to certain
 methods.  Additionally, you will use the Lightweight Java Visualizer (LJV) to automatically create diagrams, like those
 seen in Chapter 4, that depict the state of Java objects.  Then, using the ``{\tt git add}'', ``{\tt git commit}'', and
 ``{\tt git push}'' commands you will upload your modified source code, object visualizations, and the output you obtain
-from running the {\tt Practical5} program to your Git repository hosted by Bitbucket.  
+from running the {\tt Practical5} program to your Git repository hosted by Bitbucket.
 
 \vspace*{-.15in}
 \subsection*{Review the Textbook}
@@ -40,28 +40,28 @@ drawing a technical diagram like the one in Figure 4.7 of your textbook? To comp
 \end{sloppypar}
 
 \vspace*{-.15in}
-\subsection*{Enhance the Classes} 
+\subsection*{Enhance the Classes}
 \vspace*{-.05in}
 
 \begin{enumerate}
-\item 
+\item
 
 \begin{itemize}
 
 % \item Edit the file {\tt Octopus.java} and find the constructor in this class. In the constructor, there is one
 %   parameter {\tt n}, which contains a {\tt String}.  Change this by adding one more parameter, {\tt a}, of type {\tt
 %     int}.  This is the age of the octopus. Save this in the appropriate instance variable (imitating what was done for
-%     the name). 
+%     the name).
 
   \item Please find the constructor in the {\tt Octopus.java} file.  You will notice that, even though an
     instance of the {\tt Octopus} class has instance variables like {\tt weight} and {\tt name}, these variables are not
     initialized by the constructor. Assuming that the value of $-1$, indicating that the variable has not yet been set,
     is an acceptable starting value for both variables, please add to the constructor assignment statements initializing
     them to $-1$.
-    
+
 % \item \noindent Edit the file {\tt Practical5.java} and look for the place where variable {\tt ocky} is defined to be a
 %   {\tt new Octopus}. Add an ``age'' to this so that we are specifying two things, not one, in the construction.  Delete
-%   or comment out the ``{\tt ocky.setAge(10)}'' method call in the next line. 
+%   or comment out the ``{\tt ocky.setAge(10)}'' method call in the next line.
 
   \item You should also notice that the current constructor for {\tt Octopus} only accepts the ``{\tt String n}''
     parameter that allows you to specify the name of the object.  Since an {\tt Octopus} also has an {\tt age} and a
@@ -69,11 +69,11 @@ drawing a technical diagram like the one in Figure 4.7 of your textbook? To comp
     variables---and initializes all of them correctly. You can use the ``{\tt Account}'' example in Section 4.4 as a
     source of inspiration for the way in which you add an improved constructor for the {\tt Octopus} class.
 
-\end{itemize} 
+\end{itemize}
 
 %\newpage
 
-\item 
+\item
 \begin{itemize}
 
 \item Now, use GVim to edit the file {\tt Practical5.java}. Declare a second {\tt Octopus} variable (don't just change
@@ -83,7 +83,7 @@ drawing a technical diagram like the one in Figure 4.7 of your textbook? To comp
 
 \item \noindent Continuing to add code in the {\tt Practical5.java} file, please create a second {\tt Utensil} of any
   type you wish, imitating the declaration and initialization of {\tt spat}.  Assign a cost and a color to this utensil.
-  Now, assign this utensil to the new {\tt Octopus} you created. 
+  Now, assign this utensil to the new {\tt Octopus} you created.
 
 \item \noindent Print out the name, age, weight, and favorite utensil of your new {\tt Octopus} object. Finally, print
   out the type, cost, and color of your new utensil contained within the {\tt Octopus}.
@@ -92,18 +92,18 @@ drawing a technical diagram like the one in Figure 4.7 of your textbook? To comp
 \end{enumerate}
 
 \vspace*{-.30in}
-\subsection*{Visualize the Objects} 
+\subsection*{Visualize the Objects}
 \vspace*{-.1in}
 
 \begin{enumerate}
-\item 
+\item
 
 \begin{itemize}
 
 % \item Edit the file {\tt Octopus.java} and find the constructor in this class. In the constructor, there is one
 %   parameter {\tt n}, which contains a {\tt String}.  Change this by adding one more parameter, {\tt a}, of type {\tt
 %     int}.  This is the age of the octopus. Save this in the appropriate instance variable (imitating what was done for
-%     the name). 
+%     the name).
 
   \item Please study the source code of {\tt Practical5.java} to find the location where it uses a static method to
     configure the Lightweight Java Visualizer class called {\tt LJV}. Now, find the method calls that produce a
@@ -115,16 +115,16 @@ drawing a technical diagram like the one in Figure 4.7 of your textbook? To comp
     called ``{\tt ocky-after.pdf}''. What are the similarities and differences between these two diagrams? How did the
     method calls change the {\tt ocky} object?
 
-\end{itemize} 
+\end{itemize}
 
 \item
   \begin{itemize}
-    
+
     \item In the previous phase of this assignment, you were responsible for adding new code to {\tt Practical5.java}
       that would construct another instance of the {\tt Octopus} class.  Please find this code and make sure that you
       understand how it works. To test your understanding, can you draw, on paper, what you think this object looks like
       in memory?
-  
+
     \item Following the example of the previous calls to the {\tt LJV} class, please create a visualization of your
       new instance of the {\tt Octopus} class. Remember, you will not need to call the {\tt LJV} methods that configure
       the visualizer; instead, you only have to make a call to the {\tt drawGraph} method that will save the diagram in
